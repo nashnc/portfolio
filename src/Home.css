@@ -1,0 +1,76 @@
+/* .hide {
+    display: none;
+}
+
+.xplain:hover~.hide {
+    display: block;
+} */
+
+.hide {
+    visibility: hidden;
+    /* Initially hidden */
+    /* position: absolute; */
+    /* Position it relative to the parent */
+    /* background-color: rgba(0, 0, 0, 0.75); */
+    /* Tooltip background color */
+    /* color: white; */
+    /* Tooltip text color */
+    padding: 5px 10px;
+    border-radius: 4px;
+    /* font-size: 12px; */
+    top: 100%;
+    /* Position it below the parent */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Ensure it's perfectly centered */
+    opacity: 0;
+    pointer-events: none;
+    /* Ensure it doesn't block clicks */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    /* Smooth transition */
+}
+
+.xplain:hover~.hide {
+    visibility: visible;
+    /* Show the tooltip */
+    opacity: 1;
+    transition-delay: 0s;
+    /* Ensure visibility is immediate */
+}
+
+#imgCover3 {
+    /* width: 40px; */
+    /* height: 40px; */
+    object-fit: cover;
+    /* Ensures the image covers the area */
+    clip-path: polygon(0 28%, 78% 100%, 100% 0);
+    /* Custom clip path */
+    /* background: #b67575; */
+}
+
+#imgCover {
+    /* width: 40px; */
+    /* height: 40px; */
+    object-fit: cover;
+    /* Ensures the image covers the area */
+    clip-path: polygon(0 28%, 78% 100%, 100% 0);
+    /* Custom clip path */
+    /* background: #b67575; */
+}
+
+#imgCover2 {
+    /* width: 40px; */
+    /* height: 40px; */
+    object-fit: cover;
+    /* Ensures the image covers the area */
+    clip-path: polygon(0 73%, 78% 100%, 30% 0);
+    /* Custom clip path */
+    /* background: #f37070; */
+}
+
+/*  */
+/*  */
+/*  */
+/* Add this to your styles */
+
