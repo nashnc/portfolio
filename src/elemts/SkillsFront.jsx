@@ -11,23 +11,23 @@ const SkillsFront = () => {
   return (
     <>
       <div className="grid grid-cols-6 gap-3">
-        <div className="skillItem">
-          <img src={mongologo} alt="MongoDB" className="skillLogo" />
+        <div className="skillLogo">
+          <img src={mongologo} alt="MongoDB" className="" />
         </div>
-        <div className="skillItem">
-          <img src={expresslogo} alt="Express" className="skillLogo" />
+        <div className="skillLogo">
+          <img src={expresslogo} alt="Express" className="" />
         </div>
-        <div className="skillItem">
-          <img src={reactlogo} alt="React" className="skillLogo" />
+        <div className="skillLogo">
+          <img src={reactlogo} alt="React" className=" " />
         </div>
-        <div className="skillItem">
-          <img src={nodelogo} alt="Node.js" className="skillLogo" />
+        <div className="skillLogo">
+          <img src={nodelogo} alt="Node.js" className="" />
         </div>
-        <div className="skillItem">
-          <img src={postmanlogo} alt="Postman" className="skillLogo" />
+        <div className="skillLogo">
+          <img src={postmanlogo} alt="Postman" className="" />
         </div>
-        <div className="skillItem">
-          <img src={tailwindlogo} alt="Tailwind CSS" className="skillLogo" />
+        <div className="skillLogo">
+          <img src={tailwindlogo} alt="Tailwind CSS" className="" />
         </div>
       </div>
     </>

@@ -30,7 +30,7 @@ const ContactMini = () => {
           </tr>
         ))}
       </table>
-      <div className="contactmebutton relative text-right">
+      <div className="contactmebutton relative pt-5 text-right">
         <div className="border-hilit-1 group relative inline-block border-1 text-sm font-medium">
           <a href="#" className="size-4">
             <span className="line bg-primary size-3"></span>

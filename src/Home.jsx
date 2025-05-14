@@ -41,17 +41,17 @@ const Home = () => {
 
   return (
     <>
-      <div className="container mx-auto cursor-default px-5 py-15 sm:px-10 md:px-15 lg:px-40 xl:px-60">
+      <div className="container mx-auto cursor-default px-5 py-15 text-sm sm:px-10 md:px-15 md:text-lg lg:px-40 xl:px-60">
         <header className="">
-          <div className="flex items-center">
-            <div className="relative text-wrap">
+          <div className="items-center md:flex">
+            <div className="relative pb-10 text-wrap">
               <div className="">
                 <h1 className="head1">
-                  Hey, I'm Avinash, a.k.a. Nash—an intuitive
-                  <span className="text-hilit-1 text"> web developer </span>
+                  Hey, I'm Avinash, an intuitive
+                  <span className="text-hilit-1"> web developer </span>
                 </h1>
                 <h4 className="head4">
-                  who develops responsive and interactive websites that is
+                  who develops responsive and interactive websites that are
                   coherent to your needs.
                 </h4>
               </div>
@@ -83,7 +83,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="contactmebutton relative py-5">
+          <div className="contactmebutton relative pt-10 pb-5">
             <div className="border-hilit-1 group relative inline-block border-2 text-sm font-medium">
               <a href="#contact" className="size-4">
                 <span className="line bg-primary size-3"></span>
@@ -131,9 +131,9 @@ const Home = () => {
               </a>
             </div>
           </header>
-          <masala className="text-lg">
+          <masala className="teext-base md:text-lg">
             <p className="py-5">
-              Hey! Am Avinash , you can call me
+              Hey! You can call me
               <span className="text-hilit-1"> Nash</span>!!
             </p>
             <p className="relative py-5">
@@ -218,9 +218,8 @@ const Home = () => {
             <Titles htitle="contact" />
           </header>
           <p className="py-5 text-lg">
-            I'm looking forward to be hired as a part in a company, to receive
-            an interesting opportunity to share and show my skills, if you are
-            interested contact me.
+            I'm looking forward to being a part of your team! Let me help you
+            develop your ideas into an internet reality.
           </p>
           <ContactMini />
         </div>
