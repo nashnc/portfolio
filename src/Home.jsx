@@ -125,10 +125,10 @@ const Home = () => {
         <div id="aboutme py-5">
           <header className="headsectdiv">
             <Titles htitle="about" />
-            <div>
+            <div className="col-span-1">
               <a href="#" className="border-2ndry-2 border-2 p-1">
-                info <span className="text-hilit-1 pr-1">~~&gt;</span>
-              </a>
+                info<span className="text-hilit-1 pr-1">~&gt;</span>
+              </a>  
             </div>
           </header>
           <masala className="teext-base md:text-lg">
@@ -174,7 +174,7 @@ const Home = () => {
             <Titles htitle="projects" />
             <div>
               <a href="#" className="border-2ndry-2 col-span-1 border-2 p-1">
-                View <span className="text-hilit-1 pr-1">~~&gt;</span>
+                View<span className="text-hilit-1 pr-1">~~&gt;</span>
               </a>
             </div>
           </header>
@@ -202,9 +202,9 @@ const Home = () => {
         <div id="skills">
           <header className="headsectdiv">
             <Titles htitle="skills" />
-            <div>
+            <div className="">
               <a href="#" className="border-2ndry-2 border-2 p-1">
-                See <span className="text-hilit-1 pr-1">~~&gt;</span>
+                See<span className="text-hilit-1 pr-1">~~&gt;</span>
               </a>
             </div>
           </header>
