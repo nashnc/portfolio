@@ -171,7 +171,7 @@ const Home = () => {
 
         <div id="projects ">
           <header className="headsectdiv">
-            <Titles htitle="projects" />
+            <Titles htitle="works" />
             <div>
               <a href="#" className="border-2ndry-2 col-span-1 border-2 p-1">
                 View<span className="text-hilit-1 pr-1">~~&gt;</span>
