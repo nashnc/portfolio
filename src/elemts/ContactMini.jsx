@@ -19,18 +19,24 @@ const ContactMini = () => {
   ];
   return (
     <div>
-      <table className="border-2ndary-2 table-auto border-2 p-3">
-        {contact.map((entry, index) => (
-          <tr key={index} className="">
-            <td className="p-3">
-              <img className="inline size-7" src={entry.logo} alt={entry.app} />
-              &nbsp; {entry.app}
-            </td>
-            &nbsp;<td className="p-3">{entry.uid}</td>
-          </tr>
-        ))}
-      </table>
-      <div className="contactmebutton relative pt-5 text-right">
+      <div className="mx-auto px-10">
+        <table className="border-2ndary-2 table-auto border-2 p-3">
+          {contact.map((entry, index) => (
+            <tr key={index} className="">
+              <td className="p-3">
+                <img
+                  className="inline size-7"
+                  src={entry.logo}
+                  alt={entry.app}
+                />
+                &nbsp; {entry.app}
+              </td>
+              &nbsp;<td className="p-3">{entry.uid}</td>
+            </tr>
+          ))}
+        </table>
+      </div>
+      <div className="contactmebutton relative pt-10 text-right">
         <div className="border-hilit-1 group relative inline-block border-1 text-sm font-medium">
           <a href="#" className="size-4">
             <span className="line bg-primary size-3"></span>

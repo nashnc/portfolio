@@ -1,9 +1,11 @@
 import React from "react";
 import image from "./assets/sd.png";
+import image2 from "./assets/sd.png";
 import Titles from "./elemts/Titles";
 import "./Home.css";
 import ContactMini from "./elemts/ContactMini";
 import SkillFront from "./elemts/SkillsFront";
+import Dot from "./assets/Dots.svg";
 import Footer from "./elemts/Footer";
 import "./ButtonAnimation.css";
 
@@ -43,7 +45,7 @@ const Home = () => {
     <>
       <div className="container mx-auto cursor-default px-5 py-15 text-sm sm:px-10 md:px-15 md:text-lg lg:px-40 xl:px-60">
         <header className="">
-          <div className="items-center md:flex">
+          <div className="grid-col-2 grid items-center md:flex">
             <div className="relative pb-10 text-wrap">
               <div className="">
                 <h1 className="head1">
@@ -59,26 +61,47 @@ const Home = () => {
                 My Specialties
                 <ul className="list-disc pl-10">
                   <li>Front End Development </li>
-                  <li>Full Stack (trained by MERN stack development)</li>
+                  <li>Full Stack (trained in MERN stack development)</li>
                 </ul>
               </p>
               Let us craft user-friendly websites together!
             </div>
-            <div className="relative">
-              <div className="">
+            <div className="col-span-1">
+              <div className="hidden md:relative md:block">
+                <img
+                  className="absolute top-0 left-25 size-60 object-contain"
+                  id="imgCover2dots"
+                  src={Dot}
+                  alt="Dot"
+                />
+                <div className="">
+                  <div
+                    id="imgCover2"
+                    className="bg-hilit-1 relative size-60"
+                  ></div>
+                  <div
+                    id="imgCover3"
+                    className="bg-2ndry-2 absolute top-0 size-60"
+                  ></div>
+                  <img
+                    className="absolute top-0 left-0 size-60 object-contain"
+                    id="imgCover"
+                    src={image}
+                    alt="profilepic"
+                  />
+                </div>
+              </div>
+              <div className="smallimage relative md:hidden">
+                {" "}
                 <div
-                  id="imgCover2"
-                  className="bg-hilit-1 relative size-60"
-                ></div>
-                <div
-                  id="imgCover3"
-                  className="bg-2ndry-2 absolute top-0 size-60"
+                  id=" "
+                  className="bg-2ndry-2 relative top-0 left-1/4 size-60"
                 ></div>
                 <img
-                  className="absolute top-0 left-0 size-60 object-contain"
-                  id="imgCover"
-                  src={image}
-                  alt="profilepic"
+                  className="absolute top-0 left-1/4 size-60 object-contain"
+                  id=""
+                  src={image2}
+                  alt="profilepic2"
                 />
               </div>
             </div>
@@ -126,9 +149,13 @@ const Home = () => {
           <header className="headsectdiv">
             <Titles htitle="about" />
             <div className="col-span-1">
-              <a href="#" className="border-2ndry-2 border-2 p-1">
-                info<span className="text-hilit-1 pr-1">~&gt;</span>
-              </a>  
+              <button className="btn2b absolute right-1/12">
+                <a href="#" className="border-2ndry-2 btn2 border-2 p-1">
+                  <span className="spn2">
+                    info<span className="text-hilit-1 pr-1">~&gt;</span>
+                  </span>
+                </a>
+              </button>
             </div>
           </header>
           <masala className="teext-base md:text-lg">
@@ -173,9 +200,14 @@ const Home = () => {
           <header className="headsectdiv">
             <Titles htitle="works" />
             <div>
-              <a href="#" className="border-2ndry-2 col-span-1 border-2 p-1">
-                View<span className="text-hilit-1 pr-1">~~&gt;</span>
-              </a>
+              <button className="btn2b absolute right-1/12">
+                <a href="#" className="border-2ndry-2 btn2 border-2 p-1">
+                  <span className="spn2">
+                    {" "}
+                    view<span className="text-hilit-1 pr-1">~&gt;</span>
+                  </span>
+                </a>
+              </button>
             </div>
           </header>
           <div id="projecttable" className="gap-6 md:grid md:grid-cols-3">
@@ -203,9 +235,14 @@ const Home = () => {
           <header className="headsectdiv">
             <Titles htitle="skills" />
             <div className="">
-              <a href="#" className="border-2ndry-2 border-2 p-1">
-                See<span className="text-hilit-1 pr-1">~~&gt;</span>
-              </a>
+              <button className="btn2b absolute right-1/12">
+                <a href="#" className="border-2ndry-2 btn2 border-2 p-1">
+                  <span className="spn2">
+                    {" "}
+                    see<span className="text-hilit-1 pr-1">~&gt;</span>
+                  </span>
+                </a>
+              </button>
             </div>
           </header>
           <div>

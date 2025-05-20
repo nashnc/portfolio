@@ -10,7 +10,7 @@ import tailwindlogo from "./Images/tailwindlogo.png";
 const SkillsFront = () => {
   return (
     <>
-      <div className="grid grid-cols-6 gap-3">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
         <div className="skillLogo">
           <img src={mongologo} alt="MongoDB" className="" />
         </div>
