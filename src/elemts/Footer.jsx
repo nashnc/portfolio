@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <>
-      <div className="relative container grid hidden px-20 lg:mx-auto lg:grid lg:grid-cols-2 lg:content-between">
+      <div className="relative container grid hidden px-20 lg:mx-auto lg:block lg:grid lg:grid-cols-2 lg:content-between">
         {/* <div className="col-span-2"></div> */}
         <div className="py-2">
           <div className="button-icon lg:col-span-1">

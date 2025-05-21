@@ -158,7 +158,7 @@ const Home = () => {
               </button>
             </div>
           </header>
-          <masala className="teext-base md:text-lg">
+          <masala className="text-base md:text-lg">
             <p className="py-5">
               Hey! You can call me
               <span className="text-hilit-1"> Nash</span>!!
