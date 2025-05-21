@@ -92,13 +92,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="smallimage relative md:hidden">
-                {" "}
-                <div
-                  id=" "
-                  className="bg-2ndry-2 relative top-0 left-1/4 size-60"
-                ></div>
                 <img
-                  className="absolute top-0 left-1/4 size-60 object-contain"
+                  className="border-2ndry-2 relative top-1 left-36 size-60 border-1 border-dashed object-contain"
                   id=""
                   src={image2}
                   alt="profilepic2"
@@ -149,7 +144,7 @@ const Home = () => {
           <header className="headsectdiv">
             <Titles htitle="about" />
             <div className="col-span-1">
-              <button className="btn2b absolute right-1/12">
+              <button className="btn2b absolute right-1/6">
                 <a href="#" className="border-2ndry-2 btn2 border-2 p-1">
                   <span className="spn2">
                     info<span className="text-hilit-1 pr-1">~&gt;</span>
@@ -200,7 +195,7 @@ const Home = () => {
           <header className="headsectdiv">
             <Titles htitle="works" />
             <div>
-              <button className="btn2b absolute right-1/12">
+              <button className="btn2b absolute right-1/6">
                 <a href="#" className="border-2ndry-2 btn2 border-2 p-1">
                   <span className="spn2">
                     {" "}
@@ -235,7 +230,7 @@ const Home = () => {
           <header className="headsectdiv">
             <Titles htitle="skills" />
             <div className="">
-              <button className="btn2b absolute right-1/12">
+              <button className="btn2b absolute right-1/6">
                 <a href="#" className="border-2ndry-2 btn2 border-2 p-1">
                   <span className="spn2">
                     {" "}
