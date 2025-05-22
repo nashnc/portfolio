@@ -17,7 +17,7 @@ const ContactMini = () => {
     {
       app: "e-mail",
       uid: "nash.nc@gmail.com",
-      logo: "https://img.icons8.com/?size=100&id=of3VL9FKzJuz&format=png&color=e5e7eb",
+      logo: "https://img.icons8.com/?size=100&id=QqtDTGEho4jP&format=png&color=e5e7eb",
       link: "mailto:nash.nc@gmail.com",
     },
   ];
@@ -28,22 +28,21 @@ const ContactMini = () => {
         <table className="border-2ndary-2 table-auto p-3">
           <tbody className="border-2 hover:rounded-xl">
             {contact.map((entry, index) => (
-              <div className="">
+              <div>
                 <tr key={index}>
                   <td className="p-3">
                     <img
-                      className="inline size-7"
+                      className="inline h-auto w-7 object-contain"
                       src={entry.logo}
                       alt={entry.app}
                     />
                   </td>
-                  <td>&nbsp; {entry.app} &nbsp;</td>
+                  <td>&nbsp;{entry.app} &nbsp;</td>
                   <td className="hover:text-hilit-1 p-3 hover:animate-bounce hover:text-2xl">
                     <a
                       href={entry.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className=""
                     >
                       {entry.uid}
                     </a>

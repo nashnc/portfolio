@@ -1,6 +1,5 @@
 import React from "react";
-const skillset = () => {
-  
+const Skillset = () => {
   const skillsets = [
     {
       id: "languages",
@@ -32,13 +31,19 @@ const skillset = () => {
     <div id="skillset">
       <div id="skillst" className="grid grid-cols-3 grid-rows-2 gap-2">
         {skillsets.map((skillset) => (
-          <table id={skillset.id} className="border-2ndry-2 border-2">
-            <tr className="border-2ndry-2 border-b-1">
-              <th>{skillset.title}</th>
-            </tr>
-            <tr className="border-2ndry-2 border-b-1 p-3">
-              <td> {skillset.softUsed.join(", ")}</td>
-            </tr>
+          <table id={skillset.id} className="">
+            <div className="border-2ndry-2 border-2 p-2 text-center">
+              <div className="border-b-1">
+                <tr className="border-2ndry-2">
+                  <th>{skillset.title}</th>
+                </tr>
+              </div>
+              <div>
+                <tr className="border-2ndry-2">
+                  <td> {skillset.softUsed.join(", ")}</td>
+                </tr>
+              </div>
+            </div>
           </table>
         ))}
       </div>
@@ -46,4 +51,4 @@ const skillset = () => {
   );
 };
 
-export default skillset;
+export default Skillset;

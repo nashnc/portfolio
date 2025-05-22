@@ -1,4 +1,5 @@
 import React from "react";
+
 import image from "./assets/sd.png";
 import image2 from "./assets/sd.png";
 import Titles from "./elemts/Titles";
@@ -9,13 +10,16 @@ import Dot from "./assets/Dots.svg";
 import Footer from "./elemts/Footer";
 import "./ButtonAnimation.css";
 import Projectmini from "./elemts/Projectmini";
+import Navbar from "./Navbar";
+import AboutMini from "./AboutMini";
 
 const Home = () => {
-  const mern = ["MongoDB", "Express.js", "React.js", "Node.js"];
+ 
 
   return (
     <>
-      <div className="container mx-auto cursor-default px-5 py-15 text-sm sm:px-10 md:px-15 md:text-lg lg:px-40 xl:px-60">
+      <Navbar />
+      <div className="mycontainer">
         <header className="">
           <div className="grid-col-2 grid items-center md:flex">
             <div className="relative pb-10 text-wrap">
@@ -125,33 +129,7 @@ const Home = () => {
               </button>
             </div>
           </header>
-          <masala className="text-base md:text-lg">
-            <p className="py-5">
-              Hey! You can call me
-              <span className="text-hilit-1"> Nash</span>!!
-            </p>
-            <p className="relative py-5">
-              I'm a <span className="text-hilit-1"> web developer</span>. I
-              prefer front end development, I have been trained for full-stack
-              in &nbsp;
-              <span className="xplain decoration-hilit-1 relative underline underline-offset-4">
-                MERN stack
-              </span>
-              <div className="hide text-hilit-1 bg-primary absolute p-3">
-                MERN stands for <span className="">{mern.join(", ")}</span>
-              </div>
-              &nbsp; development. I can develope responsive and user friendly
-              websites for you.
-            </p>
-            <p className="py-5">
-              Transforming my creativity and knowledge into awesome websites. I
-              am looking forward to work with you, to show my skills also to
-              sharpen them .
-            </p>
-            <p className="py-5">
-              I also try to keep me up-to-date with technologies
-            </p>
-          </masala>
+          <AboutMini />
           <div className="contactmebutton relative">
             <div className="border-hilit-1 group relative inline-block border-2 text-sm font-medium">
               <a href="#" className="size-4">

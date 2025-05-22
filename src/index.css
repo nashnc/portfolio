@@ -18,6 +18,7 @@
   --color-2ndry-1: #e5e7eb;
   --color-2ndry-2: #abb2bf;
   --color-hilit-1: #be0eec;
+  --color-hilit-2: #9e3dc1;
 }
 
 .firstLetterW::first-letter {
@@ -25,7 +26,11 @@
 }
 
 .skillLogo {
-  @apply object-contain border-2ndry-2 bg-primary rounded-2xl  lg:border-8 md:border-4 border-4 overflow-hidden
+  @apply object-contain border-2ndry-2 bg-primary rounded-2xl lg:border-8 md:border-4 border-4
+}
+
+.navilink {
+  @apply md:hover:text-hilit-2 md:dark:hover:text-hilit-2 text-primary dark:hover:bg-primary-2 block rounded-sm px-3 py-2 hover:bg-green-100 hover:text-xl md:p-0 md:hover:bg-transparent dark:text-white dark:hover:text-white md:dark:hover:bg-transparent
 }
 
 .projecttable {
@@ -46,4 +51,8 @@
 
 .headsectdiv {
   @apply grid grid-cols-4 gap-4 py-10 sm:gap-4 sm:py-10 md:grid-cols-6
+}
+
+.mycontainer {
+  @apply container mx-auto cursor-default px-5 py-5 text-sm sm:px-10 md:px-15 md:text-lg lg:px-40 xl:px-60
 }
