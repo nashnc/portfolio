@@ -187,7 +187,7 @@ const Home = () => {
           <masala className="text-lg">
             <p className="py-5">
               Hey! Am Avinash , you can call me
-              <span className="text-hilit-1"> Nash</span>!! 
+              <span className="text-hilit-1"> Nash</span>!!
             </p>
             <p className="relative py-5">
               I'm a <span className="text-hilit-1"> web developer</span>. I
