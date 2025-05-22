@@ -8,37 +8,9 @@ import SkillFront from "./elemts/SkillsFront";
 import Dot from "./assets/Dots.svg";
 import Footer from "./elemts/Footer";
 import "./ButtonAnimation.css";
+import Projectmini from "./elemts/Projectmini";
 
 const Home = () => {
-  const projects = [
-    {
-      id: "002",
-      softUsed: ["react.js", "css", "tailwind css"],
-      title: "Portfolio 2.0",
-      description: "The portfolio you are viewing right now ",
-    },
-    {
-      id: "001",
-      softUsed: [
-        "express.js",
-        "node.js",
-        "mongodb",
-        "html (ejs template)",
-        "bootstrap",
-        "react.js",
-        "css",
-      ],
-      title: "OTT Streaming Platform",
-      description: "Admin can upload movies, delete them, block users",
-    },
-
-    {
-      id: "003",
-      softUsed: ["bootstrap", "react.js", "css"],
-      title: "Bookmarking",
-      description: "A website to save and display bookmarks",
-    },
-  ];
   const mern = ["MongoDB", "Express.js", "React.js", "Node.js"];
 
   return (
@@ -93,7 +65,7 @@ const Home = () => {
               </div>
               <div className="smallimage relative md:hidden">
                 <img
-                  className="border-2ndry-2 relative top-1 left-36 size-60 border-1 border-dashed object-contain"
+                  className="border-2ndry-2 relative top-1 left-1/4 size-60 border-1 border-dashed object-contain"
                   id=""
                   src={image2}
                   alt="profilepic2"
@@ -205,25 +177,7 @@ const Home = () => {
               </button>
             </div>
           </header>
-          <div id="projecttable" className="gap-6 md:grid md:grid-cols-3">
-            {projects.map((project) => (
-              <div className="py-2">
-                <table id={project.id} className="border-2ndry-2 border-2 pl-2">
-                  <tr className="border-2ndry-2 border-b-1">
-                    <td className="mx-auto px-2">
-                      {project.softUsed.join(", ")}
-                    </td>
-                  </tr>
-                  <tr className="border-2ndry-2 border-b-1">
-                    <th> {project.title}</th>
-                  </tr>
-                  <tr className="">
-                    <td className="mx-auto px-2">{project.description}</td>
-                  </tr>
-                </table>
-              </div>
-            ))}
-          </div>
+          <Projectmini />
         </div>
         {/* skills */}
         <div id="skills">

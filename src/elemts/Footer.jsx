@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <>
-      <div className="relative container grid hidden px-20 lg:mx-auto lg:block lg:grid lg:grid-cols-2 lg:content-between">
+      <div className="relative container hidden px-20 lg:mx-auto lg:block lg:grid lg:grid-cols-2 lg:content-between">
         {/* <div className="col-span-2"></div> */}
         <div className="py-2">
           <div className="button-icon lg:col-span-1">
@@ -40,7 +40,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto grid size-70 grid-cols-2 gap-10 px-15 pt-10 lg:hidden">
+      <div className="mx-auto grid grid-cols-4 gap-5 px-15 py-5 lg:hidden">
+        <div className="col-span-1"></div>
         <div class="group relative col-span-1">
           <button>
             <a className="" href="https://github.com/nashnc" target="blank">

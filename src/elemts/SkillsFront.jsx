@@ -8,27 +8,55 @@ import postmanlogo from "./Images/postmanlogo.png";
 import tailwindlogo from "./Images/tailwindlogo.png";
 
 const SkillsFront = () => {
+  const logos = [
+    {
+      tool: "MongoDB",
+      image: mongologo,
+      tooltip: "MongoDB - NoSQL database used to store application data",
+    },
+    {
+      tool: "Express.js",
+      image: expresslogo,
+      tooltip: "Express.js - Backend framework used to build APIs",
+    },
+    {
+      tool: "React",
+      image: reactlogo,
+      tooltip: "React - JavaScript library for building user interfaces",
+    },
+    {
+      tool: "Node.js",
+      image: nodelogo,
+      tooltip: "Node.js - JavaScript runtime to run backend code",
+    },
+    {
+      tool: "Postman",
+      image: postmanlogo,
+      tooltip: "Postman - Tool used to test APIs and inspect responses",
+    },
+    {
+      tool: "Tailwind CSS",
+      image: tailwindlogo,
+      tooltip: "Tailwind CSS - Utility-first CSS framework for styling UIs",
+    },
+  ];
+
   return (
     <>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
-        <div className="skillLogo">
-          <img src={mongologo} alt="MongoDB" className="" />
-        </div>
-        <div className="skillLogo">
-          <img src={expresslogo} alt="Express" className="" />
-        </div>
-        <div className="skillLogo">
-          <img src={reactlogo} alt="React" className=" " />
-        </div>
-        <div className="skillLogo">
-          <img src={nodelogo} alt="Node.js" className="" />
-        </div>
-        <div className="skillLogo">
-          <img src={postmanlogo} alt="Postman" className="" />
-        </div>
-        <div className="skillLogo">
-          <img src={tailwindlogo} alt="Tailwind CSS" className="" />
-        </div>
+        {logos.map((logo, index) => (
+          <div className="group skillLogo relative" key={index}>
+            <img
+              src={logo.image}
+              alt={logo.tool}
+              className="hover:bg-primary-3 rounded-md"
+            />
+            {/* Tooltip */}
+            <div className="border-primary-3 bg-primary-2 invisible absolute bottom-full left-1/2 z-10 mb-2 w-max max-w-[200px] -translate-x-1/2 transform rounded-lg border-1 px-3 py-2 text-center text-sm font-medium text-white opacity-0 shadow-lg transition-opacity duration-300 group-hover:visible group-hover:opacity-100">
+              {logo.tooltip}
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

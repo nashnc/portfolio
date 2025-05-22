@@ -14,6 +14,7 @@
   --font-fira: "Fira Code", sans;
   --color-primary: #101010;
   --color-primary-2: #161318;
+  --color-primary-3: #282C33;
   --color-2ndry-1: #e5e7eb;
   --color-2ndry-2: #abb2bf;
   --color-hilit-1: #be0eec;
@@ -24,7 +25,11 @@
 }
 
 .skillLogo {
-  @apply object-contain border-2ndry-2 bg-primary rounded-2xl p-3 lg:border-8 md:border-4 border-4 border-2ndry-2
+  @apply object-contain border-2ndry-2 bg-primary rounded-2xl  lg:border-8 md:border-4 border-4 overflow-hidden
+}
+
+.projecttable {
+  @apply border-2ndry-2 overflow-hidden text-center hover:bg-primary-3 bg-primary rounded-md md:border-2 border-1
 }
 
 .head1 {
