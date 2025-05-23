@@ -13,10 +13,10 @@ const Navbar = () => {
     <nav className="dark:bg-primary border-green-200 bg-white pt-3">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         {/* Logo */}
-        <a href="#/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={logo} className="h-8" alt="Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            nashnc.is-a.dev
+            nashnc
           </span>
         </a>
 
@@ -51,22 +51,22 @@ const Navbar = () => {
         >
           <ul className="dark:border-primary-2 dark:bg-primary-3 md:dark:bg-primary mt-4 flex flex-col rounded-lg border border-green-100 bg-green-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse">
             <li>
-              <a href="#/" className="navilink">
+              <a href="/" className="navilink">
                 <span className="text-hilit-1">#</span>home
               </a>
             </li>
             <li>
-              <a href="#/about" className="navilink">
+              <a href="/about" className="navilink">
                 <span className="text-hilit-1">#</span>about
               </a>
             </li>
             <li>
-              <a href="#/projects" className="navilink">
+              <a href="/projects" className="navilink">
                 <span className="text-hilit-1">#</span>works
               </a>
             </li>
             <li>
-              <a href="#/contact" className="navilink">
+              <a href="/contact" className="navilink">
                 <span className="text-hilit-1">#</span>contact
               </a>
             </li>

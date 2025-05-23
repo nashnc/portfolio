@@ -1,6 +1,6 @@
 import React from "react";
 
-const ContactMini = () => {
+const ContactMini = ({ htitle }) => {
   const contact = [
     {
       app: "Telegram",
@@ -15,53 +15,58 @@ const ContactMini = () => {
       link: "https://discord.com/users/nashnc11", // Direct links require user ID; this will work only if `nashnc11` is your numeric ID.
     },
     {
-      app: "e-mail",
-      uid: "nash.nc@gmail.com",
+      app: "mail",
+      uid: "nash.nc@gmail",
       logo: "https://img.icons8.com/?size=100&id=QqtDTGEho4jP&format=png&color=e5e7eb",
       link: "mailto:nash.nc@gmail.com",
     },
   ];
 
-  return (
-    <div>
+  return (<>
+  
+  <div>
       <div className="mx-auto px-10">
         <table className="border-2ndary-2 table-auto p-3">
-          <tbody className="border-2 hover:rounded-xl">
-            {contact.map((entry, index) => (
-              <div>
-                <tr key={index}>
-                  <td className="p-3">
-                    <img
-                      className="inline h-auto w-7 object-contain"
-                      src={entry.logo}
-                      alt={entry.app}
-                    />
-                  </td>
-                  <td>&nbsp;{entry.app} &nbsp;</td>
-                  <td className="hover:text-hilit-1 p-3 hover:animate-bounce hover:text-2xl">
-                    <a
-                      href={entry.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {entry.uid}
-                    </a>
-                  </td>
-                </tr>
-              </div>
-            ))}
+          <tbody className="">
+            <div className="border-2 hover:rounded-xl">
+              {contact.map((entry, index) => (
+                <div>
+                  <tr key={index}>
+                    <td className="p-3">
+                      <img
+                        className="inline h-auto w-7 object-contain"
+                        src={entry.logo}
+                        alt={entry.app}
+                      />
+                    </td>
+                    <td>&nbsp;{entry.app} </td>
+                    <td className="hover:text-hilit-1 p-3 hover:animate-bounce hover:text-2xl">
+                      <a
+                        href={entry.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {entry.uid}
+                      </a>
+                    </td>
+                  </tr>
+                </div>
+              ))}
+            </div>
           </tbody>
         </table>
       </div>
-      <div className="contactmebutton relative pt-10 text-right">
-        <div className="border-hilit-1 group relative inline-block border-1 text-sm font-medium">
-          <a href="#" className="size-4">
-            <span className="line bg-primary size-3"></span>
-            <div className="bg-primary px-3 py-3"> Other...</div>
-          </a>
+      {htitle !== "contact" && (
+        <div className="contactmebutton relative pt-10 text-right">
+          <div className="border-hilit-1 group relative inline-block border-1 text-sm font-medium">
+            <a href="#" className="size-4">
+              <span className="line bg-primary size-3"></span>
+              <div className="bg-primary px-3 py-3"> Other...</div>
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </div></>
   );
 };
 
