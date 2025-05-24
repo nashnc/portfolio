@@ -11,18 +11,18 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="dark:bg-primary bg-2ndry-1 border-green-200 pt-3 shadow-sm ">
+    <nav className="dark:bg-primary bg-2ndry-1 border-green-200 pt-3 shadow-sm">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         {/* Logo */}
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse ">
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={logo} className="h-8" alt="Logo" />
-          <span className="dark:text-2ndry-1 self-center text-2xl font-semibold whitespace-nowrap ">
+          <span className="dark:text-2ndry-1 self-center text-2xl font-semibold whitespace-nowrap">
             nashnc
           </span>
         </a>
         {/* Buttons */}
         {/* Buttons */}
-        <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse ">
+        <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
           <div className="group relative inline-block">
             <LightBulb />
 
@@ -59,22 +59,22 @@ const Navbar = () => {
         >
           <ul className="dark:border-primary-2 dark:bg-primary-3 md:dark:bg-primary mt-4 flex flex-col rounded-lg border border-green-100 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
             <li>
-              <a href="/" className="navilink ">
+              <a href="/" className="navilink">
                 <span className="text-hilit-1">#</span>home
               </a>
             </li>
             <li>
-              <a href="/about" className="navilink">
+              <a href="#/about" className="navilink">
                 <span className="text-hilit-1">#</span>about
               </a>
             </li>
             <li>
-              <a href="/projects" className="navilink">
+              <a href="#/projects" className="navilink">
                 <span className="text-hilit-1">#</span>works
               </a>
             </li>
             <li>
-              <a href="/contact" className="navilink">
+              <a href="#/contact" className="navilink">
                 <span className="text-hilit-1">#</span>contact
               </a>
             </li>
