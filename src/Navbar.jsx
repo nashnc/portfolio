@@ -22,7 +22,7 @@ const Navbar = () => {
         </a>
         {/* Buttons */}
         {/* Buttons */}
-        <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
+        <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse ">
           <div className="group relative inline-block">
             <LightBulb />
 
