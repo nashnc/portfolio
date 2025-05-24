@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import image from "./assets/sd.png";
 import image2 from "./assets/sd.png";
 import Titles from "./elemts/Titles";
@@ -14,8 +14,6 @@ import Navbar from "./Navbar";
 import AboutMini from "./AboutMini";
 
 const Home = () => {
- 
-
   return (
     <>
       <Navbar />
@@ -33,7 +31,7 @@ const Home = () => {
                   coherent to your needs.
                 </h4>
               </div>
-              <p className="text-2ndry-2">
+              <p className="dark:text-2ndry-2 text-primary-2">
                 My Specialties
                 <ul className="list-disc pl-10">
                   <li>Front End Development </li>
@@ -80,8 +78,8 @@ const Home = () => {
           <div className="contactmebutton relative pt-10 pb-5">
             <div className="border-hilit-1 group relative inline-block border-2 text-sm font-medium">
               <a href="#contact" className="size-4">
-                <span className="line bg-primary size-3"></span>
-                <div className="bg-primary px-3 py-3">
+                <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
+                <div className="dark:bg-primary px-3 py-3">
                   {" "}
                   contact me{" "}
                   <img
@@ -97,18 +95,18 @@ const Home = () => {
           </div>
 
           <div className="relative text-right">
-            <div className="quote border-2ndry-2 lg:border-2ndry-2 border-1 lg:border-2 lg:pt-2 lg:pb-2 lg:text-right lg:text-2xl">
+            <div className="quote dark:border-2ndry-2 border-2ndry-3 border-1 lg:border-2 lg:pt-2 lg:pb-2 lg:text-right lg:text-2xl">
               <h3 className="">
                 <span className="">
                   Dedication, perseverance, patience, and focus, are basics
                   to&nbsp;
                 </span>
-                <span className="lg:border-2ndry-2 lg:block lg:border-t-2 lg:indent-[50%]">
+                <span className="lg:dark:border-2ndry-2 border-2ndry-3 lg:block lg:border-t-2 lg:indent-[50%]">
                   achieve anything in life &nbsp;
                 </span>
               </h3>
             </div>
-            <h4 className="border-2ndry-2 lg:text-l absolute right-0 border-1 pb-1 lg:right-0 lg:border-r-2 lg:border-b-2 lg:border-l-2">
+            <h4 className="dark:border-2ndry-2 border-2ndry-3 lg:text-l absolute right-0 border-1 pb-1 lg:right-0 lg:border-r-2 lg:border-b-2 lg:border-l-2">
               &nbsp; ___By Nash&nbsp;
             </h4>
           </div>
@@ -121,7 +119,10 @@ const Home = () => {
             <Titles htitle="about" />
             <div className="col-span-1">
               <button className="btn2b absolute right-1/6">
-                <a href="#" className="border-2ndry-2 btn2 border-2 p-1">
+                <a
+                  href="/about"
+                  className="dark:border-2ndry-2 border-2ndry-3 btn2 bg-2ndry-1 border-2 p-1"
+                >
                   <span className="spn2">
                     info<span className="text-hilit-1 pr-1">~&gt;</span>
                   </span>
@@ -129,12 +130,12 @@ const Home = () => {
               </button>
             </div>
           </header>
-          <AboutMini />
+          <AboutMini htitle="homeabout" />
           <div className="contactmebutton relative">
             <div className="border-hilit-1 group relative inline-block border-2 text-sm font-medium">
-              <a href="#" className="size-4">
-                <span className="line bg-primary size-3"></span>
-                <div className="bg-primary px-3 py-3"> Read more ...</div>
+              <a href="/about" className="size-4">
+                <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
+                <div className="dark:bg-primary px-3 py-3"> Read more ...</div>
               </a>
             </div>
           </div>
@@ -146,7 +147,10 @@ const Home = () => {
             <Titles htitle="works" />
             <div>
               <button className="btn2b absolute right-1/6">
-                <a href="#" className="border-2ndry-2 btn2 border-2 p-1">
+                <a
+                  href="/projects"
+                  className="border-2ndry-2 btn2 border-2 p-1"
+                >
                   <span className="spn2">
                     {" "}
                     view<span className="text-hilit-1 pr-1">~&gt;</span>
@@ -163,12 +167,15 @@ const Home = () => {
             <Titles htitle="skills" />
             <div className="">
               <button className="btn2b absolute right-1/6">
-                <a href="#" className="border-2ndry-2 btn2 border-2 p-1">
+                <Link
+                  to="/about#skillset"
+                  className="border-2ndry-2 btn2 border-2 p-1"
+                >
                   <span className="spn2">
                     {" "}
                     see<span className="text-hilit-1 pr-1">~&gt;</span>
                   </span>
-                </a>
+                </Link>
               </button>
             </div>
           </header>

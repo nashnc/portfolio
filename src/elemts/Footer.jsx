@@ -1,6 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Footer.css";
 const Footer = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Detect if `dark` class is present on <html>
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const isDark = document.documentElement.classList.contains("dark");
+      setIsDarkMode(isDark);
+    };
+
+    checkDarkMode(); // Initial check
+
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const color1 = isDarkMode ? "101010" : "e5e7eb";
+  const color2 = isDarkMode ? "e5e7eb" : "282C33";
   return (
     <>
       <div className="relative container hidden px-20 lg:mx-auto lg:block lg:grid lg:grid-cols-2 lg:content-between">
@@ -10,7 +32,7 @@ const Footer = () => {
             <div className="icon">
               <img
                 className="size-8"
-                src="https://img.icons8.com/?size=100&id=12598&format=png&color=000000"
+                src={`https://img.icons8.com/?size=100&id=12598&format=png&color=${color1}`}
                 alt=""
               />
             </div>
@@ -25,7 +47,7 @@ const Footer = () => {
             <div className="icon">
               <img
                 className="size-8"
-                src="https://img.icons8.com/?size=100&id=16166&format=png&color=000000"
+                src={`https://img.icons8.com/?size=100&id=16166&format=png&color=${color1}`}
                 alt=""
               />
             </div>
@@ -45,10 +67,12 @@ const Footer = () => {
         <div className="group relative col-span-1">
           <button>
             <a className="" href="https://github.com/nashnc" target="blank">
-              <img src="https://img.icons8.com/?size=100&id=12598&format=png&color=e5e7eb" />
+              <img
+                src={`https://img.icons8.com/?size=100&id=12598&format=png&color=${color2}`}
+              />
             </a>
           </button>
-          <span className="bg-primary absolute -top-14 left-[50%] z-20 origin-left -translate-x-[50%] scale-0 rounded-lg border border-gray-300 px-3 py-2 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+          <span className="dark:bg-primary bg-2ndry-2 absolute -top-14 left-[50%] z-20 origin-left -translate-x-[50%] scale-0 rounded-lg border border-gray-300 px-3 py-2 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
             GitHub<span></span>
           </span>
         </div>
@@ -59,10 +83,12 @@ const Footer = () => {
               href="https://www.linkedin.com/in/nashnc/"
               target="blank"
             >
-              <img src="https://img.icons8.com/?size=100&id=447&format=png&color=e5e7eb" />
+              <img
+                src={`https://img.icons8.com/?size=100&id=447&format=png&color=${color2}`}
+              />
             </a>
           </button>
-          <span className="bg-primary absolute -top-14 left-[50%] z-20 origin-left -translate-x-[50%] scale-0 rounded-lg border border-gray-300 px-3 py-2 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+          <span className="dark:bg-primary bg-2ndry-2 absolute -top-14 left-[50%] z-20 origin-left -translate-x-[50%] scale-0 rounded-lg border border-gray-300 px-3 py-2 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
             Linkedin<span></span>
           </span>
         </div>

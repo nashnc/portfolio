@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 /*  */
 /* @theme {
@@ -10,6 +11,7 @@
 .coin {
   @apply text-grape bg-amber-100 rounded-lg
 } */
+
 @theme {
   --font-fira: "Fira Code", sans;
   --color-primary: #101010;
@@ -26,15 +28,15 @@
 }
 
 .skillLogo {
-  @apply object-contain border-2ndry-2 bg-primary rounded-2xl lg:border-8 md:border-4 border-4
+  @apply object-contain border-2ndry-2 bg-primary-3 dark:bg-primary rounded-2xl lg:border-8 md:border-4 border-4
 }
 
 .navilink {
-  @apply md:hover:text-hilit-2 md:dark:hover:text-hilit-2 text-primary dark:hover:bg-primary-2 block rounded-sm px-3 py-2 hover:bg-green-100 hover:text-xl md:p-0 md:hover:bg-transparent dark:text-white dark:hover:text-white md:dark:hover:bg-transparent
+  @apply md:hover:text-hilit-2 md:dark:hover:text-hilit-2 text-primary hover:shadow-lg dark:hover:bg-primary-2 block rounded-sm px-3 py-2 hover:bg-green-100 hover:text-xl md:p-0 md:hover:bg-transparent dark:text-white dark:hover:text-white md:dark:hover:bg-transparent
 }
 
 .projecttable {
-  @apply border-2ndry-2 overflow-hidden text-center hover:bg-primary-3 bg-primary rounded-md md:border-2 border-1
+  @apply border-2ndry-2 hover:text-2ndry-1 shadow-lg dark:shadow-primary-2 dark:hover:shadow-primary-3 hover:shadow-xl/30  overflow-hidden text-center dark:hover:bg-primary-3 hover:bg-primary-3 rounded-md md:border-2 border-1
 }
 
 .head1 {

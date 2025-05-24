@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "./assets/vite.svg"; // Update path as needed
 import burger from "./assets/burger.svg"; // Use any burger icon
+import LightBulb from "./LightBulb";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,26 +11,33 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="dark:bg-primary border-green-200 bg-white pt-3">
+    <nav className="dark:bg-primary bg-2ndry-1 border-green-200 pt-3 shadow-sm ">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         {/* Logo */}
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse ">
           <img src={logo} className="h-8" alt="Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="dark:text-2ndry-1 self-center text-2xl font-semibold whitespace-nowrap ">
             nashnc
           </span>
         </a>
-
+        {/* Buttons */}
         {/* Buttons */}
         <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
-          <button
-            type="button"
-            className="hilit-2 hilit-1 rounded-lg px-4 py-2 text-center text-sm font-medium focus:ring-4 focus:outline-none"
-          >
-            Soon...
-          </button>
+          <div className="group relative inline-block">
+            <LightBulb />
+
+            {/* Tooltip */}
+            <div
+              className="text-2ndry-1 pointer-events-none absolute top-1/2 right-full mr-2 -translate-y-1/2 rounded bg-gray-900 px-2 py-1 text-xs whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              // no style attribute here - no delay
+            >
+              pull the chord!
+              <div className="absolute top-1/2 right-0 h-2 w-2 translate-x-full -translate-y-1/2 rotate-45 bg-gray-900"></div>
+            </div>
+          </div>
 
           {/* Toggle mobile menu */}
+
           <button
             onClick={toggleMenu}
             type="button"
@@ -49,9 +57,9 @@ const Navbar = () => {
           } w-full items-center justify-between md:order-1 md:flex md:w-auto`}
           id="navbar-cta"
         >
-          <ul className="dark:border-primary-2 dark:bg-primary-3 md:dark:bg-primary mt-4 flex flex-col rounded-lg border border-green-100 bg-green-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse">
+          <ul className="dark:border-primary-2 dark:bg-primary-3 md:dark:bg-primary mt-4 flex flex-col rounded-lg border border-green-100 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
             <li>
-              <a href="/" className="navilink">
+              <a href="/" className="navilink ">
                 <span className="text-hilit-1">#</span>home
               </a>
             </li>
