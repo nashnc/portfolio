@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import logo from "./assets/vite.svg"; // Update path as needed
 import burger from "./assets/burger.svg"; // Use any burger icon
 import LightBulb from "./LightBulb";
@@ -16,7 +18,7 @@ const Navbar = () => {
         {/* Logo */}
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={logo} className="h-8" alt="Logo" />
-          <span className="dark:text-2ndry-1 self-center text-2xl font-semibold whitespace-nowrap">
+          <span className="dark:text-2ndry-1 self-center whitespace-nowrap text-2xl font-semibold">
             nashnc
           </span>
         </a>
@@ -28,11 +30,11 @@ const Navbar = () => {
 
             {/* Tooltip */}
             <div
-              className="text-2ndry-1 pointer-events-none absolute top-1/2 right-full mr-2 -translate-y-1/2 rounded bg-gray-900 px-2 py-1 text-xs whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              className="text-2ndry-1 pointer-events-none absolute right-full top-1/2 mr-2 -translate-y-1/2 whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-xs opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               // no style attribute here - no delay
             >
               pull the chord!
-              <div className="absolute top-1/2 right-0 h-2 w-2 translate-x-full -translate-y-1/2 rotate-45 bg-gray-900"></div>
+              <div className="absolute right-0 top-1/2 h-2 w-2 -translate-y-1/2 translate-x-full rotate-45 bg-gray-900"></div>
             </div>
           </div>
 
@@ -41,7 +43,7 @@ const Navbar = () => {
           <button
             onClick={toggleMenu}
             type="button"
-            className="text-hilit-1 dark:hover:bg-primary-2 inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm hover:bg-green-100 focus:ring-2 focus:ring-green-200 focus:outline-none md:hidden dark:text-green-400 dark:focus:ring-green-600"
+            className="text-hilit-1 dark:hover:bg-primary-2 inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-200 md:hidden dark:text-green-400 dark:focus:ring-green-600"
             aria-controls="navbar-cta"
             aria-expanded={isMenuOpen}
           >
@@ -59,24 +61,24 @@ const Navbar = () => {
         >
           <ul className="dark:border-primary-2 dark:bg-primary-3 md:dark:bg-primary mt-4 flex flex-col rounded-lg border border-green-100 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
             <li>
-              <a href="/" className="navilink">
+              <Link to="/" className="navilink">
                 <span className="text-hilit-1">#</span>home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#/about" className="navilink">
+              <Link to="/about" className="navilink">
                 <span className="text-hilit-1">#</span>about
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#/projects" className="navilink">
+              <Link to="/projects" className="navilink">
                 <span className="text-hilit-1">#</span>works
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#/contact" className="navilink">
+              <Link to="/contact" className="navilink">
                 <span className="text-hilit-1">#</span>contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
