@@ -2,7 +2,6 @@
 .button-icon {
     display: flex;
     border: 3px solid #101010;
-    /* dark border for light mode */
     width: fit-content;
     height: fit-content;
     cursor: pointer;
@@ -10,7 +9,6 @@
 
 .icon {
     background-color: #101010;
-    /* dark bg for light mode */
     padding: 10px 10px 5px 10px;
 }
 
@@ -23,7 +21,6 @@
 
 .button-icon:hover {
     border-color: #be0eec;
-    /* darker purple for light mode */
 }
 
 .button-icon:hover .cube {
@@ -45,48 +42,38 @@
 
 .top {
     background: #be0eec;
-    /* darker purple */
     color: #101010;
-    /* dark text */
     transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
 }
 
 .front {
     background: #e5e7eb;
-    /* light bg */
     color: #101010;
-    /* dark text */
     transform: translate3d(0, 0, 1em);
 }
 
 
-
-/* Dark Mode overrides */
+/* 🌙 Dark Mode overrides */
 .dark .button-icon {
     border-color: #e5e7eb;
-    /* light border */
 }
 
 .dark .icon {
     background-color: #e5e7eb;
-    /* light bg */
 }
 
 .dark .button-icon:hover {
-    border-color: #be0eec;
-    /* bright purple */
+    border-color: #d74115;
+    /* ✅ replaced be0eec with d74115 */
 }
 
 .dark .top {
-    background: #be0eec;
-    /* bright purple */
+    background: #d74115;
+    /* ✅ replaced be0eec with d74115 */
     color: #e5e7eb;
-    /* light text */
 }
 
 .dark .front {
     background: #101010;
-    /* dark bg */
     color: #e5e7eb;
-    /* light text */
 }

@@ -63,7 +63,7 @@ const ContactMini = ({ htitle }) => {
                         />
                       </td>
                       <td>&nbsp;{entry.app} </td>
-                      <td className="hover:text-hilit-1 p-3 hover:animate-bounce hover:text-2xl">
+                      <td className="hover:text-lhilit-1 hover:dark:text-dhilit-1 p-3 hover:animate-bounce hover:text-2xl">
                         <a href={entry.link} target="_blank" rel="">
                           {entry.uid}
                         </a>
@@ -77,7 +77,7 @@ const ContactMini = ({ htitle }) => {
         </div>
         {htitle !== "contact" && (
           <div className="contactmebutton relative pt-10 text-right">
-            <div className="border-hilit-1 group relative inline-block border-2 text-sm font-medium">
+            <div className="border-lhilit-1 dark:border-dhilit-1 group relative inline-block border-2 text-sm font-medium">
               <a href="/contact" className="size-4">
                 <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
                 <div className="dark:bg-primary px-3 py-3"> Other...</div>

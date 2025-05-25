@@ -12,10 +12,13 @@ import "./ButtonAnimation.css";
 import Projectmini from "./elemts/Projectmini";
 import Navbar from "./Navbar";
 import AboutMini from "./AboutMini";
+import Quote from "./elemts/Quote";
 
 const Home = () => {
   return (
     <>
+       {/* <div className="fixed top-0 z-10 h-full w-full"></div> */}
+      <div className="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
       <Navbar />
       <div className="mycontainer">
         <header className="">
@@ -24,7 +27,7 @@ const Home = () => {
               <div className="">
                 <h1 className="head1">
                   Hey, I'm Avinash, an intuitive
-                  <span className="text-hilit-1"> web developer </span>
+                  <span className="texthilit1"> web developer </span>
                 </h1>
                 <h4 className="head4">
                   who develops responsive and interactive websites that are
@@ -51,7 +54,7 @@ const Home = () => {
                 <div className="">
                   <div
                     id="imgCover2"
-                    className="bg-hilit-1 relative size-60"
+                    className="bg-lhilit-1 dark:bg-dhilit-1 relative size-60"
                   ></div>
                   <div
                     id="imgCover3"
@@ -75,8 +78,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="contactmebutton relative pt-10 pb-5">
-            <div className="border-hilit-1 group relative inline-block border-2 text-sm font-medium">
+          {/* <div className="contactmebutton relative pt-10 pb-5">
+            <div className="border-lhilit-1 group relative inline-block border-2 text-sm font-medium">
               <a href="#contact" className="size-4">
                 <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
                 <div className="dark:bg-primary px-3 py-3">
@@ -92,24 +95,7 @@ const Home = () => {
                 </div>
               </a>
             </div>
-          </div>
-
-          <div className="relative text-right">
-            <div className="quote dark:border-2ndry-2 border-2ndry-3 border-1 lg:border-2 lg:pt-2 lg:pb-2 lg:text-right lg:text-2xl">
-              <h3 className="">
-                <span className="">
-                  Dedication, perseverance, patience, and focus, are basics
-                  to&nbsp;
-                </span>
-                <span className="lg:dark:border-2ndry-2 border-2ndry-3 lg:block lg:border-t-2 lg:indent-[50%]">
-                  achieve anything in life &nbsp;
-                </span>
-              </h3>
-            </div>
-            <h4 className="dark:border-2ndry-2 border-2ndry-3 lg:text-l absolute right-0 border-1 pb-1 lg:right-0 lg:border-r-2 lg:border-b-2 lg:border-l-2">
-              &nbsp; ___By Nash&nbsp;
-            </h4>
-          </div>
+          </div> */}
         </header>
         <br />
         <br />
@@ -118,27 +104,33 @@ const Home = () => {
           <header className="headsectdiv">
             <Titles htitle="about" />
             <div className="col-span-1">
-              <button className="btn2b absolute right-1/6">
+              {/* <button className="btn2b absolute right-1/6">
                 <a
                   href="/about"
                   className="dark:border-2ndry-2 border-2ndry-3 btn2 bg-2ndry-1 border-2 p-1"
                 >
                   <span className="spn2">
-                    info<span className="text-hilit-1 pr-1">~&gt;</span>
+                    info
+                    <span className="texthilit1 pr-1">
+                      ~&gt;
+                    </span>
                   </span>
                 </a>
-              </button>
+              </button> */}
             </div>
           </header>
           <AboutMini htitle="homeabout" />
           <div className="contactmebutton relative">
-            <div className="border-hilit-1 group relative inline-block border-2 text-sm font-medium">
-              <a href="/about" className="size-4">
+            <div className="border-lhilit-1 dark:border-dhilit-1 group relative inline-block border-2 text-sm font-medium">
+              <Link to="/about" className="size-4">
                 <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
                 <div className="dark:bg-primary px-3 py-3"> Read more ...</div>
-              </a>
+              </Link>
             </div>
           </div>
+          {/* quote */}
+          <Quote />
+          {/* quote */}
         </div>
         {/* projects */}
 
@@ -153,7 +145,8 @@ const Home = () => {
                 >
                   <span className="spn2">
                     {" "}
-                    view<span className="text-hilit-1 pr-1">~&gt;</span>
+                    view
+                    <span className="texthilit1 pr-1">~&gt;</span>
                   </span>
                 </a>
               </button>
@@ -173,7 +166,8 @@ const Home = () => {
                 >
                   <span className="spn2">
                     {" "}
-                    see<span className="text-hilit-1 pr-1">~&gt;</span>
+                    see
+                    <span className="texthilit1 pr-1">~&gt;</span>
                   </span>
                 </Link>
               </button>

@@ -70,8 +70,8 @@ const Home = () => {
           <div className="flex items-center">
             <div className="relative text-wrap">
               <h1 className="text-2xl font-bold sm:text-5xl">
-                Avinash is a<span className="text-hilit-1"> Node.js</span> and
-                <span className="text-hilit-1"> React.js </span>
+                Avinash is a<span className="text-lhilit-1"> Node.js</span> and
+                <span className="text-lhilit-1"> React.js </span>
                 full-stack developer
               </h1>
               <p className="text-2ndry-2">
@@ -83,7 +83,7 @@ const Home = () => {
               <div className="">
                 <div
                   id="imgCover2"
-                  className="bg-hilit-1 relative size-60"
+                  className="bg-lhilit-1 relative size-60"
                 ></div>
                 <div
                   id="imgCover3"
@@ -99,7 +99,7 @@ const Home = () => {
             </div>
           </div>
           <div className="conatmebutton pb-6 sm:pt-4">
-            <a href="#" className="border-hilit-1 bottom-0 border-2 px-2 py-1">
+            <a href="#" className="border-lhilit-1 bottom-0 border-2 px-2 py-1">
               contact me!
             </a>
           </div>
@@ -130,7 +130,7 @@ const Home = () => {
             <Titles htitle="projects" />
             <div>
               <a href="#" className="border-2ndry-2 border-2 p-1">
-                View <span className="text-hilit-1 pr-1">~~&gt;</span>
+                View <span className="text-lhilit-1 pr-1">~~&gt;</span>
               </a>
             </div>
           </header>
@@ -156,7 +156,7 @@ const Home = () => {
             <Titles htitle="skills" />
             <div>
               <a href="#" className="border-2ndry-2 border-2 p-1">
-                See <span className="text-hilit-1 pr-1">~~&gt;</span>
+                See <span className="text-lhilit-1 pr-1">~~&gt;</span>
               </a>
             </div>
           </header>
@@ -180,23 +180,23 @@ const Home = () => {
             <Titles htitle="about" />
             <div>
               <a href="#" className="border-2ndry-2 border-2 p-1">
-                info <span className="text-hilit-1 pr-1">~~&gt;</span>
+                info <span className="text-lhilit-1 pr-1">~~&gt;</span>
               </a>
             </div>
           </header>
           <masala className="text-lg">
             <p className="py-5">
               Hey! Am Avinash , you can call me
-              <span className="text-hilit-1"> Nash</span>!!
+              <span className="text-lhilit-1"> Nash</span>!!
             </p>
             <p className="relative py-5">
-              I'm a <span className="text-hilit-1"> web developer</span>. I
+              I'm a <span className="text-lhilit-1"> web developer</span>. I
               prefer front end development, I have been trained for full-stack
               in &nbsp;
-              <span className="xplain decoration-hilit-1 relative underline underline-offset-4">
+              <span className="xplain decoration-lhilit-1 relative underline underline-offset-4">
                 MERN stack
               </span>
-              <div className="hide text-hilit-1 bg-primary absolute p-3">
+              <div className="hide text-lhilit-1 bg-primary absolute p-3">
                 MERN stands for <span className="">{mern.join(", ")}</span>
               </div>
               &nbsp; development. I can develope responsive and user friendly
@@ -211,7 +211,7 @@ const Home = () => {
               I also try to keep me up-to-date with technologies
             </p>
           </masala>
-          <a href="#" className="border-hilit-1 border-2 p-1 text-sm">
+          <a href="#" className="border-lhilit-1 border-2 p-1 text-sm">
             Read more ...
           </a>
         </div>

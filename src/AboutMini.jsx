@@ -7,15 +7,15 @@ const AboutMini = ({ htitle }) => {
         <masala className="text-base md:text-lg">
           <p className="py-5">
             Hey! You can call me
-            <span className="text-hilit-1"> Nash</span>!!
+            <span className="texthilit1"> Nash</span>!!
           </p>
           <p className="relative py-5">
             I'm an <span className="font-bold"> aspiring web developer</span>. I
             with a strong foundation in the &nbsp;
-            <span className="xplain decoration-hilit-1 relative underline underline-offset-4">
+            <span className="xplain decoration-lhilit-1 dark:decoration-dhilit-1 underline-offset-4 dark:relative dark:underline">
               MERN stack
             </span>
-            <div className="hide text-hilit-1 dark:bg-primary bg-2ndry-1 absolute p-3">
+            <div className="hide texthilit1 dark:bg-primary bg-2ndry-1 absolute p-3">
               MERN stands for <span className="">{mern.join(", ")}</span>
             </div>
             &nbsp; As a recent full-stack development trainee, I’m eager to
@@ -43,15 +43,15 @@ const AboutMini = ({ htitle }) => {
         <masala className="text-base md:text-lg">
           <p className="py-5">
             Hey! You can call me
-            <span className="text-hilit-1"> Nash</span>!!
+            <span className="texthilit1"> Nash</span>!!
           </p>
           <p className="relative py-5">
             I'm an <span className="font-bold"> aspiring web developer</span>. I
             with a strong foundation in the &nbsp;
-            <span className="xplain decoration-hilit-1 relative underline underline-offset-4">
+            <span className="xplain decoration-lhilit-1 dark:decoration-dhilit-1 relative underline underline-offset-4">
               MERN stack
             </span>
-            <div className="hide text-hilit-1 dark:bg-primary bg-2ndry-1 absolute p-3">
+            <div className="hide texthilit1 dark:bg-primary bg-2ndry-1 absolute p-3">
               MERN stands for <span className="">{mern.join(", ")}</span>
             </div>
             &nbsp; As a recent full-stack development trainee, I’m eager to

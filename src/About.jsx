@@ -34,18 +34,18 @@ const About = () => {
     <>
       <Navbar />
       <div className="mycontainer scroll-smooth pb-10">
-        <h1 className="head1 pb-3">
-          <span className="text-hilit-1">/</span>about
+        <h1 id="about" className="head1 pb-3">
+          <span className="texthilit1">/</span>about
         </h1>
         <p>Quick about me...</p>
         <AboutMini />
         <h4 className="head4">
-          <span className="text-hilit-1">#</span>
+          <span className="texthilit1">#</span>
           skills
         </h4>
         <Skillset />
         <h4 className="head4">
-          <span className="text-hilit-1">#</span>
+          <span className="texthilit1">#</span>
           funfacts
         </h4>
         <div>
