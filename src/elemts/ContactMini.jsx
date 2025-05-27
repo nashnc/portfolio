@@ -45,48 +45,51 @@ const ContactMini = ({ htitle }) => {
     },
   ];
 
-  return (
-    <>
-      <div>
-        <div className="mx-auto px-10">
-          <table className="border-2ndary-2 table-auto p-3">
-            <tbody className="">
-              <div className="rounded-lg border-2 hover:rounded-xl">
-                {contact.map((entry, index) => (
-                  <div>
-                    <tr key={index}>
-                      <td className="p-3">
-                        <img
-                          className="fill-primary inline h-auto w-7 object-contain"
-                          src={entry.logo}
-                          alt={entry.app}
-                        />
-                      </td>
-                      <td>&nbsp;{entry.app} </td>
-                      <td className="hover:text-hilit-1 p-3 hover:animate-bounce hover:text-2xl">
-                        <a href={entry.link} target="_blank" rel="">
-                          {entry.uid}
-                        </a>
-                      </td>
-                    </tr>
-                  </div>
-                ))}
-              </div>
-            </tbody>
-          </table>
-        </div>
-        {htitle !== "contact" && (
-          <div className="contactmebutton relative pt-10 text-right">
-            <div className="border-hilit-1 group relative inline-block border-2 text-sm font-medium">
-              <a href="/contact" className="size-4">
-                <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
-                <div className="dark:bg-primary px-3 py-3"> Other...</div>
-              </a>
+  return (<>
+  
+  <div>
+      <div className="mx-auto px-10">
+        <table className="border-2ndary-2 table-auto p-3">
+          <tbody className="">
+            <div className="border-2 hover:rounded-xl">
+              {contact.map((entry, index) => (
+                <div>
+                  <tr key={index}>
+                    <td className="p-3">
+                      <img
+                        className="inline h-auto w-7 object-contain"
+                        src={entry.logo}
+                        alt={entry.app}
+                      />
+                    </td>
+                    <td>&nbsp;{entry.app} </td>
+                    <td className="hover:text-hilit-1 p-3 hover:animate-bounce hover:text-2xl">
+                      <a
+                        href={entry.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {entry.uid}
+                      </a>
+                    </td>
+                  </tr>
+                </div>
+              ))}
             </div>
-          </div>
-        )}
+          </tbody>
+        </table>
       </div>
-    </>
+      {htitle !== "contact" && (
+        <div className="contactmebutton relative pt-10 text-right">
+          <div className="border-hilit-1 group relative inline-block border-1 text-sm font-medium">
+            <a href="#" className="size-4">
+              <span className="line bg-primary size-3"></span>
+              <div className="bg-primary px-3 py-3"> Other...</div>
+            </a>
+          </div>
+        </div>
+      )}
+    </div></>
   );
 };
 

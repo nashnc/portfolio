@@ -29,7 +29,7 @@ const Skillset = () => {
   ];
   return (
     <div id="skillset">
-      <div id="skillst " className="grid grid-cols-3 grid-rows-2 gap-2">
+      <div id="skillst" className="grid grid-cols-3 grid-rows-2 gap-2">
         {skillsets.map((skillset) => (
           <table id={skillset.id} className="">
             <div className="dark:border-2ndry-2 border-primary-2 border-2 p-2 text-center">
