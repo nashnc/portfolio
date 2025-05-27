@@ -78,7 +78,7 @@ const ContactMini = ({ htitle }) => {
         {htitle !== "contact" && (
           <div className="contactmebutton relative pt-10 text-right">
             <div className="border-lhilit-1 dark:border-dhilit-1 group relative inline-block border-2 text-sm font-medium">
-              <a href="/contact" className="size-4">
+              <a href="/contact#contact" className="size-4">
                 <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
                 <div className="dark:bg-primary px-3 py-3"> Other...</div>
               </a>

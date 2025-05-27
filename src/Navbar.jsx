@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import nashlogodark from "./assets/nashdarklogo.svg"; // Update path as needed
 import nashlogolight from "./assets/nashlightlogo.svg"; // Update path as needed
 import burger from "./assets/burger.svg"; // Use any burger icon
+import toltvideo from "./assets/tootopvideo.gif";
 import LightBulb from "./LightBulb";
 
 const Navbar = () => {
@@ -42,21 +43,30 @@ const Navbar = () => {
         {/* Buttons */}
         {/* Buttons */}
         <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
+          {/* ttopp */}
           <div className="group relative inline-block">
-            <LightBulb />
+            {/* LightBulb Icon */}
+            <div>
+              <LightBulb />
+            </div>
 
-            {/* Tooltip */}
-            <div
-              className="text-2ndry-1 pointer-events-none absolute top-1/2 right-full mr-2 -translate-y-1/2 rounded px-2 py-1 text-xs whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-              // no style attribute here - no delay
-            >
-              pull the chord!
-              <div className="absolute top-1/2 right-0 h-2 w-2 translate-x-full -translate-y-1/2 rotate-45"></div>
+            {/* Text Tooltip */}
+            <div className="bg-primary-3 invisible absolute top-1/2 right-full z-10 mr-3 -translate-y-1/2 rounded px-3 py-1 text-sm whitespace-nowrap text-white opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100">
+              Pull the chord!
+              {/* Arrow */}
+              <div className="bg-primary-3 border-2ndry-2 absolute top-1/2 right-0 h-2 w-2 translate-x-full -translate-y-1/2 rotate-45 border-t border-r"></div>
+            </div>
+
+            {/* GIF Tooltip Below with viewport safety */}
+            <div className="invisible absolute top-full right-2 z-20 mt-2 h-32 w-48 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100">
+              <img
+                src={toltvideo}
+                alt="Tooltip animation"
+                className="h-32 w-48 rounded object-cover shadow-lg"
+              />
             </div>
           </div>
-
           {/* Toggle mobile menu */}
-
           <button
             onClick={toggleMenu}
             type="button"

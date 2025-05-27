@@ -30,3 +30,28 @@
   border-color: #ff7d16;
 
 }
+
+
+
+.bg {
+  color: #111111;
+  /* primary */
+  color: #101010;
+  /* primary-4 */
+  color: #161318;
+  /* primary-2 */
+  color: #282C33;
+  /* primary-3 */
+  color: #e5e7eb;
+  /* 2ndry-1 */
+  color: #abb2bf;
+  /* 2ndry-2 */
+  color: #be0eec;
+  /* light-highlight-1 */
+  color: #9e3dc1;
+  /* light-highlight-2 */
+  color: #d74115;
+  /* dark-highlight-1 */
+  color: #e66500;
+  /* dark-highlight-2 */
+}

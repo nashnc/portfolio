@@ -17,7 +17,7 @@ import Quote from "./elemts/Quote";
 const Home = () => {
   return (
     <>
-       {/* <div className="fixed top-0 z-10 h-full w-full"></div> */}
+      {/* <div className="fixed top-0 z-10 h-full w-full"></div> */}
       <div className="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
       <Navbar />
       <div className="mycontainer">
@@ -122,7 +122,7 @@ const Home = () => {
           <AboutMini htitle="homeabout" />
           <div className="contactmebutton relative">
             <div className="border-lhilit-1 dark:border-dhilit-1 group relative inline-block border-2 text-sm font-medium">
-              <Link to="/about" className="size-4">
+              <Link to="/about#about" className="size-4">
                 <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
                 <div className="dark:bg-primary px-3 py-3"> Read more ...</div>
               </Link>
@@ -139,8 +139,8 @@ const Home = () => {
             <Titles htitle="works" />
             <div>
               <button className="btn2b absolute right-1/6">
-                <a
-                  href="/projects"
+                <Link
+                  to="/projects#projects"
                   className="border-2ndry-2 btn2 border-2 p-1"
                 >
                   <span className="spn2">
@@ -148,7 +148,7 @@ const Home = () => {
                     view
                     <span className="texthilit1 pr-1">~&gt;</span>
                   </span>
-                </a>
+                </Link>
               </button>
             </div>
           </header>

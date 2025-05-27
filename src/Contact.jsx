@@ -9,7 +9,7 @@ const contact = () => {
     <>
       <Navbar />
       <div className="mycontainer pb-10">
-        <h1 className="head1 pb-3">
+        <h1 id="contact" className="head1 pb-3">
           <span className="texthilit1">/</span>contact
         </h1>
         <div className="">

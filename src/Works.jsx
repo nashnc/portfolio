@@ -45,7 +45,7 @@ const Projectmini = () => {
     <>
       <Navbar />
       <div className="mycontainer">
-        <h1 className="head1 py-3">
+        <h1 id="projects" className="head1 py-3">
           <span className="texthilit1 py-3">/</span>works
         </h1>
         <p>All my works ...</p>
