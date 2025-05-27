@@ -44,7 +44,7 @@
     /* height: 40px; */
     object-fit: cover;
     /* Ensures the image covers the area */
-    clip-path: polygon(0 28%, 78% 100%, 100% 0);
+    clip-path: polygon(5% 45%, 78% 100%, 100% 21%);
     /* Custom clip path */
     /* background: #b67575; */
 }
@@ -54,7 +54,18 @@
     /* height: 40px; */
     object-fit: cover;
     /* Ensures the image covers the area */
-    clip-path: polygon(0 28%, 78% 100%, 100% 0);
+    clip-path: polygon(5% 45%, 78% 100%, 100% 21%);
+    /* Custom clip path */
+    /* background: #b67575; */
+}
+
+#imgCoverTp {
+    /* trasparent image cover*/
+    /* width: 40px; */
+    /* height: 40px; */
+    object-fit: cover;
+    /* Ensures the image covers the area */
+    clip-path: polygon(0% 0%, 100% 0, 100% 21%, 78% 100%, 5% 45%);
     /* Custom clip path */
     /* background: #b67575; */
 }

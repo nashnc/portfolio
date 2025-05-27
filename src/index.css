@@ -14,13 +14,20 @@
 
 @theme {
   --font-fira: "Fira Code", sans;
-  --color-primary: #101010;
+  --color-primary: #111111;
+  --color-primary-4: #101010;
   --color-primary-2: #161318;
   --color-primary-3: #282C33;
   --color-2ndry-1: #e5e7eb;
   --color-2ndry-2: #abb2bf;
-  --color-hilit-1: #be0eec;
-  --color-hilit-2: #9e3dc1;
+  --color-lhilit-1: #be0eec;
+  --color-lhilit-2: #9e3dc1;
+  --color-dhilit-1: #d74115;
+  --color-dhilit-2: #e66500;
+}
+
+.preview {
+  @apply bg-lhilit-1 bg-lhilit-2 bg-dhilit-1 bg-dhilit-2
 }
 
 .firstLetterW::first-letter {
@@ -32,11 +39,11 @@
 }
 
 .navilink {
-  @apply md:hover:text-hilit-2 md:dark:hover:text-hilit-2 text-primary dark:hover:bg-primary-2 block rounded-sm px-3 py-2 hover:bg-green-100 hover:text-xl md:p-0 md:hover:bg-transparent dark:text-white dark:hover:text-white md:dark:hover:bg-transparent
+  @apply md:hover:text-lhilit-2 md:dark:hover:text-dhilit-2 text-primary hover:shadow-lg dark:hover:bg-primary-2 block rounded-sm px-3 py-2 hover:bg-fuchsia-100 hover:text-xl md:p-0 md:hover:bg-transparent dark:text-white dark:hover:text-white md:dark:hover:bg-transparent
 }
 
 .projecttable {
-  @apply border-2ndry-2 hover:text-2ndry-1 overflow-hidden text-center dark:hover:bg-primary-3 hover:bg-primary-3 rounded-md md:border-2 border-1
+  @apply border-2ndry-2 overflow-hidden text-center hover:bg-primary-3 bg-primary rounded-md md:border-2 border-1
 }
 
 .head1 {
@@ -57,4 +64,8 @@
 
 .mycontainer {
   @apply container mx-auto cursor-default px-5 py-5 text-sm sm:px-10 md:px-15 md:text-lg lg:px-40 xl:px-60
+}
+
+.texthilit1 {
+  @apply text-lhilit-1 dark:text-dhilit-1
 }
