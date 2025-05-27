@@ -1,4 +1,4 @@
-Here’s an analysis and elaboration of your current README, along with suggestions and missing elements to make it more comprehensive and professional:
+
 
 ---
 
@@ -23,17 +23,26 @@ Here’s an analysis and elaboration of your current README, along with suggesti
 
 ## 📋 Table of Contents
 
-- [About](#about)
-- [Demo](#demo)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
-- [Author](#author)
+- [Portfolio](#portfolio)
+  - [📋 Table of Contents](#-table-of-contents)
+  - [🧑‍💻 About](#-about)
+  - [🚀 Demo](#-demo)
+  - [✨ Features](#-features)
+  - [🖼️ Screenshots](#️-screenshots)
+  - [🛠️ Technologies Used](#️-technologies-used)
+  - [📦 Getting Started](#-getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Running Locally](#running-locally)
+    - [Building for Production](#building-for-production)
+    - [Deployment](#deployment)
+  - [📝 Usage](#-usage)
+  - [📁 Folder Structure](#-folder-structure)
+  - [🤝 Contributing](#-contributing)
+  - [📄 License](#-license)
+  - [👤 Author](#-author)
+  - [📬 Contact](#-contact)
+  - [🔗 Acknowledgements](#-acknowledgements)
 
 ---
 
