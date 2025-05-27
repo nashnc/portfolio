@@ -1,4 +1,6 @@
 import React from "react";
+import image from "./assets/sdalt.jpg";
+
 const AboutMini = ({ htitle }) => {
   const mern = ["MongoDB", "Express.js", "React.js", "Node.js"];
   return (
@@ -22,6 +24,14 @@ const AboutMini = ({ htitle }) => {
             apply my skills to real-world projects and grow into a confident,
             industry-ready developer.
           </p>
+          <div>
+            <img
+              className="float-right size-60 object-contain"
+              id=" "
+              src={image}
+              alt="profilepic"
+            />
+          </div>
           <p className="py-5">
             I love bringing ideas to life through clean, responsive, and
             user-friendly web interfaces. While I’ve trained across the full

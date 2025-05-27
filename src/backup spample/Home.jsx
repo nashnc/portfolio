@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import image from "./assets/sd.png";
-import image3 from "./assets/sdtra.png";
 import image2 from "./assets/sd.png";
 import Titles from "./elemts/Titles";
 import "./Home.css";
@@ -65,12 +64,6 @@ const Home = () => {
                     className="absolute top-0 left-0 size-60 object-contain"
                     id="imgCover"
                     src={image}
-                    alt="profilepic"
-                  />
-                  <img
-                    className="absolute top-0 left-0 size-60 object-contain"
-                    id="imgCoverTp"
-                    src={image3}
                     alt="profilepic"
                   />
                 </div>

@@ -50,16 +50,17 @@ const About = () => {
         </h4>
         <div>
           {funfacts.map((funfact, index) => (
-            <p className="text-base/10">
-              <span
-                className="dark:border-primary-3 border-2ndry-2 border-1 p-1"
+            <div className="mt-2 mr-2 inline-flex text-base/10 last:mr-0">
+              <div
+                className="dark:border-primary-3 border-2ndry-2 border-1 px-2"
                 key={index}
               >
-                {funfact}
-              </span>
-            </p>
+                <p> {funfact}</p>
+              </div>
+            </div>
           ))}
         </div>
+      
         &nbsp;
         <hr />
         <br />

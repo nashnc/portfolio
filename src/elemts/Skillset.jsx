@@ -29,6 +29,7 @@ const Skillset = () => {
   ];
   return (
     <div id="skillset">
+      {/* <div id="skillst " className=""> */}
       <div id="skillst " className="grid grid-cols-3 grid-rows-2 gap-2">
         {skillsets.map((skillset) => (
           <table id={skillset.id} className="">
