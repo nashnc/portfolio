@@ -1,17 +1,18 @@
-/* From Uiverse.io by aguerquin */
+/* Default Light Mode */
 .button-icon {
     display: flex;
-    border: 3px #e5e7eb solid;
+    border: 3px solid #101010;
+    /* dark border for light mode */
     width: fit-content;
     height: fit-content;
     cursor: pointer;
 }
 
 .icon {
-    background-color: #e5e7eb;
+    background-color: #101010;
+    /* dark bg for light mode */
     padding: 10px 10px 5px 10px;
 }
-
 
 .cube {
     transition: all 0.4s;
@@ -22,6 +23,7 @@
 
 .button-icon:hover {
     border-color: #be0eec;
+    /* darker purple for light mode */
 }
 
 .button-icon:hover .cube {
@@ -43,12 +45,48 @@
 
 .top {
     background: #be0eec;
-    color: #e5e7eb;
+    /* darker purple */
+    color: #101010;
+    /* dark text */
     transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
 }
 
 .front {
-    background: #222229;
-    color: #e5e7eb;
+    background: #e5e7eb;
+    /* light bg */
+    color: #101010;
+    /* dark text */
     transform: translate3d(0, 0, 1em);
+}
+
+
+
+/* Dark Mode overrides */
+.dark .button-icon {
+    border-color: #e5e7eb;
+    /* light border */
+}
+
+.dark .icon {
+    background-color: #e5e7eb;
+    /* light bg */
+}
+
+.dark .button-icon:hover {
+    border-color: #be0eec;
+    /* bright purple */
+}
+
+.dark .top {
+    background: #be0eec;
+    /* bright purple */
+    color: #e5e7eb;
+    /* light text */
+}
+
+.dark .front {
+    background: #101010;
+    /* dark bg */
+    color: #e5e7eb;
+    /* light text */
 }

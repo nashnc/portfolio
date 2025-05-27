@@ -2,6 +2,7 @@ import React from "react";
 import soon from "./assets/soon.png";
 import ContactMini from "./elemts/ContactMini";
 import Navbar from "./Navbar";
+import Footer from "./elemts/Footer";
 
 const contact = () => {
   return (
@@ -20,7 +21,14 @@ const contact = () => {
             <ContactMini htitle="contact" />
           </div>
         </div>
+        &nbsp;
+        <hr />
+        <br />
+        <Footer />
       </div>
+      &nbsp;
+      <br />
+      &nbsp;
     </>
   );
 };

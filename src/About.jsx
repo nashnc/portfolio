@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import AboutMini from "./AboutMini";
 import Skillset from "./elemts/Skillset";
+import Footer from "./elemts/Footer";
 
 const About = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      // Delay to ensure DOM is ready
+      const scrollToHash = () => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
+      // Wait one animation frame before scrolling
+      requestAnimationFrame(scrollToHash);
+    }
+  }, [location]);
   const funfacts = [
     "A cup of coffee is a ticket to heaven",
     "Speak English Malayalam and Tamil",
@@ -15,7 +33,7 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <div className="mycontainer pb-10">
+      <div className="mycontainer scroll-smooth pb-10">
         <h1 className="head1 pb-3">
           <span className="text-hilit-1">/</span>about
         </h1>
@@ -33,13 +51,23 @@ const About = () => {
         <div>
           {funfacts.map((funfact, index) => (
             <p className="text-base/10">
-              <span className="border-primary-3 border-1 p-1" key={index}>
+              <span
+                className="dark:border-primary-3 border-2ndry-2 border-1 p-1"
+                key={index}
+              >
                 {funfact}
               </span>
             </p>
           ))}
         </div>
+        &nbsp;
+        <hr />
+        <br />
+        <Footer />
       </div>
+      &nbsp;
+      <br />
+      &nbsp;
     </>
   );
 };
