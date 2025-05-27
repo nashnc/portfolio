@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "./assets/vite.svg"; // Update path as needed
 import burger from "./assets/burger.svg"; // Use any burger icon
+import LightBulb from "./LightBulb";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,17 +20,24 @@ const Navbar = () => {
             nashnc
           </span>
         </a>
-
+        {/* Buttons */}
         {/* Buttons */}
         <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
-          <button
-            type="button"
-            className="hilit-2 hilit-1 rounded-lg px-4 py-2 text-center text-sm font-medium focus:ring-4 focus:outline-none"
-          >
-            Soon...
-          </button>
+          <div className="group relative inline-block">
+            <LightBulb />
+
+            {/* Tooltip */}
+            <div
+              className="pointer-events-none absolute top-1/2 right-full mr-2 -translate-y-1/2 rounded bg-gray-900 px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              // no style attribute here - no delay
+            >
+              pull the chord!
+              <div className="absolute top-1/2 right-0 h-2 w-2 translate-x-full -translate-y-1/2 rotate-45 bg-gray-900"></div>
+            </div>
+          </div>
 
           {/* Toggle mobile menu */}
+
           <button
             onClick={toggleMenu}
             type="button"

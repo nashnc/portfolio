@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 /*  */
 /* @theme {
@@ -56,3 +57,4 @@
 .mycontainer {
   @apply container mx-auto cursor-default px-5 py-5 text-sm sm:px-10 md:px-15 md:text-lg lg:px-40 xl:px-60
 }
+
