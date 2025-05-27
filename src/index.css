@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
 
 /*  */
 /* @theme {
@@ -10,13 +11,23 @@
 .coin {
   @apply text-grape bg-amber-100 rounded-lg
 } */
+
 @theme {
   --font-fira: "Fira Code", sans;
-  --color-primary: #101010;
+  --color-primary: #111111;
+  --color-primary-4: #101010;
   --color-primary-2: #161318;
+  --color-primary-3: #282C33;
   --color-2ndry-1: #e5e7eb;
   --color-2ndry-2: #abb2bf;
-  --color-hilit-1: #be0eec;
+  --color-lhilit-1: #be0eec;
+  --color-lhilit-2: #9e3dc1;
+  --color-dhilit-1: #d74115;
+  --color-dhilit-2: #e66500;
+}
+
+.preview {
+  @apply bg-lhilit-1 bg-lhilit-2 bg-dhilit-1 bg-dhilit-2
 }
 
 .firstLetterW::first-letter {
@@ -24,7 +35,15 @@
 }
 
 .skillLogo {
-  @apply object-contain border-2ndry-2 bg-primary rounded-2xl p-3 lg:border-8 md:border-4 border-4 border-2ndry-2
+  @apply object-contain border-2ndry-2 bg-primary-3 dark:bg-primary rounded-2xl lg:border-8 md:border-4 border-4
+}
+
+.navilink {
+  @apply md:hover:text-lhilit-2 md:dark:hover:text-dhilit-2 text-primary hover:shadow-lg dark:hover:bg-primary-2 block rounded-sm px-3 py-2 hover:bg-fuchsia-100 hover:text-xl md:p-0 md:hover:bg-transparent dark:text-white dark:hover:text-white md:dark:hover:bg-transparent
+}
+
+.projecttable {
+  @apply border-2ndry-2 overflow-hidden text-center hover:bg-primary-3 bg-primary rounded-md md:border-2 border-1
 }
 
 .head1 {
@@ -42,3 +61,14 @@
 .headsectdiv {
   @apply grid grid-cols-4 gap-4 py-10 sm:gap-4 sm:py-10 md:grid-cols-6
 }
+
+.mycontainer {
+  @apply container mx-auto cursor-default px-5 py-5 text-sm sm:px-10 md:px-15 md:text-lg lg:px-40 xl:px-60
+}
+
+<<<<<<< HEAD
+=======
+.texthilit1 {
+  @apply text-lhilit-1 dark:text-dhilit-1
+}
+>>>>>>> eee784e70eb90c75e24ac6be3a849ef90d9cbc03

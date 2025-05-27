@@ -1,17 +1,24 @@
-/* From Uiverse.io by aguerquin */
+/* Default Light Mode */
 .button-icon {
     display: flex;
-    border: 3px #e5e7eb solid;
+    border: 3px solid #101010;
+<<<<<<< HEAD
+    /* dark border for light mode */
+=======
+>>>>>>> bcb839ea2152466eff1cc6652467edba91391859
     width: fit-content;
     height: fit-content;
     cursor: pointer;
 }
 
 .icon {
-    background-color: #e5e7eb;
+    background-color: #101010;
+<<<<<<< HEAD
+    /* dark bg for light mode */
+=======
+>>>>>>> bcb839ea2152466eff1cc6652467edba91391859
     padding: 10px 10px 5px 10px;
 }
-
 
 .cube {
     transition: all 0.4s;
@@ -22,6 +29,7 @@
 
 .button-icon:hover {
     border-color: #be0eec;
+    /* darker purple for light mode */
 }
 
 .button-icon:hover .cube {
@@ -43,12 +51,80 @@
 
 .top {
     background: #be0eec;
-    color: #e5e7eb;
+<<<<<<< HEAD
+    /* darker purple */
+    color: #101010;
+    /* dark text */
+=======
+    color: #101010;
+>>>>>>> bcb839ea2152466eff1cc6652467edba91391859
     transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
 }
 
 .front {
-    background: #222229;
-    color: #e5e7eb;
+    background: #e5e7eb;
+<<<<<<< HEAD
+    /* light bg */
+    color: #101010;
+    /* dark text */
+=======
+    color: #101010;
+>>>>>>> bcb839ea2152466eff1cc6652467edba91391859
     transform: translate3d(0, 0, 1em);
+}
+
+
+<<<<<<< HEAD
+
+/* Dark Mode overrides */
+.dark .button-icon {
+    border-color: #e5e7eb;
+    /* light border */
+=======
+/* 🌙 Dark Mode overrides */
+.dark .button-icon {
+    border-color: #e5e7eb;
+>>>>>>> bcb839ea2152466eff1cc6652467edba91391859
+}
+
+.dark .icon {
+    background-color: #e5e7eb;
+<<<<<<< HEAD
+    /* light bg */
+}
+
+.dark .button-icon:hover {
+    border-color: #be0eec;
+    /* bright purple */
+}
+
+.dark .top {
+    background: #be0eec;
+    /* bright purple */
+    color: #e5e7eb;
+    /* light text */
+=======
+}
+
+.dark .button-icon:hover {
+    border-color: #d74115;
+    /* ✅ replaced be0eec with d74115 */
+}
+
+.dark .top {
+    background: #d74115;
+    /* ✅ replaced be0eec with d74115 */
+    color: #e5e7eb;
+>>>>>>> bcb839ea2152466eff1cc6652467edba91391859
+}
+
+.dark .front {
+    background: #101010;
+<<<<<<< HEAD
+    /* dark bg */
+    color: #e5e7eb;
+    /* light text */
+=======
+    color: #e5e7eb;
+>>>>>>> bcb839ea2152466eff1cc6652467edba91391859
 }

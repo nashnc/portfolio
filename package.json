@@ -1,6 +1,6 @@
 {
   "name": "portfolionash",
-  "homepage": "https://nashnc.is-a.dev/",
+  "homepage": "https://nashnc.is-a.dev/#/",
   "private": true,
   "version": "2.0.0",
   "type": "module",
@@ -9,14 +9,22 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
-    "gh-pages": "^6.3.0",
+<<<<<<< HEAD
+=======
+    "framer-motion": "^12.12.2",
+    "gasp": "^0.0.2",
+>>>>>>> eee784e70eb90c75e24ac6be3a849ef90d9cbc03
+    "gsap": "^3.13.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-intersection-observer": "^9.16.0",
+    "react-router-dom": "^7.6.0",
+    "styled-components": "^6.1.18",
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
@@ -27,6 +35,7 @@
     "eslint": "^9.22.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
