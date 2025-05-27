@@ -6,6 +6,10 @@
 :root {
   --on: 0;
   --bg: hsl(calc(var(--on) * 220), calc(var(--on) * 13%), calc(6% + var(--on) * 85%));
+<<<<<<< HEAD
+=======
+  /* --bg: hsl(calc(var(--on) * 217), calc(var(--on) * 13%), calc(6% + var(--on) * 66%)); */
+>>>>>>> eee784e70eb90c75e24ac6be3a849ef90d9cbc03
   /* --bg: hsl(calc(200 - (var(--on) * 160)), calc((20 + (var(--on) * 50)) * 1%), calc((20 + (var(--on) * 60)) * 1%)); */
   --cord: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
   --stroke: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));

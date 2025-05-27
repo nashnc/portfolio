@@ -1,23 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ContactMini = ({ htitle }) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Detect if `dark` class is present on <html>
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const isDark = document.documentElement.classList.contains("dark");
+      setIsDarkMode(isDark);
+    };
+
+    checkDarkMode(); // Initial check
+
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  // const color = isDarkMode ? "282C33" : "e5e7eb";
+
+  const color = isDarkMode ? "e5e7eb" : "282C33";
   const contact = [
     {
       app: "Telegram",
       uid: "@nashnc11",
-      logo: "https://img.icons8.com/?size=100&id=TCnKnYZFoOzM&format=png&color=e5e7eb",
+      logo: `https://img.icons8.com/?size=100&id=TCnKnYZFoOzM&format=png&color=${color}`,
       link: "https://t.me/nashnc11",
     },
     {
       app: "Discord",
       uid: "nashnc11",
-      logo: "https://img.icons8.com/?size=100&id=25627&format=png&color=e5e7eb",
+      logo: `https://img.icons8.com/?size=100&id=25627&format=png&color=${color}`,
       link: "https://discord.com/users/nashnc11", // Direct links require user ID; this will work only if `nashnc11` is your numeric ID.
     },
     {
       app: "mail",
       uid: "nash.nc@gmail",
-      logo: "https://img.icons8.com/?size=100&id=QqtDTGEho4jP&format=png&color=e5e7eb",
+      logo: `https://img.icons8.com/?size=100&id=QqtDTGEho4jP&format=png&color=${color}`,
       link: "mailto:nash.nc@gmail.com",
     },
   ];

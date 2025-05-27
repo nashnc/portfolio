@@ -44,7 +44,7 @@ const Projectmini = () => {
       {projects.map((project) => (
         <div className="relative w-80 pb-4 sm:left-1/4 md:w-auto">
           <table className="">
-            <div id={project.id} className="projecttable">
+            <div id={project.id} className="projecttable ">
               <a href={project.link} target="blank">
                 <img
                   src={project.image}

@@ -38,8 +38,8 @@ const Home = () => {
           <div className="flex items-center">
             <div className="relative text-wrap">
               <h1 className="text-2xl font-bold sm:text-5xl">
-                Avinash is a<span className="text-hilit-1"> Node.js</span> and{" "}
-                <span className="text-hilit-1"> React.js </span>
+                Avinash is a<span className="text-lhilit-1"> Node.js</span> and{" "}
+                <span className="text-lhilit-1"> React.js </span>
                 full-stack developer
               </h1>
               <p className="text-2ndry-2">
@@ -52,7 +52,7 @@ const Home = () => {
             </div>
           </div>
           <div className="conatmebutton pb-6 sm:pt-4">
-            <a href="#" className="border-hilit-1 bottom-0 border-2 px-2 py-1">
+            <a href="#" className="border-lhilit-1 bottom-0 border-2 px-2 py-1">
               contact me!
             </a>
           </div>
@@ -81,10 +81,10 @@ const Home = () => {
         <div id="projects ">
           <header className="grid grid-cols-5 gap-4">
             <h2 className="col-span-1 text-3xl font-bold">
-              <span className="text-hilit-1">#</span>projects
+              <span className="text-lhilit-1">#</span>projects
             </h2>
             <div className="col-span-3 pt-4">
-              <div className="bg-hilit-1 h-1 w-auto"></div>
+              <div className="bg-lhilit-1 h-1 w-auto"></div>
             </div>
           </header>
           <div id="projecttable">

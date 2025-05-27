@@ -5,7 +5,7 @@ const Titles = ({ htitle }) => {
   return (
     <>
       <h2 className="head2">
-        <span className="text-hilit-1">#</span>
+        <span className="texthilit1">#</span>
         {htitle}
       </h2>
       {htitle.toLowerCase() === "contact" ? null : (

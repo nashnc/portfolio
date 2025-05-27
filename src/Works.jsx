@@ -3,6 +3,7 @@ import warehouse from "./elemts/Images/projectPics/warehouse.png";
 import port from "./elemts/Images/projectPics/port.png";
 import ott from "./elemts/Images/projectPics/ott.png";
 import Navbar from "./Navbar";
+import Footer from "./elemts/Footer";
 
 const Projectmini = () => {
   const projects = [
@@ -43,14 +44,13 @@ const Projectmini = () => {
   return (
     <>
       <Navbar />
-
       <div className="mycontainer">
-        <h1 className="head1 py-3">
-          <span className="text-hilit-1 py-3">/</span>works
+        <h1 id="projects" className="head1 py-3">
+          <span className="texthilit1 py-3">/</span>works
         </h1>
         <p>All my works ...</p>
         <h4 className="head4 py-3">
-          <span className="text-hilit-1">#</span>
+          <span className="texthilit1">#</span>
           fullstack
         </h4>
         <div id="projecttable" className="gap-6 md:grid md:grid-cols-3">
@@ -79,7 +79,14 @@ const Projectmini = () => {
             </div>
           ))}
         </div>
+        &nbsp;
+        <hr />
+        <br />
+        <Footer />
       </div>
+      &nbsp;
+      <br />
+      &nbsp;
     </>
   );
 };
