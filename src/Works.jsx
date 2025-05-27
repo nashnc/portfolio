@@ -4,6 +4,7 @@ import port from "./elemts/Images/projectPics/port.png";
 import ott from "./elemts/Images/projectPics/ott.png";
 import Navbar from "./Navbar";
 import Footer from "./elemts/Footer";
+import { motion } from "motion/react";
 
 const Projectmini = () => {
   const projects = [
@@ -48,14 +49,23 @@ const Projectmini = () => {
         <h1 id="projects" className="head1 py-3">
           <span className="texthilit1 py-3">/</span>works
         </h1>
-        <p>All my works ...</p>
+        <motion.p initial={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
+          All my works ...
+        </motion.p>
         <h4 className="head4 py-3">
           <span className="texthilit1">#</span>
           fullstack
         </h4>
         <div id="projecttable" className="gap-6 md:grid md:grid-cols-3">
           {projects.map((project) => (
-            <div className="w-80 pb-4 sm:left-1/4 md:w-auto">
+            <motion.div
+              //
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              transition={{ duration: 0.5 }}
+              //
+              className="w-80 pb-4 sm:left-1/4 md:w-auto"
+            >
               <table className="">
                 <div id={project.id} className="projecttable">
                   <a href={project.link} target="blank">
@@ -76,7 +86,7 @@ const Projectmini = () => {
                   </a>
                 </div>
               </table>
-            </div>
+            </motion.div>
           ))}
         </div>
         &nbsp;

@@ -2,6 +2,7 @@ import React from "react";
 import warehouse from "./Images/projectPics/warehouse.png";
 import port from "./Images/projectPics/port.png";
 import ott from "./Images/projectPics/ott.png";
+import { motion } from "framer-motion"; // Fix: use framer-motion here
 
 const Projectmini = () => {
   const projects = [
@@ -39,13 +40,27 @@ const Projectmini = () => {
     },
   ];
 
+  // Map project.id to initial motion positions
+  const directionMap = {
+    "002": { x: -100, y: 0 }, // from left
+    "001": { x: 0, y: 100 }, // from bottom
+    "003": { x: 100, y: 0 }, // from right
+  };
+
   return (
     <div id="projecttable" className="gap-6 md:grid md:grid-cols-3">
       {projects.map((project) => (
-        <div className="relative w-80 pb-4 sm:left-1/4 md:w-auto">
-          <table className="">
-            <div id={project.id} className="projecttable ">
-              <a href={project.link} target="blank">
+        <motion.div
+          key={project.id}
+          initial={{ opacity: 0, ...directionMap[project.id] }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="relative w-80 pb-4 sm:left-1/4 md:w-auto"
+        >
+          <table>
+            <div id={project.id} className="projecttable">
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -63,7 +78,7 @@ const Projectmini = () => {
               </a>
             </div>
           </table>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

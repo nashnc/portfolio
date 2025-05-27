@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const ContactMini = ({ htitle }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -49,14 +50,35 @@ const ContactMini = ({ htitle }) => {
     <>
       <div>
         <div className="mx-auto px-10">
+          <motion.p
+            //
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+            //
+            className="py-5 text-lg"
+          >
+            I'm looking forward to being a part of your team! Let me help you
+            develop your ideas into an internet reality.
+          </motion.p>
           <table className="border-2ndary-2 table-auto p-3">
             <tbody className="">
-              <div className="rounded-lg border-2 hover:rounded-xl">
+              <motion.div
+                //
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 100 }}
+                transition={{ duration: 0.5 }}
+                //
+                className="rounded-lg border-2 hover:rounded-xl"
+              >
                 {contact.map((entry, index) => (
                   <div>
                     <tr key={index}>
                       <td className="p-3">
-                        <img
+                        <motion.img
+                          //
+                          animate={{ rotate: 360 }}
+                          //
                           className="fill-primary inline h-auto w-7 object-contain"
                           src={entry.logo}
                           alt={entry.app}
@@ -71,7 +93,7 @@ const ContactMini = ({ htitle }) => {
                     </tr>
                   </div>
                 ))}
-              </div>
+              </motion.div>
             </tbody>
           </table>
         </div>

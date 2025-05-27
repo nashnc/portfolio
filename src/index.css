@@ -51,7 +51,7 @@
 }
 
 .head4 {
-  @apply font-bold text-xl xl:text-3xl md:text-2xl
+  @apply py-3 font-bold text-xl xl:text-3xl md:text-2xl
 }
 
 .head2 {
@@ -63,9 +63,11 @@
 }
 
 .mycontainer {
-  @apply container mx-auto cursor-default px-5 py-5 text-sm sm:px-10 md:px-15 md:text-lg lg:px-40 xl:px-60
+  @apply container overflow-x-hidden mx-auto cursor-default px-5 py-5 text-sm sm:px-10 md:px-15 md:text-lg lg:px-40 xl:px-60
 }
 
 .texthilit1 {
   @apply text-lhilit-1 dark:text-dhilit-1
 }
+
+

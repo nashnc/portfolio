@@ -1,4 +1,4 @@
-import React from "react";
+import { mixVisibility, motion } from "motion/react";
 import { Link } from "react-router-dom";
 import image from "./assets/sd.png";
 import image3 from "./assets/sdtra.png";
@@ -14,8 +14,17 @@ import Projectmini from "./elemts/Projectmini";
 import Navbar from "./Navbar";
 import AboutMini from "./AboutMini";
 import Quote from "./elemts/Quote";
+import { delay } from "motion";
 
 const Home = () => {
+  const container = (delay) => ({
+    hidden: { x: -100, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
+  });
+  const container2 = (delay) => ({
+    hidden: { x: 100, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: delay } },
+  });
   return (
     <>
       {/* <div className="fixed top-0 z-10 h-full w-full"></div> */}
@@ -26,48 +35,117 @@ const Home = () => {
           <div className="grid-col-2 grid items-center md:flex">
             <div className="relative pb-10 text-wrap">
               <div className="">
-                <h1 className="head1">
+                <motion.h1
+                  // framer
+                  variants={container(0)}
+                  initial="hidden"
+                  animate="visible"
+                  //framer
+                  className="head1"
+                >
                   Hey, I'm Avinash, an intuitive
-                  <span className="texthilit1"> web developer </span>
-                </h1>
-                <h4 className="head4">
+                  {" web devloper".split("").map((char, index) => (
+                    <motion.span
+                      //
+                      initial={{ opacity: 0, x: -100 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.4 }}
+                      //
+                      className="texthilit1"
+                      key={index}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </motion.h1>
+                <motion.h4
+                  // framer
+                  variants={container(0.5)}
+                  initial="hidden"
+                  animate="visible"
+                  //framer
+                  className="head4"
+                >
                   who develops responsive and interactive websites that are
                   coherent to your needs.
-                </h4>
+                </motion.h4>
               </div>
-              <p className="dark:text-2ndry-2 text-primary-2">
+              <motion.p
+                // framer
+                variants={container(1)}
+                initial="hidden"
+                animate="visible"
+                //framer
+                className="dark:text-2ndry-2 text-primary-2"
+              >
                 My Specialties
                 <ul className="list-disc pl-10">
                   <li>Front End Development </li>
                   <li>Full Stack (trained in MERN stack development)</li>
                 </ul>
-              </p>
-              Let us craft user-friendly websites together!
+              </motion.p>
+              <motion.span
+                // framer
+                variants={container(1.5)}
+                initial="hidden"
+                animate="visible"
+                //framer
+                className="text-2ndry-1"
+              >
+                {" "}
+                Let us craft user-friendly websites together!
+              </motion.span>
             </div>
             <div className="col-span-1">
               <div className="hidden md:relative md:block">
-                <img
+                <motion.img
+                  // framer
+                  variants={container2(1.9)}
+                  initial="hidden"
+                  animate="visible"
+                  //framer
+
                   className="absolute top-0 left-25 size-60 object-contain"
                   id="imgCover2dots"
                   src={Dot}
                   alt="Dot"
                 />
                 <div className="">
-                  <div
+                  <motion.div
+                    // framer
+                    variants={container2(1.7)}
+                    initial="hidden"
+                    animate="visible"
+                    //framer
                     id="imgCover2"
                     className="bg-lhilit-1 dark:bg-dhilit-1 relative size-60"
-                  ></div>
-                  <div
+                  ></motion.div>
+                  <motion.div
+                    // framer
+                    variants={container2(2.2)}
+                    initial="hidden"
+                    animate="visible"
+                    //framer
                     id="imgCover3"
                     className="bg-2ndry-2 absolute top-0 size-60"
-                  ></div>
-                  <img
+                  ></motion.div>
+                  <motion.img
+                    // framer
+                    variants={container2(2.2)}
+                    initial="hidden"
+                    animate="visible"
+                    //framer
                     className="absolute top-0 left-0 size-60 object-contain"
                     id="imgCover"
                     src={image}
                     alt="profilepic"
                   />
-                  <img
+                  <motion.img
+                    // framer
+                    variants={container2(2.2)}
+                    initial="hidden"
+                    animate="visible"
+                    //framer
                     className="absolute top-0 left-0 size-60 object-contain"
                     id="imgCoverTp"
                     src={image3}
@@ -85,24 +163,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-          {/* <div className="contactmebutton relative pt-10 pb-5">
-            <div className="border-lhilit-1 group relative inline-block border-2 text-sm font-medium">
-              <a href="#contact" className="size-4">
-                <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
-                <div className="dark:bg-primary px-3 py-3">
-                  {" "}
-                  contact me{" "}
-                  <img
-                    src="
-                    https://img.icons8.com/?size=100&id=Sh7F47sHSyUT&format=png&color=be0eec
-                 "
-                    alt="contactme"
-                    className="inline size-6"
-                  />
-                </div>
-              </a>
-            </div>
-          </div> */}
         </header>
         <br />
         <br />
@@ -110,30 +170,24 @@ const Home = () => {
         <div id="aboutme py-5">
           <header className="headsectdiv">
             <Titles htitle="about" />
-            <div className="col-span-1">
-              {/* <button className="btn2b absolute right-1/6">
-                <a
-                  href="/about"
-                  className="dark:border-2ndry-2 border-2ndry-3 btn2 bg-2ndry-1 border-2 p-1"
-                >
-                  <span className="spn2">
-                    info
-                    <span className="texthilit1 pr-1">
-                      ~&gt;
-                    </span>
-                  </span>
-                </a>
-              </button> */}
-            </div>
+            <div className="col-span-1"></div>
           </header>
           <AboutMini htitle="homeabout" />
           <div className="contactmebutton relative">
-            <div className="border-lhilit-1 dark:border-dhilit-1 group relative inline-block border-2 text-sm font-medium">
+            <motion.div
+              //
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 100 }}
+              transition={{ duration: 0.5 }}
+              //
+
+              className="border-lhilit-1 dark:border-dhilit-1 group relative left-3/4 inline-block border-2 text-sm font-medium"
+            >
               <Link to="/about#about" className="size-4">
                 <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
                 <div className="dark:bg-primary px-3 py-3"> Read more ...</div>
               </Link>
-            </div>
+            </motion.div>
           </div>
           {/* quote */}
           <Quote />
@@ -189,10 +243,7 @@ const Home = () => {
           <header className="headsectdiv">
             <Titles htitle="contact" />
           </header>
-          <p className="py-5 text-lg">
-            I'm looking forward to being a part of your team! Let me help you
-            develop your ideas into an internet reality.
-          </p>
+
           <ContactMini />
         </div>
         <hr />
