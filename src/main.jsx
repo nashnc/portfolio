@@ -10,4 +10,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <App />
     </HashRouter>
   </React.StrictMode>,
+<<<<<<< HEAD
 );
+=======
+);
+>>>>>>> eee784e70eb90c75e24ac6be3a849ef90d9cbc03

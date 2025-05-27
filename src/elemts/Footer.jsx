@@ -64,7 +64,11 @@ const Footer = () => {
       </div>
       <div className="mx-auto grid grid-cols-4 gap-5 px-15 py-5 lg:hidden">
         <div className="col-span-1"></div>
+<<<<<<< HEAD
+        <div class="group relative col-span-1">
+=======
         <div className="group relative col-span-1">
+>>>>>>> 7234fad3e89bca0104bbb8a03dd786e697cd9ed4
           <button>
             <a className="" href="https://github.com/nashnc" target="blank">
               <img

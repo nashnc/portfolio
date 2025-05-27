@@ -30,6 +30,7 @@ const Skillset = () => {
   ];
   return (
     <div id="skillset">
+<<<<<<< HEAD
       {/* <div id="skillst " className=""> */}
       <div id="skillst " className="grid grid-cols-3 grid-rows-2 gap-2">
         {skillsets.map(
@@ -59,6 +60,25 @@ const Skillset = () => {
             </table>
           ),
         )}
+=======
+      <div id="skillst" className="grid grid-cols-3 grid-rows-2 gap-2">
+        {skillsets.map((skillset) => (
+          <table id={skillset.id} className="">
+            <div className="dark:border-2ndry-2 border-primary-2 border-2 p-2 text-center">
+              <div className="border-b-1">
+                <tr className="border-2ndry-2">
+                  <th>{skillset.title}</th>
+                </tr>
+              </div>
+              <div>
+                <tr className="border-2ndry-2">
+                  <td> {skillset.softUsed.join(", ")}</td>
+                </tr>
+              </div>
+            </div>
+          </table>
+        ))}
+>>>>>>> 42916b9fd4faf5ea150ea570120a4d114be10fa1
       </div>
     </div>
   );

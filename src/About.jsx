@@ -42,9 +42,15 @@ const About = () => {
   return (
     <>
       <Navbar />
+<<<<<<< HEAD
       <div className=" mycontainer scroll-smooth pb-10">
         <h1 id="about" className="head1 pb-3">
           <span className="texthilit1">/</span>about
+=======
+      <div className="mycontainer pb-10">
+        <h1 className="head1 pb-3">
+          <span className="text-hilit-1">/</span>about
+>>>>>>> 42916b9fd4faf5ea150ea570120a4d114be10fa1
         </h1>
         <motion.p
           //
@@ -67,6 +73,7 @@ const About = () => {
         </h4>
         <div>
           {funfacts.map((funfact, index) => (
+<<<<<<< HEAD
             <motion.div
               //
               initial={{ opacity: 0, y: -100 }}
@@ -87,6 +94,15 @@ const About = () => {
         <hr />
         <br />
         <Footer />
+=======
+            <p className="text-base/10">
+              <span className="border-primary-3 border-1 p-1" key={index}>
+                {funfact}
+              </span>
+            </p>
+          ))}
+        </div>
+>>>>>>> 42916b9fd4faf5ea150ea570120a4d114be10fa1
       </div>
       &nbsp;
       <br />
