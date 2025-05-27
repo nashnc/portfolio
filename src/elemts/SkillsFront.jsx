@@ -45,8 +45,17 @@ const SkillsFront = () => {
     <>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
         {logos.map((logo, index) => (
-          <section className="skillLogo">
-            <div className="group relative" key={index}>
+          <section
+            className="skillLogo"
+            key={index}
+            style={{
+              animation:
+                index % 2 === 0
+                  ? "floatUpDown 4s ease-in-out infinite"
+                  : "floatDownUp 4s ease-in-out infinite",
+            }}
+          >
+            <div className="group relative cursor-pointer">
               <img
                 src={logo.image}
                 alt={logo.tool}
@@ -60,6 +69,20 @@ const SkillsFront = () => {
           </section>
         ))}
       </div>
+
+      <style>
+        {`
+          @keyframes floatUpDown {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+          }
+
+          @keyframes floatDownUp {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(15px); }
+          }
+        `}
+      </style>
     </>
   );
 };
