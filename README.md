@@ -1,42 +1,19 @@
-
 # Portfolio
 
 ---
 
-
-<!-- Awesome Badge -->
 [![Awesome](https://img.shields.io/badge/Awesome-Profile-blueviolet?logo=github)](https://github.com/nashnc/portfolio)
-
-<!-- Star Badge -->
 [![GitHub stars](https://img.shields.io/github/stars/nashnc/portfolio?style=social)](https://github.com/nashnc/portfolio/stargazers)
-
-<!-- Join Community Badge (GitHub Profile) -->
 [![Join the Community](https://img.shields.io/badge/Join%20My%20Community-@nashnc-ff69b4?logo=github)](https://github.com/nashnc)
-
-<!-- Curated List Badge -->
 [![Curated List](https://img.shields.io/badge/Curated%20List-GitHub%20Profile%20READMEs-orange?logo=github)](https://github.com/nashnc/portfolio)
-
-<!-- Stars Badge -->
 [![GitHub Stars](https://img.shields.io/github/stars/nashnc/portfolio?color=yellow&label=Stars)](https://github.com/nashnc/portfolio/stargazers)
-
-<!-- Forks Badge -->
 [![GitHub Forks](https://img.shields.io/github/forks/nashnc/portfolio?color=green&label=Forks)](https://github.com/nashnc/portfolio/fork)
-
-<!-- Pull Requests Badge -->
 [![Pull Requests](https://img.shields.io/github/issues-pr/nashnc/portfolio?label=Pull%20Requests)](https://github.com/nashnc/portfolio/pulls)
-
-<!-- Issues Badge -->
 [![Issues](https://img.shields.io/github/issues/nashnc/portfolio?label=Issues)](https://github.com/nashnc/portfolio/issues)
-
-<!-- GitHub Contributors Badge -->
 [![GitHub Contributors](https://img.shields.io/github/contributors/nashnc/portfolio?label=Contributors)](https://github.com/nashnc/portfolio/graphs/contributors)
-
-<!-- License Badge -->
 [![License](https://img.shields.io/github/license/nashnc/portfolio)](https://github.com/nashnc/portfolio/blob/main/LICENSE)
 
-
-
-
+---
 
 Welcome to my personal portfolio!  
 This project showcases my skills, projects, and professional background, built using modern web technologies.
