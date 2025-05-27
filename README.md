@@ -185,4 +185,6 @@ If you have any questions or suggestions, feel free to open an issue or contact 
 
 ---
 
+> Built with ❤️ by [@nashnc](https://github.com/nashnc)
+
 <sub>Inspired by <a href="https://figma.com/community/file/1164933568884615740/portfolio" target="_blank">this Figma  design by eliasdevis.github.io</a></sub>
