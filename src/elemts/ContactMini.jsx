@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
-const ContactMini = ({ htitle }) => {
+const ContactMini = ({ htitle, container, container2 }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Detect if `dark` class is present on <html>
@@ -49,11 +50,29 @@ const ContactMini = ({ htitle }) => {
     <>
       <div>
         <div className="mx-auto px-10">
+          <motion.p
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            transition={{ duration: 0.5 }}
+            className="py-5 text-lg"
+          >
+            I'm looking forward to being a part of your team! Let me help you
+            develop your ideas into an internet reality.
+          </motion.p>
           <table className="border-2ndary-2 table-auto p-3">
             <tbody className="">
-              <div className="rounded-lg border-2 hover:rounded-xl">
+              <motion.div
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 100 }}
+                transition={{ duration: 0.5 }}
+                className="rounded-lg border-2 hover:rounded-xl"
+              >
                 {contact.map((entry, index) => (
-                  <div>
+                  <motion.div
+                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    transition={{ duration: 0.7 + index * 0.5 }}
+                  >
                     <tr key={index}>
                       <td className="p-3">
                         <img
@@ -69,9 +88,9 @@ const ContactMini = ({ htitle }) => {
                         </a>
                       </td>
                     </tr>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </tbody>
           </table>
         </div>
@@ -80,7 +99,14 @@ const ContactMini = ({ htitle }) => {
             <div className="border-lhilit-1 dark:border-dhilit-1 group relative inline-block border-2 text-sm font-medium">
               <a href="/contact#contact" className="size-4">
                 <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
-                <div className="dark:bg-primary px-3 py-3"> Other...</div>
+                <motion.div
+                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: 100 }}
+                  transition={{ duration: 0.5 }}
+                  className="dark:bg-primary px-3 py-3"
+                >
+                  Other...
+                </motion.div>
               </a>
             </div>
           </div>

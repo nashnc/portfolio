@@ -1,12 +1,14 @@
 import React from "react";
 import image from "./assets/sdalt.jpg";
+import { motion } from "framer-motion";
 
-const AboutMini = ({ htitle }) => {
+const AboutMini = ({ htitle, container, container2 }) => {
+  // Remove internal container/container2, use props instead
   const mern = ["MongoDB", "Express.js", "React.js", "Node.js"];
   return (
     <>
       {htitle !== "homeabout" ? (
-        <masala className="text-base md:text-lg">
+        <div className="text-base md:text-lg">
           <p className="py-5">
             Hey! You can call me
             <span className="texthilit1"> Nash</span>!!
@@ -48,14 +50,25 @@ const AboutMini = ({ htitle }) => {
           <p className="py-5">
             Let’s connect and build something awesome together!
           </p>
-        </masala>
+        </div>
       ) : (
-        <masala className="text-base md:text-lg">
-          <p className="py-5">
+        <div className="text-base md:text-lg">
+          <motion.p
+            variants={container(0.9)}
+            initial="hidden"
+            animate="visible"
+            className="py-5"
+          >
             Hey! You can call me
             <span className="texthilit1"> Nash</span>!!
-          </p>
-          <p className="relative py-5">
+          </motion.p>
+          <motion.p
+            variants={container2(0.9)}
+            initial="hidden"
+            animate="visible"
+            className="py-5"
+            className="relative py-5"
+          >
             I'm an <span className="font-bold"> aspiring web developer</span>. I
             with a strong foundation in the &nbsp;
             <span className="xplain decoration-lhilit-1 dark:decoration-dhilit-1 relative underline underline-offset-4">
@@ -73,11 +86,16 @@ const AboutMini = ({ htitle }) => {
             latest web development trends. I’m excited to join a team where I
             can contribute, learn from experienced developers, and sharpen my
             skills every day
-          </p>
-          <p className="py-5">
+          </motion.p>
+          <motion.p
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+            className="py-5"
+          >
             Let’s connect and build something awesome together!
-          </p>
-        </masala>
+          </motion.p>
+        </div>
       )}
     </>
   );
