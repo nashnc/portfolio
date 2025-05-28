@@ -3,7 +3,6 @@ import Home from "./Home";
 import About from "./About";
 import Works from "./Works";
 import Contact from "./Contact";
-import contact from "./Contact";
 
 function App() {
   return (
@@ -11,7 +10,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/projects" element={<Works />} />
-      <Route path="/contact" element={<Contact  />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 }

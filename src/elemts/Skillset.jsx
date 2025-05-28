@@ -1,4 +1,5 @@
-import React from "react";
+import { motion } from "framer-motion";
+
 const Skillset = () => {
   const skillsets = [
     {
@@ -29,23 +30,18 @@ const Skillset = () => {
   ];
   return (
     <div id="skillset">
-      {/* <div id="skillst " className=""> */}
-      <div id="skillst " className="grid grid-cols-3 grid-rows-2 gap-2">
-        {skillsets.map((skillset) => (
-          <table id={skillset.id} className="">
-            <div className="dark:border-2ndry-2 border-primary-2 border-2 p-2 text-center">
-              <div className="border-b-1">
-                <tr className="border-2ndry-2">
-                  <th>{skillset.title}</th>
-                </tr>
-              </div>
-              <div>
-                <tr className="border-2ndry-2">
-                  <td> {skillset.softUsed.join(", ")}</td>
-                </tr>
-              </div>
-            </div>
-          </table>
+      <div className="grid grid-cols-3 grid-rows-2 gap-2">
+        {skillsets.map((skillset, index) => (
+          <motion.div
+            key={skillset.id}
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.7 + index * 0.5, ease: "easeIn" }}
+            className="dark:border-2ndry-2 border-primary-2 rounded border-2 p-2 text-center"
+          >
+            <div className="mb-2 border-b-1 font-bold">{skillset.title}</div>
+            <div>{skillset.softUsed.join(", ")}</div>
+          </motion.div>
         ))}
       </div>
     </div>

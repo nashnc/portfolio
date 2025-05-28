@@ -4,8 +4,9 @@ import port from "./elemts/Images/projectPics/port.png";
 import ott from "./elemts/Images/projectPics/ott.png";
 import Navbar from "./Navbar";
 import Footer from "./elemts/Footer";
+import { motion } from "framer-motion";
 
-const Projectmini = () => {
+const Project = () => {
   const projects = [
     {
       id: "002",
@@ -41,6 +42,27 @@ const Projectmini = () => {
     },
   ];
 
+  const container = (delay) => ({
+    hidden: { y: -100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, delay: delay },
+    },
+  });
+  const container2 = (delay) => ({
+    hidden: { x: 100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.5, delay: delay },
+    },
+  });
+  const initialVariants = [
+    { opacity: 0, x: -100, y: 0 }, // First card: from right
+    { opacity: 0, x: 0, y: 100 }, // Second card: from top
+    { opacity: 0, x: 100, y: 0 }, // Third card: from left
+  ];
   return (
     <>
       <Navbar />
@@ -48,14 +70,22 @@ const Projectmini = () => {
         <h1 id="projects" className="head1 py-3">
           <span className="texthilit1 py-3">/</span>works
         </h1>
-        <p>All my works ...</p>
+        <motion.p variants={container(0.5)} initial="hidden" animate="visible">
+          All my works ...
+        </motion.p>
         <h4 className="head4 py-3">
           <span className="texthilit1">#</span>
           fullstack
         </h4>
         <div id="projecttable" className="gap-6 md:grid md:grid-cols-3">
-          {projects.map((project) => (
-            <div className="w-80 pb-4 sm:left-1/4 md:w-auto">
+          {projects.map((project, idx) => (
+            <motion.div
+              key={project.id}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              initial={initialVariants[idx] || { opacity: 0 }}
+              transition={{ duration: 1 }}
+              className="w-80 pb-4 sm:left-1/4 md:w-auto"
+            >
               <table className="">
                 <div id={project.id} className="projecttable">
                   <a href={project.link} target="blank">
@@ -76,7 +106,7 @@ const Projectmini = () => {
                   </a>
                 </div>
               </table>
-            </div>
+            </motion.div>
           ))}
         </div>
         &nbsp;
@@ -91,4 +121,4 @@ const Projectmini = () => {
   );
 };
 
-export default Projectmini;
+export default Project;

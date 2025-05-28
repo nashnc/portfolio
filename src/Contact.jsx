@@ -13,10 +13,6 @@ const contact = () => {
           <span className="texthilit1">/</span>contact
         </h1>
         <div className="">
-          <p>
-            I am looking forward to work in your company feel free to contact
-            me{" "}
-          </p>
           <div className="">
             <ContactMini htitle="contact" />
           </div>
