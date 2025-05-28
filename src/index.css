@@ -43,7 +43,7 @@
 }
 
 .projecttable {
-  @apply border-2ndry-2 overflow-hidden text-center hover:bg-primary-3 bg-primary rounded-md md:border-2 border-1
+  @apply border-2ndry-2 hover:text-2ndry-1 shadow-lg dark:shadow-primary-2 dark:hover:shadow-primary-3 hover:shadow-xl/30 overflow-hidden text-center dark:hover:bg-primary-3 hover:bg-primary-3 rounded-md md:border-2 border-1
 }
 
 .head1 {
@@ -51,7 +51,7 @@
 }
 
 .head4 {
-  @apply py-3 font-bold text-xl xl:text-3xl md:text-2xl
+  @apply font-bold text-xl xl:text-3xl md:text-2xl
 }
 
 .head2 {
@@ -63,17 +63,9 @@
 }
 
 .mycontainer {
-  @apply container overflow-x-hidden mx-auto cursor-default px-5 py-5 text-sm sm:px-10 md:px-15 md:text-lg lg:px-40 xl:px-60
+  @apply container mx-auto cursor-default px-5 py-5 text-sm sm:px-10 md:px-15 md:text-lg lg:px-40 xl:px-60
 }
 
-<<<<<<< HEAD
-=======
 .texthilit1 {
   @apply text-lhilit-1 dark:text-dhilit-1
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> eee784e70eb90c75e24ac6be3a849ef90d9cbc03
->>>>>>> 42916b9fd4faf5ea150ea570120a4d114be10fa1

@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 import mongologo from "./Images/mognologo.png";
 import expresslogo from "./Images/expresslogo.png";
@@ -9,19 +8,6 @@ import postmanlogo from "./Images/postmanlogo.png";
 import tailwindlogo from "./Images/tailwindlogo.png";
 
 const SkillsFront = () => {
-  const iconVariants = (duration) => ({
-    initial: { y: -10 },
-    animate: {
-      y: [10, -10],
-      transition: {
-        duration: duration,
-        ease: "linear",
-        repeat: Infinity,
-        repeatType: "reverse",
-      },
-    },
-  });
-
   const logos = [
     {
       tool: "MongoDB",
@@ -56,58 +42,11 @@ const SkillsFront = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
-      {logos.map((logo, index) => {
-        const randomFactor = Math.random() * 0.5 + 0.5; // Between 0.5 and 1
-        const timer = 2.5 + index * randomFactor;
-
-        return (
-          <motion.div
-            //
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.5, delay: index * 0.3 }} // Now index is defined
-            //
-
-            key={index}
-          >
-            <motion.section
-              variants={iconVariants(timer)}
-              initial="initial"
-              animate="animate"
-              className="group skillLogo relative"
-            >
-              <div>
-                <img
-                  src={logo.image}
-                  alt={logo.tool}
-                  className="hover:bg-primary-3 rounded-md"
-                />
-                <div className="dark:border-primary-3 dark:bg-primary-2 border-2ndry-2 bg-2ndry-1 dark:text-2ndry-1 text-primary-2 invisible absolute bottom-full left-1/2 z-10 mb-2 w-max max-w-[200px] -translate-x-1/2 transform rounded-lg border-1 px-3 py-2 text-center text-sm font-medium opacity-0 shadow-lg transition-opacity duration-300 group-hover:visible group-hover:opacity-100">
-                  {logo.tooltip}
-                </div>
-              </div>
-            </motion.section>
-          </motion.div>
-        );
-      })}
-    </div>
-=======
     <>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
         {logos.map((logo, index) => (
-          <section
-            className="skillLogo"
-            key={index}
-            style={{
-              animation:
-                index % 2 === 0
-                  ? "floatUpDown 4s ease-in-out infinite"
-                  : "floatDownUp 4s ease-in-out infinite",
-            }}
-          >
-            <div className="group relative cursor-pointer">
+          <section className="skillLogo">
+            <div className="group relative" key={index}>
               <img
                 src={logo.image}
                 alt={logo.tool}
@@ -121,22 +60,7 @@ const SkillsFront = () => {
           </section>
         ))}
       </div>
-
-      <style>
-        {`
-          @keyframes floatUpDown {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-          }
-
-          @keyframes floatDownUp {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(15px); }
-          }
-        `}
-      </style>
     </>
->>>>>>> 42916b9fd4faf5ea150ea570120a4d114be10fa1
   );
 };
 

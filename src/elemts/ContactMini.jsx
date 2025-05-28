@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
 const ContactMini = ({ htitle }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -46,40 +45,18 @@ const ContactMini = ({ htitle }) => {
     },
   ];
 
-<<<<<<< HEAD
   return (
     <>
       <div>
         <div className="mx-auto px-10">
-          <motion.p
-            //
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.5 }}
-            //
-            className="py-5 text-lg"
-          >
-            I'm looking forward to being a part of your team! Let me help you
-            develop your ideas into an internet reality.
-          </motion.p>
           <table className="border-2ndary-2 table-auto p-3">
             <tbody className="">
-              <motion.div
-                //
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: 100 }}
-                transition={{ duration: 0.5 }}
-                //
-                className="rounded-lg border-2 hover:rounded-xl"
-              >
+              <div className="rounded-lg border-2 hover:rounded-xl">
                 {contact.map((entry, index) => (
                   <div>
                     <tr key={index}>
                       <td className="p-3">
-                        <motion.img
-                          //
-                          animate={{ rotate: 360 }}
-                          //
+                        <img
                           className="fill-primary inline h-auto w-7 object-contain"
                           src={entry.logo}
                           alt={entry.app}
@@ -94,7 +71,7 @@ const ContactMini = ({ htitle }) => {
                     </tr>
                   </div>
                 ))}
-              </motion.div>
+              </div>
             </tbody>
           </table>
         </div>
@@ -105,53 +82,11 @@ const ContactMini = ({ htitle }) => {
                 <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
                 <div className="dark:bg-primary px-3 py-3"> Other...</div>
               </a>
-=======
-  return (<>
-  
-  <div>
-      <div className="mx-auto px-10">
-        <table className="border-2ndary-2 table-auto p-3">
-          <tbody className="">
-            <div className="border-2 hover:rounded-xl">
-              {contact.map((entry, index) => (
-                <div>
-                  <tr key={index}>
-                    <td className="p-3">
-                      <img
-                        className="inline h-auto w-7 object-contain"
-                        src={entry.logo}
-                        alt={entry.app}
-                      />
-                    </td>
-                    <td>&nbsp;{entry.app} </td>
-                    <td className="hover:text-hilit-1 p-3 hover:animate-bounce hover:text-2xl">
-                      <a
-                        href={entry.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {entry.uid}
-                      </a>
-                    </td>
-                  </tr>
-                </div>
-              ))}
->>>>>>> 42916b9fd4faf5ea150ea570120a4d114be10fa1
             </div>
-          </tbody>
-        </table>
-      </div>
-      {htitle !== "contact" && (
-        <div className="contactmebutton relative pt-10 text-right">
-          <div className="border-hilit-1 group relative inline-block border-1 text-sm font-medium">
-            <a href="#" className="size-4">
-              <span className="line bg-primary size-3"></span>
-              <div className="bg-primary px-3 py-3"> Other...</div>
-            </a>
           </div>
-        </div>
-      )}
-    </div></>
+        )}
+      </div>
+    </>
   );
 };
 
