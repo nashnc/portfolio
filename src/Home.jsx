@@ -1,9 +1,11 @@
+"use client";
+
 import React from "react";
 import { Link } from "react-router-dom";
 import image from "./assets/sd.png";
 import image3 from "./assets/sdtra.png";
 import image2 from "./assets/sd.png";
-import Titles from "./elemts/Titles";
+import Titles from "./elemts/TitlesHome";
 import "./Home.css";
 import ContactMini from "./elemts/ContactMini";
 import SkillFront from "./elemts/SkillsFront";
@@ -14,7 +16,28 @@ import Projectmini from "./elemts/Projectmini";
 import Navbar from "./Navbar";
 import AboutMini from "./AboutMini";
 import Quote from "./elemts/Quote";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+
+// TypingEffect Component
+function TypingEffect({ text = " web developer" }) {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <span ref={ref} className="texthilit1">
+      {text.split("").map((letter, index) => (
+        <motion.span
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.2, delay: 2 + index * 0.3 }}
+        >
+          {letter}
+        </motion.span>
+      ))}
+    </span>
+  );
+}
 
 const Home = () => {
   const container = (delay) => ({
@@ -50,8 +73,10 @@ const Home = () => {
                   className="head1"
                 >
                   Hey, I'm Avinash, an intuitive
-                  <span className="texthilit1"> web developer </span>
                 </motion.h1>
+                <div className="head1">
+                  <TypingEffect text=" web developer" />
+                </div>
                 <motion.h4
                   variants={container(0.7)}
                   initial="hidden"
@@ -152,7 +177,6 @@ const Home = () => {
             <Titles htitle="about" />
             <div className="col-span-1"></div>
           </header>
-          {/* Pass container and container2 as props */}
           <AboutMini
             htitle="homeabout"
             container={container}
@@ -185,7 +209,7 @@ const Home = () => {
                   <span className="spn2">
                     {" "}
                     view
-                    <span className="texthilit1 pr-1">~&gt;</span>
+                    <span className="texthilit1 pr-1">~></span>
                   </span>
                 </Link>
               </button>
@@ -205,7 +229,7 @@ const Home = () => {
                   <span className="spn2">
                     {" "}
                     see
-                    <span className="texthilit1 pr-1">~&gt;</span>
+                    <span className="texthilit1 pr-1">~></span>
                   </span>
                 </Link>
               </button>
@@ -219,16 +243,13 @@ const Home = () => {
           <header className="headsectdiv">
             <Titles htitle="contact" />
           </header>
-
           <ContactMini container={container} container2={container2} />
         </div>
         <hr />
         <br />
         <Footer />
       </div>
-      &nbsp;
       <br />
-      &nbsp;
     </>
   );
 };

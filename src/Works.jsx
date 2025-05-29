@@ -5,6 +5,9 @@ import ott from "./elemts/Images/projectPics/ott.png";
 import Navbar from "./Navbar";
 import Footer from "./elemts/Footer";
 import { motion } from "framer-motion";
+import Titles from "./elemts/TitlesOther";
+import TitlesS from "./elemts/TitlesSlash";
+
 
 const Project = () => {
   const projects = [
@@ -67,16 +70,13 @@ const Project = () => {
     <>
       <Navbar />
       <div className="mycontainer">
-        <h1 id="projects" className="head1 py-3">
-          <span className="texthilit1 py-3">/</span>works
-        </h1>
+        <TitlesS htitle="works" />
         <motion.p variants={container(0.5)} initial="hidden" animate="visible">
           All my works ...
         </motion.p>
-        <h4 className="head4 py-3">
-          <span className="texthilit1">#</span>
-          fullstack
-        </h4>
+        <section className="headsectdiv">
+          <Titles htitle="fullstack" />
+        </section>
         <div id="projecttable" className="gap-6 md:grid md:grid-cols-3">
           {projects.map((project, idx) => (
             <motion.div

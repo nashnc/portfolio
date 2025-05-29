@@ -96,19 +96,17 @@ const ContactMini = ({ htitle, container, container2 }) => {
         </div>
         {htitle !== "contact" && (
           <div className="contactmebutton relative pt-10 text-right">
-            <div className="border-lhilit-1 dark:border-dhilit-1 group relative inline-block border-2 text-sm font-medium">
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 100 }}
+              transition={{ duration: 0.5 }}
+              className="border-lhilit-1 dark:border-dhilit-1 group relative inline-block border-2 text-sm font-medium"
+            >
               <a href="/contact#contact" className="size-4">
                 <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
-                <motion.div
-                  whileInView={{ opacity: 1, x: 0 }}
-                  initial={{ opacity: 0, x: 100 }}
-                  transition={{ duration: 0.5 }}
-                  className="dark:bg-primary px-3 py-3"
-                >
-                  Other...
-                </motion.div>
+                <div className="dark:bg-primary px-3 py-3">Other...</div>
               </a>
-            </div>
+            </motion.div>
           </div>
         )}
       </div>

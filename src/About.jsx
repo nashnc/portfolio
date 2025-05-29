@@ -1,4 +1,7 @@
 import React, { useEffect } from "react";
+import Titles from "./elemts/TitlesOther";
+import TitlesS from "./elemts/TitlesSlash";
+
 import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import AboutMini from "./AboutMini";
@@ -56,22 +59,18 @@ const About = () => {
     <>
       <Navbar />
       <div className="mycontainer scroll-smooth pb-10">
-        <h1 id="about" className="head1 pb-3">
-          <span className="texthilit1">/</span>about
-        </h1>
+        <TitlesS htitle="about" />
         <motion.p variants={container2(0.5)} initial="hidden" animate="visible">
           Quick about me...
         </motion.p>
         <AboutMini container={container} container2={container2} />
-        <h4 className="head4 py-3">
-          <span className="texthilit1">#</span>
-          skills
-        </h4>
+        <section className="headsectdiv">
+          <Titles htitle="skills" />
+        </section>
         <Skillset />
-        <h4 className="head4 py-5">
-          <span className="texthilit1">#</span>
-          funfacts
-        </h4>
+        <section className="headsectdiv py-5">
+          <Titles htitle="funfacts" />
+        </section>
         <div>
           {funfacts.map((funfact, index) => (
             <div
@@ -79,8 +78,8 @@ const About = () => {
               key={index}
             >
               <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -100 }}
                 transition={{ duration: getRandomDuration() }}
                 className="dark:border-primary-3 border-2ndry-2 border-1 px-2"
               >
