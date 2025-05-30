@@ -178,7 +178,7 @@ npm run preview  # Preview production build
 npm run deploy   # Deploy to GitHub Pages
 ```
 
-Project Structure:
+<!-- Project Structure:
 ```
 portfolio/
 ├── src/
@@ -189,7 +189,7 @@ portfolio/
 │   └── animations/     # Animation configurations
 ├── public/             # Static files
 └── vite.config.js      # Vite configuration
-```
+``` -->
 
 ---
 

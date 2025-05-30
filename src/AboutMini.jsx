@@ -1,9 +1,12 @@
 import React from "react";
 import image from "./assets/sdalt.jpg";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 const AboutMini = ({ htitle, container, container2 }) => {
   const mern = ["MongoDB", "Express.js", "React.js", "Node.js"];
+  const isMobile = useMediaQuery({ maxWidth: 950 });
+  
   return (
     <>
       {htitle !== "homeabout" ? (
@@ -31,7 +34,7 @@ const AboutMini = ({ htitle, container, container2 }) => {
             <div className="hide texthilit1 dark:bg-primary bg-2ndry-1 absolute p-3">
               MERN stands for <span>{mern.join(", ")}</span>
             </div>
-            &nbsp;As a recent full-stack development trainee, I’m eager to apply
+            &nbsp;As a recent full-stack development trainee, I'm eager to apply
             my skills to real-world projects and grow into a confident,
             industry-ready developer.
           </motion.p>
@@ -53,29 +56,45 @@ const AboutMini = ({ htitle, container, container2 }) => {
             className="py-5"
           >
             I love bringing ideas to life through clean, responsive, and
-            user-friendly web interfaces. While I’ve trained across the full
-            stack, I’m especially passionate about front-end development and
+            user-friendly web interfaces. While I've trained across the full
+            stack, I'm especially passionate about front-end development and
             creating smooth, engaging user experiences.
           </motion.p>
           <motion.p
-            variants={container(1.5)}
-            initial="hidden"
-            animate="visible"
+            {...(isMobile
+              ? {
+                  whileInView: { opacity: 1, x: 0 },
+                  initial: { opacity: 0, x: -100 },
+                  transition: { duration: 0.5 },
+                }
+              : {
+                  variants: container(1.5),
+                  initial: "hidden",
+                  animate: "visible",
+                })}
             className="py-5"
           >
-            As a fresher, I’m constantly learning, building side projects, and
+            As a fresher, I'm constantly learning, building side projects, and
             keeping myself updated with the latest trends and tools in web
-            development. I’m excited about opportunities where I can learn from
+            development. I'm excited about opportunities where I can learn from
             experienced teams, contribute meaningfully, and sharpen my skills
             every day.
           </motion.p>
           <motion.p
-            variants={container2(1.9)}
-            initial="hidden"
-            animate="visible"
+            {...(isMobile
+              ? {
+                  whileInView: { opacity: 1, x: 0 },
+                  initial: { opacity: 0, x: -100 },
+                  transition: { duration: 0.5 },
+                }
+              : {
+                  variants: container2(1.9),
+                  initial: "hidden",
+                  animate: "visible",
+                })}
             className="py-5"
           >
-            Let’s connect and build something awesome together!
+            Let's connect and build something awesome together!
           </motion.p>
         </div>
       ) : (
@@ -90,9 +109,17 @@ const AboutMini = ({ htitle, container, container2 }) => {
             <span className="texthilit1"> Nash</span>!!
           </motion.p>
           <motion.p
-            variants={container2(0.9)}
-            initial="hidden"
-            animate="visible"
+            {...(isMobile
+              ? {
+                  whileInView: { opacity: 1, x: 0 },
+                  initial: { opacity: 0, x: -100 },
+                  transition: { duration: 0.5 },
+                }
+              : {
+                  variants: container2(1.1),
+                  initial: "hidden",
+                  animate: "visible",
+                })}
             className="relative py-5"
           >
             I'm an <span className="font-bold">aspiring web developer</span>{" "}
@@ -103,13 +130,13 @@ const AboutMini = ({ htitle, container, container2 }) => {
             <div className="hide texthilit1 dark:bg-primary bg-2ndry-1 absolute p-3">
               MERN stands for <span>{mern.join(", ")}</span>
             </div>
-            &nbsp;As a recent full-stack development trainee, I’m eager to apply
+            &nbsp;As a recent full-stack development trainee, I'm eager to apply
             my skills to real-world projects and grow into a confident,
-            industry-ready developer. While I’ve trained across the full stack,
-            I’m especially passionate about front-end development and creating
-            clean, responsive, and engaging user experiences. I’m constantly
+            industry-ready developer. While I've trained across the full stack,
+            I'm especially passionate about front-end development and creating
+            clean, responsive, and engaging user experiences. I'm constantly
             learning, building side projects, and staying updated with the
-            latest web development trends. I’m excited to join a team where I
+            latest web development trends. I'm excited to join a team where I
             can contribute, learn from experienced developers, and sharpen my
             skills every day.
           </motion.p>
@@ -119,7 +146,7 @@ const AboutMini = ({ htitle, container, container2 }) => {
             transition={{ duration: 0.5 }}
             className="py-5"
           >
-            Let’s connect and build something awesome together!
+            Let's connect and build something awesome together!
           </motion.p>
         </div>
       )}

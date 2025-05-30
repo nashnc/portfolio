@@ -1,22 +1,56 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 const Quote = () => {
-    return (
-      <div className="relative pt-4 text-right">
-        <div className="quote dark:border-2ndry-2 border-2ndry-3 border-1 lg:border-2 lg:pt-2 lg:pb-2 lg:text-right lg:text-2xl">
-          <h3 className="">
-            <span className="">
-              Dedication, perseverance, patience, and focus, are basics to&nbsp;
-            </span>
-            <span className="lg:dark:border-2ndry-2 border-2ndry-3 lg:block lg:border-t-2 lg:indent-[50%]">
-              achieve anything in life &nbsp;
-            </span>
-          </h3>
-        </div>
-        <h4 className="dark:border-2ndry-2 border-2ndry-3 lg:text-l absolute right-0 border-1 pb-1 lg:right-0 lg:border-r-2 lg:border-b-2 lg:border-l-2">
-          &nbsp; ___By Nash&nbsp;
-        </h4>
+  const quoteText =
+    "Dedication, perseverance, patience, and focus, are basics to achieve anything ";
+  const author = "___By Nash";
+
+  // Create multiple copies for seamless loop
+  const quotes = Array(3).fill({ text: quoteText, author });
+
+  return (
+    <div className="relative w-full overflow-hidden">
+      {/* Container for the scrolling quote */}
+      <div className="relative flex h-16 items-center lg:h-20">
+        {/* Left gradient overlay */}
+        <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-20 bg-gradient-to-r from-gray-200 to-transparent dark:from-[#0a0a0a]" />
+
+        {/* Right gradient overlay */}
+        <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-20 bg-gradient-to-l from-gray-200 to-transparent dark:from-[#0a0a0a]" />
+
+        {/* Animated quote container */}
+        <motion.div
+          className="flex whitespace-nowrap"
+          animate={{
+            x: ["0%", "-33.33%"],
+          }}
+          transition={{
+            x: {
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop",
+            },
+          }}
+        >
+          {quotes.map((quote, index) => (
+            <div
+              key={index}
+              className="quote inline-flex items-center px-8 lg:text-2xl"
+            >
+              <span>{quote.text}</span>
+              <span className="ml-2 text-sm lg:text-base">{quote.author}</span>
+              {/* Separator between quotes */}
+              {index < quotes.length - 1 && (
+                <span className="mx-8 text-gray-400">•</span>
+              )}
+            </div>
+          ))}
+        </motion.div>
       </div>
-    );
-}
- 
+    </div>
+  );
+};
+
 export default Quote;

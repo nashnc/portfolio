@@ -61,52 +61,38 @@ const ContactMini = ({ htitle, container, container2 }) => {
           </motion.p>
           <table className="border-2ndary-2 table-auto p-3">
             <tbody className="">
-              <motion.div
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: 100 }}
-                transition={{ duration: 0.5 }}
-                className="rounded-lg border-2 hover:rounded-xl"
-              >
+              <div className="rounded-lg border-2 hover:rounded-xl">
                 {contact.map((entry, index) => (
-                  <motion.div
-                    whileInView={{ opacity: 1, y: 0 }}
-                    initial={{ opacity: 0, y: 100 }}
-                    transition={{ duration: 0.7 + index * 0.5 }}
-                  >
-                    <tr key={index}>
-                      <td className="p-3">
+                  <tr key={index}>
+                    <td className="p-3">
+                      <div className="w-7 h-7 flex-shrink-0">
                         <img
-                          className="fill-primary inline h-auto w-7 object-contain"
+                          className="fill-primary w-full h-full object-contain"
                           src={entry.logo}
                           alt={entry.app}
                         />
-                      </td>
-                      <td>&nbsp;{entry.app} </td>
-                      <td className="hover:text-lhilit-1 hover:dark:text-dhilit-1 p-3 hover:animate-bounce hover:text-2xl">
-                        <a href={entry.link} target="_blank" rel="">
-                          {entry.uid}
-                        </a>
-                      </td>
-                    </tr>
-                  </motion.div>
+                      </div>
+                    </td>
+                    <td>&nbsp;{entry.app} </td>
+                    <td className="hover:text-lhilit-1 hover:dark:text-dhilit-1 p-3 hover:animate-bounce hover:text-2xl">
+                      <a href={entry.link} target="_blank" rel="">
+                        {entry.uid}
+                      </a>
+                    </td>
+                  </tr>
                 ))}
-              </motion.div>
+              </div>
             </tbody>
           </table>
         </div>
         {htitle !== "contact" && (
           <div className="contactmebutton relative pt-10 text-right">
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 0.5 }}
-              className="border-lhilit-1 dark:border-dhilit-1 group relative inline-block border-2 text-sm font-medium"
-            >
+            <div className="border-lhilit-1 dark:border-dhilit-1 group relative inline-block border-2 text-sm font-medium">
               <a href="/contact#contact" className="size-4">
                 <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
                 <div className="dark:bg-primary px-3 py-3">Other...</div>
               </a>
-            </motion.div>
+            </div>
           </div>
         )}
       </div>

@@ -201,7 +201,17 @@ const Home = () => {
           <header className="headsectdiv">
             <Titles htitle="works" />
             <div>
-              <button className="btn2b right relative left-3/4">
+              <motion.button
+                className="btn2b right relative left-3/4"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.6, delay: 0.3 },
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Link
                   to="/projects#projects"
                   className="border-2ndry-2 btn2 border-2 p-1"
@@ -209,10 +219,10 @@ const Home = () => {
                   <span className="spn2">
                     {" "}
                     view
-                    <span className="texthilit1 pr-1">~></span>
+                    <span className="texthilit1 pr-1">&#126;&gt;</span>
                   </span>
                 </Link>
-              </button>
+              </motion.button>
             </div>
           </header>
           <Projectmini container={container} container2={container2} />
@@ -221,7 +231,17 @@ const Home = () => {
           <header className="headsectdiv">
             <Titles htitle="skills" />
             <div className="">
-              <button className="btn2b right relative left-3/4">
+              <motion.button
+                className="btn2b right relative left-3/4"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 1, delay: 0.5 },
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Link
                   to="/about#skillset"
                   className="border-2ndry-2 btn2 border-2 p-1"
@@ -229,10 +249,10 @@ const Home = () => {
                   <span className="spn2">
                     {" "}
                     see
-                    <span className="texthilit1 pr-1">~></span>
+                    <span className="texthilit1 pr-1">&#126;&gt;</span>
                   </span>
                 </Link>
-              </button>
+              </motion.button>
             </div>
           </header>
           <div>
