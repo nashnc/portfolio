@@ -24,12 +24,18 @@
 
 ---
 
+## 🚀 Demo
+
+Visit: [https://nashnc.is-a.dev/#/](https://nashnc.is-a.dev/#/)
+
+---
+
 ## 📋 Table of Contents
 
 - [Portfolio](#portfolio)
+  - [🚀 Demo](#-demo)
   - [📋 Table of Contents](#-table-of-contents)
   - [🧑‍💻 About](#-about)
-  - [🚀 Demo](#-demo)
   - [✨ Features](#-features)
   - [🛠️ Tech Stack](#️-tech-stack)
   - [🎨 Animations \& Interactions](#-animations--interactions)
@@ -51,11 +57,6 @@ Language Composition:
 - CSS: 19.3%
 - HTML: 2.4%
 
----
-
-## 🚀 Demo
-
-Visit: [https://nashnc.is-a.dev/#/](https://nashnc.is-a.dev/#/)
 
 ---
 
