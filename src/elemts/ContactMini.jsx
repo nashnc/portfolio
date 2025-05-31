@@ -51,7 +51,7 @@ const ContactMini = ({ htitle, container, container2 }) => {
       <div>
         <div className="mx-auto px-10">
           <motion.p
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.5 }}
             className="py-5 text-lg"
@@ -65,9 +65,9 @@ const ContactMini = ({ htitle, container, container2 }) => {
                 {contact.map((entry, index) => (
                   <tr key={index}>
                     <td className="p-3">
-                      <div className="w-7 h-7 flex-shrink-0">
+                      <div className="h-7 w-7 flex-shrink-0">
                         <img
-                          className="fill-primary w-full h-full object-contain"
+                          className="fill-primary h-full w-full object-contain"
                           src={entry.logo}
                           alt={entry.app}
                         />

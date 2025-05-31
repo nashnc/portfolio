@@ -1,82 +1,344 @@
-import React from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import warehouse from "./Images/projectPics/warehouse.png";
 import port from "./Images/projectPics/port.png";
 import ott from "./Images/projectPics/ott.png";
-import { motion } from "framer-motion";
+import "./ProjectCard.css";
 
-const Projectmini = ({ container, container2 }) => {
-  const projects = [
-    {
-      id: "002",
-      softUsed: ["react.js", "css", "tailwind css"],
-      title: "Portfolio 2.0",
-      description: "The portfolio you are viewing right now ",
-      image: port,
-      link: "https://github.com/nashnc/portfolio",
-    },
-    {
-      id: "001",
-      softUsed: [
-        "express.js",
-        "node.js",
-        "mongodb",
-        "html (ejs template)",
-        "bootstrap",
-        "react.js",
-        "css",
-      ],
-      title: "OTT Streaming Platform",
-      description: "Users can stream movies",
-      image: ott,
-      link: "https://github.com/nashnc/ottStreamingPlatform",
-    },
-    {
-      id: "003",
-      softUsed: ["bootstrap", "react.js", "css"],
-      title: "Warehouse Stocking",
-      description: "A website to save and display Stock ",
-      image: warehouse,
-      link: "https://github.com/nashnc/medical_store",
-    },
-  ];
+// Constants
+const PROJECTS = [
+  {
+    id: "002",
+    softUsed: ["react.js", "css", "tailwind css"],
+    title: "Portfolio 2.0",
+    description: "The portfolio you are viewing right now",
+    image: port,
+    link: "https://github.com/nashnc/portfolio",
+  },
+  {
+    id: "001",
+    softUsed: [
+      "express.js",
+      "node.js",
+      "mongodb",
+      "html (ejs template)",
+      "bootstrap",
+      "react.js",
+      "css",
+    ],
+    title: "OTT Streaming Platform",
+    description: "Users can stream movies",
+    image: ott,
+    link: "https://github.com/nashnc/ottStreamingPlatform",
+  },
+  {
+    id: "003",
+    softUsed: ["bootstrap", "react.js", "css"],
+    title: "Warehouse Stocking",
+    description: "A website to save and display Stock",
+    image: warehouse,
+    link: "https://github.com/nashnc/medical_store",
+  },
+];
 
-  // Define initial animation for each card
-  const initialVariants = [
-    { opacity: 0, x: -100, y: 0 }, // First card: from right
-    { opacity: 0, x: 0, y: 100 }, // Second card: from top
-    { opacity: 0, x: 100, y: 0 }, // Third card: from left
-  ];
+const INITIAL_VARIANTS = [
+  { opacity: 0, x: -100, y: 0 }, // First card: from left
+  { opacity: 0, x: 0, y: 100 }, // Second card: from bottom
+  { opacity: 0, x: 100, y: 0 }, // Third card: from right
+];
+
+const ANIMATION_CONFIG = {
+  duration: 0.5,
+  ease: "easeInOut",
+};
+
+// Custom hook for hover capability detection
+const useHoverCapability = () => {
+  const [hasHoverCapability, setHasHoverCapability] = useState(true);
+
+  const checkHoverCapability = useCallback(() => {
+    const hasHover = window.matchMedia("(hover: hover)").matches;
+    const hasPointer = window.matchMedia("(pointer: fine)").matches;
+    return hasHover && hasPointer;
+  }, []);
+
+  useEffect(() => {
+    setHasHoverCapability(checkHoverCapability());
+
+    const mediaQuery = window.matchMedia("(hover: hover)");
+    const handleChange = () => setHasHoverCapability(checkHoverCapability());
+
+    mediaQuery.addEventListener?.("change", handleChange) ||
+      mediaQuery.addListener?.(handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener?.("change", handleChange) ||
+        mediaQuery.removeListener?.(handleChange);
+    };
+  }, [checkHoverCapability]);
+
+  return hasHoverCapability;
+};
+
+// Desktop Card Component
+const DesktopCard = ({ project, isHovered, onMouseMove }) => {
+  const cardRef = useRef(null);
+
+  // Handle mouse move and pass coordinates to parent
+  const handleMouseMove = useCallback(
+    (e) => {
+      if (!cardRef.current || !isHovered) return;
+      onMouseMove(e);
+    },
+    [isHovered, onMouseMove],
+  );
 
   return (
-    <div id="projecttable" className="gap-6 md:grid md:grid-cols-3">
-      {projects.map((project, idx) => (
+    <AnimatePresence mode="wait">
+      {isHovered ? (
         <motion.div
-          key={project.id}
-          whileInView={{ opacity: 1, x: 0, y: 0 }}
-          initial={initialVariants[idx] || { opacity: 0 }}
-          transition={{ duration: 1 }}
-          className="relative w-80 pb-4 sm:left-1/4 md:w-auto"
+          ref={cardRef}
+          key="hover"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{
+            height: ANIMATION_CONFIG,
+            opacity: ANIMATION_CONFIG,
+          }}
+          style={{ position: "relative" }}
+          className="cursor-none"
+          onMouseMove={handleMouseMove}
         >
-          <div id={project.id} className="projecttable">
-            <a href={project.link} target="blank">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="md:60 h-48 w-full object-cover pb-2"
-              />
-              <div className="mx-4">
-                <p className="border-2ndry-2 mx-auto border-t-1 border-b-1">
-                  {project.softUsed.join(", ")}
-                </p>
-                <h3 className="border-2ndry-2 border-b-1 font-bold">
-                  {project.title}
-                </h3>
-                <p className="mx-auto">{project.description}</p>
-              </div>
-            </a>
+          {/* Card content */}
+          <div className="notification">
+            <div className="notiglow"></div>
+            <div className="notiborderglow"></div>
+            <div className="notititle texthilit1 text-center">
+              {project.title}
+            </div>
+            <div className="categories">
+              {project.softUsed.map((tech, index) => (
+                <span
+                  key={index}
+                  className="text-primary2 dark:text-2ndry-1 ml-2 rounded-full border text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </motion.div>
-      ))}
+      ) : (
+        <motion.div
+          key="default"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{
+            height: { duration: 1, ease: "easeInOut" },
+            opacity: { duration: 1, ease: "easeInOut" },
+          }}
+          style={{ overflow: "hidden" }}
+        >
+          <div className="bg-2ndry-2 dark:bg-primary-4 relative isolate my-8 flex flex-col items-center overflow-hidden rounded-xl [unicode-bidi:isolate]">
+            <div className="relative w-full py-6 pr-4 pl-12 before:absolute before:left-6 before:z-[10] before:h-4/5 before:w-1 before:bg-[#373c3d] before:content-['']">
+              <p className="whitespace-pre-wrap [&:not(:first-child)]:mt-3">
+                <span className="block text-center font-bold">
+                  {project.title}
+                </span>{" "}
+                <span className="text-primary-3 dark:text-primary-5">
+                  {project.description}
+                </span>
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
+// Project Card Component
+const ProjectCard = ({
+  project,
+  index,
+  hasHoverCapability,
+  hoveredProject,
+  setHoveredProject,
+  onMouseMove,
+}) => {
+  const handleMouseEnter = useCallback(() => {
+    if (hasHoverCapability) {
+      setHoveredProject(project.id);
+    }
+  }, [hasHoverCapability, project.id, setHoveredProject]);
+
+  const handleMouseLeave = useCallback(() => {
+    if (hasHoverCapability) {
+      setHoveredProject(null);
+    }
+  }, [hasHoverCapability, setHoveredProject]);
+
+  return (
+    <motion.div
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      initial={INITIAL_VARIANTS[index] || { opacity: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="relative w-80 pb-4 sm:left-1/4 md:w-auto"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+        aria-label={`View ${project.title} project on GitHub`}
+      >
+        {!hasHoverCapability ? (
+          <MobileCard project={project} />
+        ) : (
+          <DesktopCard
+            project={project}
+            isHovered={hoveredProject === project.id}
+            onMouseMove={onMouseMove}
+          />
+        )}
+      </a>
+    </motion.div>
+  );
+};
+
+// Mobile Card Component
+const MobileCard = ({ project }) => (
+  <div className="card">
+    <div className="main-content">
+      <div className="categories">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="card-image"
+          loading="lazy"
+        />
+        {project.softUsed.map((tech, index) => (
+          <span key={index} className="text-2ndry-1 dark:text-2ndry-1">
+            {tech}
+          </span>
+        ))}
+      </div>
+      <p className="heading text-primary dark:text-2ndry-1">{project.title}</p>
+      <div className="footer text-primary-3 dark:text-2ndry-2">
+        {project.description}
+      </div>
+    </div>
+  </div>
+);
+
+// Main Component
+const Projectmini = () => {
+  const hasHoverCapability = useHoverCapability();
+  const [hoveredProject, setHoveredProject] = useState(null);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [isImageVisible, setIsImageVisible] = useState(false);
+  const animationFrameRef = useRef(null);
+  const targetPosition = useRef({ x: 0, y: 0 });
+
+  // Handle mouse move at the parent level
+  const handleMouseMove = useCallback(
+    (e) => {
+      targetPosition.current = {
+        x: e.clientX,
+        y: e.clientY,
+      };
+
+      // Show image after first mouse move
+      if (!isImageVisible) {
+        setCursorPosition(targetPosition.current);
+        setIsImageVisible(true);
+      }
+    },
+    [isImageVisible],
+  );
+
+  // Animation loop
+  useEffect(() => {
+    if (!hoveredProject || !isImageVisible) return;
+
+    const animate = () => {
+      setCursorPosition((prev) => {
+        const dx = targetPosition.current.x - prev.x;
+        const dy = targetPosition.current.y - prev.y;
+        const ease = 0.2;
+
+        return {
+          x: prev.x + dx * ease,
+          y: prev.y + dy * ease,
+        };
+      });
+
+      animationFrameRef.current = requestAnimationFrame(animate);
+    };
+
+    animationFrameRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
+  }, [hoveredProject, isImageVisible]);
+
+  // Reset when hover ends
+  useEffect(() => {
+    if (!hoveredProject) {
+      setIsImageVisible(false);
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    }
+  }, [hoveredProject]);
+
+  // Get the current hovered project
+  const currentProject = PROJECTS.find((p) => p.id === hoveredProject);
+
+  return (
+    <div className="relative">
+      <div id="projecttable" className="gap-6 md:grid md:grid-cols-3">
+        {PROJECTS.map((project, index) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            index={index}
+            hasHoverCapability={hasHoverCapability}
+            hoveredProject={hoveredProject}
+            setHoveredProject={setHoveredProject}
+            onMouseMove={handleMouseMove}
+          />
+        ))}
+      </div>
+
+      {/* Following cursor image - rendered at parent level */}
+      {isImageVisible && currentProject && (
+        <div
+          style={{
+            position: "fixed",
+            left: `${cursorPosition.x}px`,
+            top: `${cursorPosition.y}px`,
+            transform: "translate(-50%, calc(-50% - 100%))",
+            pointerEvents: "none",
+            zIndex: 9999,
+          }}
+        >
+          <img
+            src={currentProject.image}
+            alt={currentProject.title}
+            className="h-60 w-80 rounded-lg border-2 border-white object-cover shadow-xl"
+            loading="lazy"
+          />
+        </div>
+      )}
     </div>
   );
 };

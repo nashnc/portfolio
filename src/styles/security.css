@@ -1,0 +1,60 @@
+/* Security styles - Import this file conditionally based on environment */
+
+/* Disable text selection */
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Apply to entire body in production */
+body.production-mode {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Allow selection in input fields */
+body.production-mode input,
+body.production-mode textarea,
+body.production-mode [contenteditable="true"] {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+/* Disable image dragging */
+body.production-mode img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+}
+
+/* Keep pointer events for interactive images */
+body.production-mode img.interactive,
+body.production-mode a img,
+body.production-mode button img {
+    pointer-events: auto;
+}
+
+/* Disable highlighting */
+body.production-mode ::selection {
+    background-color: transparent;
+}
+
+body.production-mode ::-moz-selection {
+    background-color: transparent;
+}
+
+/* Optional: Hide content when devtools might be open (basic detection) */
+@media print {
+    body.production-mode {
+        display: none;
+    }
+}

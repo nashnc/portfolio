@@ -17,6 +17,7 @@ import Navbar from "./Navbar";
 import AboutMini from "./AboutMini";
 import Quote from "./elemts/Quote";
 import { motion, useInView } from "framer-motion";
+import MouseHover from "./MouseHover";
 
 // TypingEffect Component
 function TypingEffect({ text = " web developer" }) {
@@ -59,7 +60,11 @@ const Home = () => {
 
   return (
     <>
-      <div className="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      <div className="fixed inset-0 z-[-2] bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+
+      {/* Main content wrapper */}
+      <div className="relative z-0"></div>
+      <MouseHover />
       <Navbar />
       <div className="mycontainer">
         <header className="">
@@ -160,9 +165,9 @@ const Home = () => {
               </div>
               <div className="smallimage relative md:hidden">
                 <img
-                  className="border-2ndry-2 relative top-1 left-1/4 size-60 border-1 border-dashed object-contain"
+                  className="relative top-1 left-1/4 size-40 object-contain"
                   id=""
-                  src={image2}
+                  src={image3}
                   alt="profilepic2"
                 />
               </div>

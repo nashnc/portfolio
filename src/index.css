@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@import './styles/security.css';
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -18,12 +19,16 @@
   --color-primary-4: #101010;
   --color-primary-2: #161318;
   --color-primary-3: #282C33;
+  --color-primary-4: #1d1e21;
+  --color-primary-5: #9c9c9c;
+
   --color-2ndry-1: #e5e7eb;
   --color-2ndry-2: #abb2bf;
   --color-lhilit-1: #be0eec;
   --color-lhilit-2: #9e3dc1;
   --color-dhilit-1: #d74115;
   --color-dhilit-2: #e66500;
+
 }
 
 .preview {
@@ -54,6 +59,12 @@
   @apply font-bold text-xl xl:text-3xl md:text-2xl
 }
 
+.head5 {
+  @apply font-bold text-lg
+}
+
+
+
 .head2 {
   @apply col-span-1 md:text-3xl sm:text-2xl text-xl font-bold sm:col-span-2
 }
@@ -63,7 +74,7 @@
 }
 
 .mycontainer {
-  @apply container mx-auto cursor-default px-5 py-5 text-sm sm:px-10 md:px-15 md:text-lg lg:px-60 xl:px-80
+  @apply container mx-auto cursor-default px-6 py-5 text-sm sm:px-10 md:px-15 md:text-lg lg:px-60 xl:px-80
 }
 
 .texthilit1 {

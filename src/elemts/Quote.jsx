@@ -11,14 +11,37 @@ const Quote = () => {
 
   return (
     <div className="relative w-full overflow-hidden">
+      {/* SVG definitions for mask gradients */}
+      <svg className="absolute h-0 w-0">
+        <defs>
+          <linearGradient id="fade-mask" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="white" stopOpacity="0" />
+            <stop offset="35%" stopColor="white" stopOpacity="1" />
+            <stop offset="65%" stopColor="white" stopOpacity="1" />
+            <stop offset="100%" stopColor="white" stopOpacity="0" />
+          </linearGradient>
+          <mask id="fade-mask-element">
+            <rect
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              fill="url(#fade-mask)"
+            />
+          </mask>
+        </defs>
+      </svg>
+
       {/* Container for the scrolling quote */}
-      <div className="relative flex h-16 items-center lg:h-20">
-        {/* Left gradient overlay */}
-        <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-20 bg-gradient-to-r from-gray-200 to-transparent dark:from-[#0a0a0a]" />
-
-        {/* Right gradient overlay */}
-        <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-20 bg-gradient-to-l from-gray-200 to-transparent dark:from-[#0a0a0a]" />
-
+      <div
+        className="relative flex h-16 items-center lg:h-20"
+        style={{
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent 0%, black 35%, black 65%, transparent 100%)",
+          maskImage:
+            "linear-gradient(to right, transparent 0%, black 35%, black 65%, transparent 100%)",
+        }}
+      >
         {/* Animated quote container */}
         <motion.div
           className="flex whitespace-nowrap"

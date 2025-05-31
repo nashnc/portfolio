@@ -8,6 +8,7 @@ import AboutMini from "./AboutMini";
 import Skillset from "./elemts/Skillset";
 import Footer from "./elemts/Footer";
 import { motion } from "framer-motion";
+import MouseHover from "./MouseHover";
 
 const About = () => {
   const location = useLocation();
@@ -57,6 +58,10 @@ const About = () => {
 
   return (
     <>
+      <div className="fixed inset-0 z-[-2] bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      {/* Main content wrapper */}
+      <div className="relative z-0"></div>
+      <MouseHover />
       <Navbar />
       <div className="mycontainer scroll-smooth pb-10">
         <TitlesS htitle="about" />
@@ -69,7 +74,7 @@ const About = () => {
         </section>
         <Skillset />
         <section className="headsectdiv py-5">
-          <Titles htitle="funfacts" />
+          <Titles htitle="funfact" />
         </section>
         <div>
           {funfacts.map((funfact, index) => (

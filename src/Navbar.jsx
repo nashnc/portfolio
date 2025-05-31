@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="border-fuchsia-200 pt-3 shadow-sm">
+    <nav className="pt-3 shadow-sm">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         {/* Logo */}
         <div className="block dark:hidden">
@@ -45,8 +45,8 @@ const Navbar = () => {
         <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
           {/* ttopp */}
           <div className="group relative inline-block">
-            {/* LightBulb Icon */}
-            <div>
+            {/* LightBulb Icon with responsive sizing */}
+            <div className="scale-100 transition-transform lg:scale-125 xl:scale-150">
               <LightBulb />
             </div>
 
@@ -54,7 +54,7 @@ const Navbar = () => {
             <div className="bg-primary-3 invisible absolute top-1/2 right-full z-10 mr-3 -translate-y-1/2 rounded px-3 py-1 text-sm whitespace-nowrap text-white opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100">
               Pull the chord!
               {/* Arrow */}
-              <div className="bg-primary-3 border-2ndry-2 absolute top-1/2 right-0 h-2 w-2 translate-x-full -translate-y-1/2 rotate-45 border-t border-r"></div>
+              <div className="bg-primary-3 border-2ndry-2 absolute top-1/2 right-0 h-2 w-2 translate-x-full -translate-y-1/2 rotate-45"></div>
             </div>
 
             {/* GIF Tooltip Below with viewport safety */}
@@ -70,7 +70,7 @@ const Navbar = () => {
           <button
             onClick={toggleMenu}
             type="button"
-            className="texthilit1 dark:hover:bg-primary-2 focus:ring-2ndry-1 dark:focus:ring-primary-3 inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm hover:bg-fuchsia-100 focus:ring-2 focus:outline-none md:hidden dark:text-fuchsia-400"
+            className="texthilit1 dark:hover:bg-primary focus:ring-2ndry-1 dark:focus:ring-primary-3 inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm focus:ring-2 focus:outline-none md:hidden"
             aria-controls="navbar-cta"
             aria-expanded={isMenuOpen}
           >
@@ -87,7 +87,7 @@ const Navbar = () => {
           } w-full items-center justify-between md:order-1 md:flex md:w-auto`}
           id="navbar-cta"
         >
-          <ul className="dark:hover:border-primary-1 mt-4 flex flex-col rounded-lg p-4 font-medium hover:border hover:border-fuchsia-200 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
+          <ul className="mt-4 flex flex-col rounded-lg p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
             <li>
               <Link to="/" className="navilink">
                 <span className="texthilit1">#</span>home
