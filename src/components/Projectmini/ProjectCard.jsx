@@ -16,6 +16,7 @@ const ProjectCard = ({
   hoveredProject,
   setHoveredProject,
   onMouseMove,
+  title,
 }) => {
   const handleMouseEnter = useCallback(() => {
     if (hasHoverCapability) {
@@ -29,12 +30,19 @@ const ProjectCard = ({
     }
   }, [hasHoverCapability, setHoveredProject]);
 
+  const animationProps =
+    title !== "fullstack"
+      ? {
+          initial: INITIAL_VARIANTS[index] || { opacity: 0 },
+          whileInView: { opacity: 1, x: 0, y: 0 },
+          transition: { duration: 1 },
+          viewport: { once: true },
+        }
+      : {};
+
   return (
     <motion.div
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      initial={INITIAL_VARIANTS[index] || { opacity: 0 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
+      {...animationProps}
       className="relative w-80 pb-4 sm:left-1/4 md:w-auto"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

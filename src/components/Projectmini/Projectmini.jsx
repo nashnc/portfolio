@@ -149,6 +149,7 @@ const Projectmini = ({ title }) => {
             hoveredProject={hoveredProject}
             setHoveredProject={setHoveredProject}
             onMouseMove={handleMouseMove}
+            title={title}
           />
         ))}
       </div>
