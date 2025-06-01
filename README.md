@@ -1,6 +1,5 @@
 # Portfolio
 
-
 <div align="center">
 
 [![Awesome](https://img.shields.io/badge/Awesome-Profile-blueviolet?logo=github)](https://github.com/nashnc/portfolio)
@@ -24,16 +23,16 @@
 
 ---
 
-## 🚀 Demo
+## 🚀 Running Live
 
-Visit: [https://nashnc.is-a.dev/#/](https://nashnc.is-a.dev/#/)
+Check it out: [https://nashnc.is-a.dev/#/](https://nashnc.is-a.dev/#/)
 
 ---
 
 ## 📋 Table of Contents
 
 - [Portfolio](#portfolio)
-  - [🚀 Demo](#-demo)
+  - [🚀 Running Live](#-running-live)
   - [📋 Table of Contents](#-table-of-contents)
   - [🧑‍💻 About](#-about)
   - [✨ Features](#-features)
@@ -50,43 +49,38 @@ Visit: [https://nashnc.is-a.dev/#/](https://nashnc.is-a.dev/#/)
 
 ## 🧑‍💻 About
 
-Welcome to my personal portfolio (v2.0.0)! This project showcases my skills, projects, and professional background using modern web technologies and stunning animations.
+Welcome to my personal portfolio (v2.0.0)! This project highlights my skills, work, and professional journey using the latest web technologies and UI animations.
 
-Language Composition:
+**Language Composition:**
 - JavaScript: 78.3%
 - CSS: 19.3%
 - HTML: 2.4%
-
 
 ---
 
 ## ✨ Features
 
-- **Modern UI Implementation**
-  - React 19 with custom hooks and components
-  - React Router v7 for seamless navigation
+- **Modern UI**
+  - React 19, custom hooks & components
+  - React Router v7 for navigation
   - Responsive design with Tailwind CSS
-  - Dark/Light mode theming
-  
+  - Dark/Light mode
+
 - **Advanced Animations**
-  - Framer Motion for smooth component animations
-  - GSAP for complex animations and transitions
+  - Framer Motion for smooth UI animations
+  - GSAP for complex transitions
   - Custom animation orchestration
-  - Scroll-triggered animations
-  - Typing effects
-  
+  - Scroll-triggered & typing animations
+
 - **Interactive Elements**
-  - Animated project cards with hover effects
-  - Custom cursor animations
-  - Smooth scrolling
-  - Animated skill icons
-  - Interactive navigation
+  - Animated project cards & skill icons
+  - Custom cursor and hover effects
+  - Smooth scrolling & interactive navigation
 
 - **Performance Optimized**
-  - Code splitting
-  - Lazy loading
+  - Code splitting & lazy loading
   - Optimized asset delivery
-  - Smooth animations with GPU acceleration
+  - GPU-accelerated animations
 
 ---
 
@@ -125,30 +119,21 @@ Language Composition:
 
 ## 🎨 Animations & Interactions
 
-1. **Framer Motion Features**
-   - Page transitions
-   - Scroll-triggered animations
-   - Hover effects
-   - Staggered animations
-   - Motion variants for consistent animations
+1. **Framer Motion**
+   - Page transitions, hover effects, staggered animations
+   - Scroll-triggered & motion variants
 
-2. **GSAP Implementations**
-   - Complex timeline animations
-   - SVG morphing
-   - Draggable elements
-   - Custom easing
+2. **GSAP**
+   - Timeline animations, SVG morphing, draggable elements, custom easing
 
-3. **Custom Animations**
-   - Typing effect component
-   - Button hover animations
-   - Image transitions
-   - Loading states
+3. **Custom**
+   - Typing effects, button & image transitions, loading states
 
 ---
 
 ## 📦 Getting Started
 
-1. **Clone and Install**
+1. **Clone & Install**
    ```bash
    git clone https://github.com/nashnc/portfolio.git
    cd portfolio
@@ -159,7 +144,7 @@ Language Composition:
    ```bash
    npm run dev
    ```
-   Access at `http://localhost:5173`
+   Open [http://localhost:5173](http://localhost:5173)
 
 3. **Build & Deploy**
    ```bash
@@ -184,29 +169,29 @@ npm run deploy   # Deploy to GitHub Pages
 portfolio/
 ├── src/
 │   ├── components/      # Reusable components
-│   ├── pages/          # Page components
-│   ├── assets/         # Static assets
-│   ├── styles/         # CSS files
-│   └── animations/     # Animation configurations
-├── public/             # Static files
-└── vite.config.js      # Vite configuration
+│   ├── pages/           # Page components
+│   ├── assets/          # Static assets
+│   ├── styles/          # CSS files
+│   └── animations/      # Animation configs
+├── public/              # Static files
+└── vite.config.js       # Vite configuration
 ``` -->
 
 ---
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+1. Fork this repo
+2. Create a feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add your feature'`)
+4. Push to your branch (`git push origin feature/YourFeature`)
 5. Open a Pull Request
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
@@ -225,4 +210,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 > Built with ❤️ by [@nashnc](https://github.com/nashnc)
 
-<sub>Last Updated: 2025-05-29 04:45:36</sub>
+<sub>Last Updated: 2025-06-01</sub>
