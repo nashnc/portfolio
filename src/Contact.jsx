@@ -1,5 +1,5 @@
 import React from "react";
-import soon from "./assets/soon.png";
+import soon from "./assets/soon.webp";
 import ContactMini from "./elemts/ContactMini";
 import Navbar from "./Navbar";
 import Footer from "./elemts/Footer";

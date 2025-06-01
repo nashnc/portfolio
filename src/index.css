@@ -78,5 +78,5 @@
 }
 
 .texthilit1 {
-  @apply text-lhilit-1 dark:text-dhilit-1
+  @apply text-lhilit-1 dark:text-dhilit-1 font-black
 }

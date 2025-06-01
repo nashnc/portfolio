@@ -74,7 +74,7 @@ const Navbar = () => {
             aria-controls="navbar-cta"
             aria-expanded={isMenuOpen}
           >
-            <span class="material-symbols-outlined">menu</span>
+            <span className="material-symbols-outlined">menu</span>
             <span className="sr-only">Open main menu</span>
             {/* <img src={burger} alt="menu toggle" className="h-5 w-5" /> */}
           </button>

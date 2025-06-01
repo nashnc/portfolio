@@ -255,3 +255,11 @@
 /*  */
 /*  */
 /* /* Cursor Effect Styles */
+.hover-area {
+    padding: 20px;
+    /* Adjust the padding to set the minimum hover area */
+    margin: -20px;
+    /* Negative margin to offset the padding */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+}

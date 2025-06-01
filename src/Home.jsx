@@ -96,18 +96,10 @@ const Home = () => {
                 variants={container(0.9)}
                 initial="hidden"
                 animate="visible"
-                className="dark:text-2ndry-2 text-primary-2"
+                className="dark:text-2ndry-2 text-primary-2 mr-2 ml-6"
               >
-                My Specialties
-                <motion.ul
-                  variants={container(1.1)}
-                  initial="hidden"
-                  animate="visible"
-                  className="list-disc pl-10"
-                >
-                  <li>Front End Development </li>
-                  <li>Full Stack (trained in MERN stack development)</li>
-                </motion.ul>
+                I specialize in Front End Development and Full Stack (trained in
+                MERN stack development).
               </motion.p>
               <motion.p
                 variants={container(1.3)}

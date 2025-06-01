@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+import "./ProjectCard.css";
+import { fullstack, frontend } from "./ProjectData"; // Import the data
+// imageimports
 import warehouse from "./Images/projectPics/warehouse.png";
 import port from "./Images/projectPics/port.png";
 import ott from "./Images/projectPics/ott.png";
-import "./ProjectCard.css";
-
+// import soon from "../assets/soon.webp";
 // Constants
 const PROJECTS = [
   {
@@ -41,17 +44,6 @@ const PROJECTS = [
   },
 ];
 
-const INITIAL_VARIANTS = [
-  { opacity: 0, x: -100, y: 0 }, // First card: from left
-  { opacity: 0, x: 0, y: 100 }, // Second card: from bottom
-  { opacity: 0, x: 100, y: 0 }, // Third card: from right
-];
-
-const ANIMATION_CONFIG = {
-  duration: 0.5,
-  ease: "easeInOut",
-};
-
 // Custom hook for hover capability detection
 const useHoverCapability = () => {
   const [hasHoverCapability, setHasHoverCapability] = useState(true);
@@ -79,7 +71,8 @@ const useHoverCapability = () => {
 
   return hasHoverCapability;
 };
-
+// Define ANIMATION_CONFIG at the top of the file
+const ANIMATION_CONFIG = { duration: 0.5, ease: "easeInOut" };
 // Desktop Card Component
 const DesktopCard = ({ project, isHovered, onMouseMove }) => {
   const cardRef = useRef(null);
@@ -159,6 +152,12 @@ const DesktopCard = ({ project, isHovered, onMouseMove }) => {
   );
 };
 
+const INITIAL_VARIANTS = [
+  { opacity: 0, x: -50 }, // Example variant for the first card
+  { opacity: 0, x: 50 }, // Example variant for the second card
+  { opacity: 0, y: -50 }, // Example variant for the third card
+  // Add more variants as needed
+];
 // Project Card Component
 const ProjectCard = ({
   project,
@@ -237,13 +236,21 @@ const MobileCard = ({ project }) => (
 );
 
 // Main Component
-const Projectmini = () => {
+const Projectmini = ({ title }) => {
   const hasHoverCapability = useHoverCapability();
   const [hoveredProject, setHoveredProject] = useState(null);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isImageVisible, setIsImageVisible] = useState(false);
   const animationFrameRef = useRef(null);
   const targetPosition = useRef({ x: 0, y: 0 });
+
+  // Determine which projects to display based on the title
+  const projectsToDisplay =
+    title === "fullstack"
+      ? fullstack
+      : title === "frontend"
+        ? frontend
+        : PROJECTS;
 
   // Handle mouse move at the parent level
   const handleMouseMove = useCallback(
@@ -301,12 +308,12 @@ const Projectmini = () => {
   }, [hoveredProject]);
 
   // Get the current hovered project
-  const currentProject = PROJECTS.find((p) => p.id === hoveredProject);
+  const currentProject = projectsToDisplay.find((p) => p.id === hoveredProject);
 
   return (
     <div className="relative">
       <div id="projecttable" className="gap-6 md:grid md:grid-cols-3">
-        {PROJECTS.map((project, index) => (
+        {projectsToDisplay.map((project, index) => (
           <ProjectCard
             key={project.id}
             project={project}

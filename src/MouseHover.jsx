@@ -268,7 +268,7 @@ const CursorEffect = () => {
         className={`cursor ${isHovering ? "hovering" : ""} ${isHoveringText ? "hovering-text" : ""} ${isHoveringCard ? "hovering-card" : ""}`}
         style={cursor1Style}
       >
-        {isHoveringCard && <span className="cursor-text">#view</span>}
+        {isHoveringCard && <span className="cursor-text"><span className="texthilit1">#</span>view</span>}
       </div>
       <div
         className={`cursor2 ${isHovering ? "hovering" : ""} ${isHoveringText ? "hovering-text" : ""} ${isHoveringCard ? "hovering" : ""}`}

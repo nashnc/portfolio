@@ -30,8 +30,8 @@ const About = () => {
 
   const funfacts = [
     "A cup of coffee is a ticket to heaven",
-    "Speak English Malayalam and Tamil",
-    "Self taught in MS Office",
+    "Speak English, Malayalam, and Tamil",
+    "Self-taught in MS Office",
     "Likes to explore tech",
     "Ready to take on a challenge",
   ];

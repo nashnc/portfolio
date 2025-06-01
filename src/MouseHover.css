@@ -56,15 +56,21 @@
 /* Hover state for interactive elements */
 .cursor.hovering {
     transform: translate(-50%, -50%) scale(1.5);
-    background-color: #c6c6c64d;
+    background-color: #bf0eec6e;
     border-width: 2px;
+}
+
+.dark .cursor.hovering,
+.dark .cursor.hovering-text,
+.dark .cursor.hovering-card {
+    background-color: #d1320e41;
 }
 
 
 /* Hover state for text elements */
 .cursor.hovering-text {
     transform: translate(-50%, -50%) scale(1);
-    background-color: #c6c6c64d;
+    background-color: #eebcfb83;
     border-width: 2px;
     height: 50px;
     width: 10px;
