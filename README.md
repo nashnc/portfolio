@@ -35,6 +35,7 @@ Check it out: [https://nashnc.is-a.dev/#/](https://nashnc.is-a.dev/#/)
   - [🚀 Running Live](#-running-live)
   - [📋 Table of Contents](#-table-of-contents)
   - [🧑‍💻 About](#-about)
+  - [🗂️ Folder Structure](#️-folder-structure)
   - [✨ Features](#-features)
   - [🛠️ Tech Stack](#️-tech-stack)
   - [🎨 Animations \& Interactions](#-animations--interactions)
@@ -44,6 +45,7 @@ Check it out: [https://nashnc.is-a.dev/#/](https://nashnc.is-a.dev/#/)
   - [📄 License](#-license)
   - [👤 Author](#-author)
   - [📬 Contact](#-contact)
+  - [🎨 Design Inspiration](#-design-inspiration)
 
 ---
 
@@ -55,6 +57,41 @@ Welcome to my personal portfolio (v2.0.0)! This project highlights my skills, wo
 - JavaScript: 78.3%
 - CSS: 19.3%
 - HTML: 2.4%
+
+---
+
+## 🗂️ Folder Structure
+
+Below is a partial folder structure of the repository. For a complete view, check the [GitHub source tree](https://github.com/nashnc/portfolio/tree/main):
+
+```
+portfolio/
+├── .gitignore
+├── .prettierrc
+├── .vscode/
+├── README.md
+├── a.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── public/
+├── src/
+│   ├── .vscode/
+│   ├── App.jsx
+│   ├── Navbar.jsx
+│   ├── animations/
+│   ├── assets/
+│   ├── components/
+│   ├── index.css
+│   ├── main.jsx
+│   ├── old abot.md
+│   ├── pages/
+│   ├── styles/
+│   └── utils/
+└── vite.config.js
+```
+_Note: Only the first 10 items are shown per directory due to API limitations. [See full structure](https://github.com/nashnc/portfolio/tree/main)._
 
 ---
 
@@ -164,19 +201,6 @@ npm run preview  # Preview production build
 npm run deploy   # Deploy to GitHub Pages
 ```
 
-<!-- Project Structure:
-```
-portfolio/
-├── src/
-│   ├── components/      # Reusable components
-│   ├── pages/           # Page components
-│   ├── assets/          # Static assets
-│   ├── styles/          # CSS files
-│   └── animations/      # Animation configs
-├── public/              # Static files
-└── vite.config.js       # Vite configuration
-``` -->
-
 ---
 
 ## 🤝 Contributing
@@ -197,7 +221,7 @@ Licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## 👤 Author
 
-**Nash NC**
+**Avinash NC**
 - GitHub: [@nashnc](https://github.com/nashnc)
 - Portfolio: [nashnc.is-a.dev](https://nashnc.is-a.dev/#/)
 
@@ -207,6 +231,14 @@ Licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 - GitHub: [@nashnc](https://github.com/nashnc)
 - Portfolio: [nashnc.is-a.dev](https://nashnc.is-a.dev/#/)
+
+---
+
+## 🎨 Design Inspiration
+
+> Design inspired or referenced from [eliasdevis.github.io](https://eliasdevis.github.io/)
+
+---
 
 > Built with ❤️ by [@nashnc](https://github.com/nashnc)
 
