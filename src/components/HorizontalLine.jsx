@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "./HorizontalLine.css";
+import "./css/HorizontalLine.css";
 
 const HorizontalLine = ({ delay }) => {
   return (

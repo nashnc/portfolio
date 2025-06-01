@@ -5,7 +5,9 @@
   "version": "2.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
+    "tunnel": "lt --port 5173 --subdomain portfoliotestingxzriped",
+    "dev:public": "concurrently \"npm run dev\" \"npm run tunnel\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -14,7 +16,6 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
-    "gasp": "^0.0.2",
     "gsap": "^3.13.0",
     "motion": "^12.15.0",
     "react": "^19.0.0",
@@ -28,11 +29,12 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
     "eslint": "^9.22.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "gh-pages": "^6.3.0",
-    "globals": "^16.0.0",
+    "localtunnel": "^2.0.2",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "vite": "^6.3.1"

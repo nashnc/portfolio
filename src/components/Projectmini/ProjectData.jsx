@@ -1,7 +1,7 @@
-import warehouse from "./Images/projectPics/warehouse.png";
-import port from "./Images/projectPics/port.png";
-import ott from "./Images/projectPics/ott.png";
-import soon from "../assets/soon.webp";
+import warehouse from "../Images/projectPics/warehouse.png";
+import port from "../Images/projectPics/port.png";
+import ott from "../Images/projectPics/ott.png";
+import soon from "../../assets/soon.webp";
 
 const fullstack = [
   {

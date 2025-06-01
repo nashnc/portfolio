@@ -1,7 +1,8 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
 import HorizontalLine from "./HorizontalLine";
-import TypingEffect from "./TypingEffect"; // Import the reusable TypingEffect
+import TypingEffect from "../animations/TypingEffect"; // Import the reusable TypingEffect
+TypingEffect;
 
 const TitlesHome = ({ htitle }) => {
   const ref = React.useRef(null);

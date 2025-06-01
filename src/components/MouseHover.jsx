@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./MouseHover.css";
+import "../styles/MouseHover.css";
 
 const CursorEffect = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

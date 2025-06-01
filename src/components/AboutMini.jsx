@@ -1,12 +1,12 @@
 import React from "react";
-import image from "./assets/sdalt.jpg";
+import image from "../assets/sdalt.jpg";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 
 const AboutMini = ({ htitle, container, container2 }) => {
   const mern = ["MongoDB", "Express.js", "React.js", "Node.js"];
   const isMobile = useMediaQuery({ maxWidth: 950 });
-  
+
   return (
     <>
       {htitle !== "homeabout" ? (
@@ -31,11 +31,12 @@ const AboutMini = ({ htitle, container, container2 }) => {
             <span className="xplain decoration-lhilit-1 dark:decoration-dhilit-1 underline-offset-4 dark:relative dark:underline">
               MERN stack
             </span>
+            <span>. </span>
             <div className="hide texthilit1 dark:bg-primary bg-2ndry-1 absolute p-3">
               MERN stands for <span>{mern.join(", ")}</span>
             </div>
-            &nbsp;As a recent full-stack development trainee, I'm eager to apply
-            my skills to real-world projects and grow into a confident,
+            As a recent full-stack development trainee, I'm eager to apply my
+            skills to real-world projects and grow into a confident,
             industry-ready developer.
           </motion.p>
           <motion.div
@@ -44,7 +45,7 @@ const AboutMini = ({ htitle, container, container2 }) => {
             animate="visible"
           >
             <img
-              className="float-right size-60 object-contain"
+              className="size-60 object-contain md:float-right"
               src={image}
               alt="profilepic"
             />

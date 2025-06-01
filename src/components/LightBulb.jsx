@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 import { Draggable } from "gsap/Draggable";
-import "./TuggableLightBulb.css";
+import "./css/LightBulb.css";
 
 gsap.registerPlugin(MorphSVGPlugin, Draggable);
 

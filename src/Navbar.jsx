@@ -5,7 +5,7 @@ import nashlogodark from "./assets/nashdarklogo.svg"; // Update path as needed
 import nashlogolight from "./assets/nashlightlogo.svg"; // Update path as needed
 import burger from "./assets/burger.svg"; // Use any burger icon
 import toltvideo from "./assets/tootopvideo.gif";
-import LightBulb from "./LightBulb";
+import LightBulb from "./components/LightBulb";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

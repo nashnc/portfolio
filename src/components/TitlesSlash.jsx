@@ -1,9 +1,9 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
 import HorizontalLine from "./HorizontalLine";
-import TypingEffect from "./TypingEffect"; // <-- Import the reusable TypingEffect
+import TypingEffect from "../animations/TypingEffect"; // Import the reusable TypingEffect
 
-const TitlesOther = ({ htitle }) => {
+const TitlesSlash = ({ htitle }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -14,24 +14,24 @@ const TitlesOther = ({ htitle }) => {
 
   return (
     <>
-      <h4 className="head4" ref={ref}>
+      <h1 className="head1 pb-3" ref={ref}>
         <motion.span
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.2, delay: 0.4 }}
           className="texthilit1"
         >
-          #
+          /
         </motion.span>
         <TypingEffect text={htitle} />
-      </h4>
-      {htitle.toLowerCase() === "contact" ? null : (
-        <div className="relative left-1/4 pt-4 sm:col-span-1 md:col-span-3">
+      </h1>
+      {/* {htitle.toLowerCase() === "contact" ? null : (
+        <div className="pt-4 sm:col-span-1 md:col-span-3">
           <HorizontalLine delay={typingDelay} />
         </div>
-      )}
+      )} */}
     </>
   );
 };
 
-export default TitlesOther;
+export default TitlesSlash;

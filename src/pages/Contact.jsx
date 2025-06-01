@@ -1,10 +1,11 @@
 import React from "react";
-import soon from "./assets/soon.webp";
-import ContactMini from "./elemts/ContactMini";
-import Navbar from "./Navbar";
-import Footer from "./elemts/Footer";
-import TitlesS from "./elemts/TitlesSlash";
-import MouseHover from "./MouseHover";
+import soon from "../assets/soon.webp";
+import ContactMini from "../components/ContactMini";
+import Navbar from "../Navbar";
+import Footer from "../components/Footer";
+import TitlesS from "../components/TitlesSlash";
+import MouseHover from "../components/MouseHover";
+
 
 
 const contact = () => {

@@ -2,22 +2,22 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import image from "./assets/sd.png";
-import image3 from "./assets/sdtra.png";
-import image2 from "./assets/sd.png";
-import Titles from "./elemts/TitlesHome";
-import "./Home.css";
-import ContactMini from "./elemts/ContactMini";
-import SkillFront from "./elemts/SkillsFront";
-import Dot from "./assets/Dots.svg";
-import Footer from "./elemts/Footer";
-import "./ButtonAnimation.css";
-import Projectmini from "./elemts/Projectmini";
-import Navbar from "./Navbar";
-import AboutMini from "./AboutMini";
-import Quote from "./elemts/Quote";
+import image from "../assets/sd.png";
+import image3 from "../assets/sdtra.png";
+import image2 from "../assets/sd.png";
+import Titles from "../components/TitlesHome";
+import "../styles/Home.css";
+import ContactMini from "../components/ContactMini";
+import SkillFront from "../components/SkillsFront";
+import Dot from "../assets/Dots.svg";
+import Footer from "../components/Footer";
+import "../styles/ButtonAnimation.css";
+import Projectmini from "../components/Projectmini/Projectmini";
+import Navbar from "../Navbar";
+import AboutMini from "../components/AboutMini";
+import Quote from "../components/Quote";
 import { motion, useInView } from "framer-motion";
-import MouseHover from "./MouseHover";
+import MouseHover from "../components/MouseHover";
 
 // TypingEffect Component
 function TypingEffect({ text = " web developer" }) {

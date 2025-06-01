@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion } from "framer-motion";
-import Navbar from "./Navbar";
-import Footer from "./elemts/Footer";
-import TitlesS from "./elemts/TitlesSlash";
-import Titles from "./elemts/TitlesOther";
-import Projectmini from "./elemts/Projectmini";
-import { fullstack, frontend } from "./elemts/ProjectData";
-import MouseHover from "./MouseHover";
+import Navbar from "../Navbar";
+import Footer from "../components/Footer";
+import TitlesS from "../components/TitlesSlash";
+import Titles from "../components/TitlesOther";
+import Projectmini from "../components/Projectmini/Projectmini";
+import { fullstack, frontend } from "../components/Projectmini/ProjectData";
+import MouseHover from "../components/MouseHover";
 
 const Works = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
