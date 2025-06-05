@@ -1,19 +1,20 @@
-// Security utilities for production environment
+// security.js  – production-only security utilities
 
 export const initSecurityMeasures = () => {
-  // Only apply security measures in production
+  // Skip everything in dev
   if (process.env.NODE_ENV !== "production") {
     console.log("Security measures disabled in development mode");
     return;
   }
 
+  /* ---------- Hard blocks ---------- */
+
   // Disable right-click
   const handleContextMenu = (e) => {
     e.preventDefault();
-    return false;
   };
 
-  // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+  // Block F12, Ctrl + Shift + I / J, Ctrl + U
   const handleKeyDown = (e) => {
     if (
       e.keyCode === 123 || // F12
@@ -22,28 +23,35 @@ export const initSecurityMeasures = () => {
       (e.ctrlKey && e.keyCode === 85) // Ctrl+U
     ) {
       e.preventDefault();
-      return false;
     }
   };
 
-  // Disable text selection
+  /* ---------- NEW: smarter select block ---------- */
+
   const handleSelectStart = (e) => {
-    // Allow text selection in input fields and textareas
-    if (e.target.tagName !== "INPUT" && e.target.tagName !== "TEXTAREA") {
-      e.preventDefault();
-      return false;
+    const el = e.target;
+
+    const isWhitelisted =
+      el.tagName === "INPUT" ||
+      el.tagName === "TEXTAREA" ||
+      el.getAttribute("contenteditable") === "true" ||
+      el.closest(".allow-select"); // ✅ any ancestor with .allow-select
+
+    if (!isWhitelisted) {
+      e.preventDefault(); // block selection elsewhere
     }
   };
 
-  // Disable image dragging
+  /* ---------- Image drag block ---------- */
+
   const handleDragStart = (e) => {
     if (e.target.tagName === "IMG") {
       e.preventDefault();
-      return false;
     }
   };
 
-  // Add event listeners
+  /* ---------- Attach listeners ---------- */
+
   document.addEventListener("contextmenu", handleContextMenu);
   document.addEventListener("keydown", handleKeyDown);
   document.addEventListener("selectstart", handleSelectStart);
@@ -51,7 +59,7 @@ export const initSecurityMeasures = () => {
 
   console.log("Security measures enabled in production mode");
 
-  // Return cleanup function if needed
+  /* ---------- Cleanup helper ---------- */
   return () => {
     document.removeEventListener("contextmenu", handleContextMenu);
     document.removeEventListener("keydown", handleKeyDown);

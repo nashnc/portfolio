@@ -1,7 +1,5 @@
 .line {
     position: absolute;
-    /* background-color: #d1d5db; */
-    /* Tailwind gray-300, adjust (e.g., #ffffff for white) */
     display: block;
     z-index: 10;
     /* Overlay the border */

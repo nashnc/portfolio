@@ -70,7 +70,7 @@ const Home = () => {
         <header className="">
           <div className="grid-col-2 grid items-center md:flex">
             <div className="relative pb-10 text-wrap">
-              <div className="">
+              <div className="allow-select">
                 <motion.h1
                   variants={container(0.5)}
                   initial="hidden"
@@ -96,7 +96,7 @@ const Home = () => {
                 variants={container(0.9)}
                 initial="hidden"
                 animate="visible"
-                className="dark:text-2ndry-2 text-primary-2 mr-2 ml-6"
+                className="dark:text-2ndry-2 text-primary-2 allow-select mr-2 ml-6"
               >
                 I specialize in Front End Development and Full Stack (trained in
                 MERN stack development).

@@ -10,7 +10,7 @@ const AboutMini = ({ htitle, container, container2 }) => {
   return (
     <>
       {htitle !== "homeabout" ? (
-        <div className="text-base md:text-lg">
+        <div className="allow-select text-base md:text-lg">
           <motion.p
             variants={container(0.7)}
             initial="hidden"
@@ -99,7 +99,7 @@ const AboutMini = ({ htitle, container, container2 }) => {
           </motion.p>
         </div>
       ) : (
-        <div className="text-base md:text-lg">
+        <div className="allow-select text-base md:text-lg">
           <motion.p
             variants={container(0.9)}
             initial="hidden"

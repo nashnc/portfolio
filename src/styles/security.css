@@ -1,25 +1,17 @@
-/* Security styles - Import this file conditionally based on environment */
-
-/* Disable text selection */
-.no-select {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* Apply to entire body in production */
+/* Only apply these in production */
 body.production-mode {
+    /* Disable text selection globally */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-/* Allow selection in input fields */
+/*  Allow selection in safe zones */
 body.production-mode input,
 body.production-mode textarea,
-body.production-mode [contenteditable="true"] {
+body.production-mode [contenteditable="true"],
+body.production-mode .allow-select {
     -webkit-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
@@ -36,14 +28,14 @@ body.production-mode img {
     pointer-events: none;
 }
 
-/* Keep pointer events for interactive images */
+/*  Allow pointer events for images that are interactive */
 body.production-mode img.interactive,
 body.production-mode a img,
 body.production-mode button img {
     pointer-events: auto;
 }
 
-/* Disable highlighting */
+/* Prevent text highlight background */
 body.production-mode ::selection {
     background-color: transparent;
 }
@@ -52,7 +44,7 @@ body.production-mode ::-moz-selection {
     background-color: transparent;
 }
 
-/* Optional: Hide content when devtools might be open (basic detection) */
+/* Basic anti-devtools print detection */
 @media print {
     body.production-mode {
         display: none;

@@ -28,7 +28,6 @@
     will-change: transform;
     transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease, width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
     mix-blend-mode: difference;
-    /* Optional: creates interesting visual effect with default cursor */
 }
 
 .dark .cursor {
@@ -111,8 +110,6 @@
 .cursor-text {
     color: #e5e7eb;
     font-size: 12px;
-    /* font-weight: bold; */
     pointer-events: none;
     user-select: none;
-    /* mix-blend-mode: difference; */
 }

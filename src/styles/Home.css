@@ -1,23 +1,8 @@
-/* .hide {
-    display: none;
-}
-
-.xplain:hover~.hide {
-    display: block;
-} */
-
 .hide {
     visibility: hidden;
-    /* Initially hidden */
-    /* position: absolute; */
-    /* Position it relative to the parent */
-    /* background-color: rgba(0, 0, 0, 0.75); */
-    /* Tooltip background color */
-    /* color: white; */
-    /* Tooltip text color */
+
     padding: 5px 10px;
     border-radius: 4px;
-    /* font-size: 12px; */
     top: 100%;
     /* Position it below the parent */
     left: 50%;
@@ -40,55 +25,38 @@
 }
 
 #imgCover3 {
-    /* width: 40px; */
-    /* height: 40px; */
     object-fit: cover;
     /* Ensures the image covers the area */
     clip-path: polygon(5% 45%, 78% 100%, 100% 21%);
     /* Custom clip path */
-    /* background: #b67575; */
 }
 
 #imgCover {
-    /* width: 40px; */
-    /* height: 40px; */
     object-fit: cover;
     /* Ensures the image covers the area */
     clip-path: polygon(5% 45%, 78% 100%, 100% 21%);
-    /* Custom clip path */
-    /* background: #b67575; */
 }
 
 #imgCoverTp {
-    /* trasparent image cover*/
-    /* width: 40px; */
-    /* height: 40px; */
     object-fit: cover;
     /* Ensures the image covers the area */
     clip-path: polygon(0% 0%, 100% 0, 100% 21%, 78% 100%, 5% 45%);
     /* Custom clip path */
-    /* background: #b67575; */
 }
 
 #imgCover2 {
-    /* width: 40px; */
-    /* height: 40px; */
     object-fit: cover;
     /* Ensures the image covers the area */
     clip-path: polygon(0 73%, 78% 100%, 30% 0);
     /* Custom clip path */
-    /* background: #f37070; */
 }
 
 #imgCover2dots {
-    /* width: 40px; */
-    /* height: 40px; */
     object-fit: cover;
     /* Ensures the image covers the area */
     clip-path: polygon(28% 0, 71% 33%, 37% 100%);
 
     /* Custom clip path */
-    /* background: #f37070; */
 }
 
 /*  */
@@ -107,7 +75,7 @@
     transition: 0.3s;
 }
 
-/* ✅ Default (Light Theme) background */
+/*  Default (Light Theme) background */
 .btn2::before,
 .btn2::after {
     content: '';
@@ -123,7 +91,7 @@
     z-index: 0;
 }
 
-/* 🌙 Dark Theme override using Tailwind's .dark class */
+/*  Dark Theme override using Tailwind's .dark class */
 .dark .btn2::before,
 .dark .btn2::after {
     background-color: #101010;
