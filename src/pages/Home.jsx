@@ -169,31 +169,7 @@ const Home = () => {
         <br />
         <br />
         <br />
-        <div id="aboutme py-5">
-          <header className="headsectdiv">
-            <Titles htitle="about" />
-            <div className="col-span-1"></div>
-          </header>
-          <AboutMini
-            htitle="homeabout"
-            container={container}
-            container2={container2}
-          />
-          <div className="contactmebutton relative">
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 0.5 }}
-              className="border-lhilit-1 dark:border-dhilit-1 group relative inline-block border-2 text-sm font-medium"
-            >
-              <Link to="/about#about" className="size-4">
-                <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
-                <div className="dark:bg-primary px-3 py-3"> Read more ...</div>
-              </Link>
-            </motion.div>
-          </div>
-          <Quote />
-        </div>
+
         <div id="projects ">
           <header className="headsectdiv">
             <Titles htitle="works" />
@@ -255,6 +231,31 @@ const Home = () => {
           <div>
             <SkillFront container={container} container2={container2} />
           </div>
+        </div>
+        <div id="aboutme py-5">
+          <header className="headsectdiv">
+            <Titles htitle="about" />
+            <div className="col-span-1"></div>
+          </header>
+          <AboutMini
+            htitle="homeabout"
+            container={container}
+            container2={container2}
+          />
+          <div className="contactmebutton relative">
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 100 }}
+              transition={{ duration: 0.5 }}
+              className="border-lhilit-1 dark:border-dhilit-1 group relative inline-block border-2 text-sm font-medium"
+            >
+              <Link to="/about#about" className="size-4">
+                <span className="line dark:bg-primary bg-2ndry-1 size-3"></span>
+                <div className="dark:bg-primary px-3 py-3"> Read more ...</div>
+              </Link>
+            </motion.div>
+          </div>
+          <Quote />
         </div>
         <div id="contact" className="py-10">
           <header className="headsectdiv">

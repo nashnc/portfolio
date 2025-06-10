@@ -46,7 +46,7 @@ const Navbar = () => {
           {/* ttopp */}
           <div className="group relative inline-block">
             {/* LightBulb Icon with responsive sizing */}
-            <div className="scale-100 transition-transform lg:scale-125 xl:scale-150">
+            <div className="relative top-4 scale-140 transition-transform lg:scale-175 xl:scale-200">
               <LightBulb />
             </div>
 
@@ -54,7 +54,7 @@ const Navbar = () => {
             <div className="bg-primary-3 invisible absolute top-1/2 right-full z-10 mr-3 -translate-y-1/2 rounded px-3 py-1 text-sm whitespace-nowrap text-white opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100">
               Pull the chord!
               {/* Arrow */}
-              <div className="bg-primary-3 border-2ndry-2 absolute top-1/2 right-0 h-2 w-2 translate-x-full -translate-y-1/2 rotate-45"></div>
+              <div className="bg-primary-3 border-2ndry-2 absolute top-1/2 left-0 h-2 w-2 translate-x-full -translate-y-1/2 rotate-45"></div>
             </div>
 
             {/* GIF Tooltip Below with viewport safety */}
@@ -94,15 +94,16 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/about" className="navilink">
-                <span className="texthilit1">#</span>about
-              </Link>
-            </li>
-            <li>
               <Link to="/projects" className="navilink">
                 <span className="texthilit1">#</span>works
               </Link>
             </li>
+            <li>
+              <Link to="/about" className="navilink">
+                <span className="texthilit1">#</span>about
+              </Link>
+            </li>
+
             <li>
               <Link to="/contact" className="navilink">
                 <span className="texthilit1">#</span>contact

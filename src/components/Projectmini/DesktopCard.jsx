@@ -41,7 +41,7 @@ const DesktopCard = ({ project, isHovered, onMouseMove }) => {
               {project.softUsed.map((tech, index) => (
                 <span
                   key={index}
-                  className="text-primary2 dark:text-2ndry-1 ml-2 rounded-full border text-sm"
+                  className="text-primary2 dark:text-2ndry-1 ml-2 rounded-full text-sm"
                 >
                   {tech}
                 </span>
@@ -61,7 +61,7 @@ const DesktopCard = ({ project, isHovered, onMouseMove }) => {
           }}
           style={{ overflow: "hidden" }}
         >
-          <div className="bg-2ndry-2 dark:bg-primary-4 relative isolate my-8 flex flex-col items-center overflow-hidden rounded-xl [unicode-bidi:isolate]">
+          <div className="bg-2ndry-2/10 dark:bg-primary-4/30 relative isolate my-8 flex flex-col items-center overflow-hidden rounded-xl shadow-xl/20 backdrop-blur-2xl [unicode-bidi:isolate]">
             <div className="relative w-full py-6 pr-4 pl-12 before:absolute before:left-6 before:z-[10] before:h-4/5 before:w-1 before:bg-[#373c3d] before:content-['']">
               <p className="whitespace-pre-wrap [&:not(:first-child)]:mt-3">
                 <span className="block text-center font-bold">
